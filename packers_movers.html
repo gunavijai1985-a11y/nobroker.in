@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Packers and Movers - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d3c9e",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "eco": "#10b981", // Emerald 500
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+
+        /* Hide scrollbar for testimonial slider */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white antialiased overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-[#1a202c] border-b border-[#f0f2f4] dark:border-gray-800">
+        <div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-[1440px]">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <nav class="flex gap-6">
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="buy.html">Buy</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="index.html">Rent</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="commercial.html">Commercial</a>
+                    <a class="text-sm font-semibold text-primary" href="packers_movers.html">Packers &amp; Movers</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="rental_agreement.html">Rental Agreement</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="pay_rent.html">Pay Rent</a>
+                </nav>
+            </div>
+            <div class="flex gap-3">
+                <button
+                    class="hidden sm:flex items-center justify-center rounded-lg h-9 px-4 bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-bold"
+                    onclick="window.location.href='login.html'">
+                    Log In
+                </button>
+                <button
+                    class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary-dark transition-colors text-sm font-bold shadow-md shadow-primary/20"
+                    onclick="window.location.href='login.html'">
+                    Sign Up
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Breadcrumbs -->
+    <div class="bg-white dark:bg-[#1a202c] border-b border-gray-100 dark:border-gray-800">
+        <div class="max-w-[1440px] mx-auto px-4 md:px-10 py-3">
+            <div class="flex flex-wrap items-center gap-2 text-sm">
+                <a class="text-gray-500 hover:text-primary transition-colors" href="index.html">Home</a>
+                <span class="text-gray-400">/</span>
+                <a class="text-gray-500 hover:text-primary transition-colors" href="packers_movers.html">Services</a>
+                <span class="text-gray-400">/</span>
+                <span class="font-medium text-gray-900 dark:text-white">Packers &amp; Movers</span>
+            </div>
+        </div>
+    </div>
+    <!-- Hero Section -->
+    <div class="relative bg-white dark:bg-[#1a202c] pb-16">
+        <!-- Hero Background -->
+        <div class="absolute inset-0 h-[500px] w-full bg-cover bg-center z-0"
+            data-alt="Blurred background of moving boxes in a living room"
+            style='background-image: linear-gradient(rgba(17, 82, 212, 0.85), rgba(16, 22, 34, 0.7)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZfKCuyQOscVMdZPXPx62ZN8zyxfosm3jjHD97eBOGkH9l0mGPQ_3cUoTwPgLgtKFQFrlqMBjuj1QPxrzleibVuTboaMTd5dlrCbWW95Q-tHo1WJiwhxylN8FvY2SNs0IlDRfDXyxqqK5iQYOKdIBKT2KShorDbFrrxRJTjlVN7kSFtUQH8pWxeg_f1ElDbbU0TVsbfhCi4caeGSFDbw_Uegjz29j10Kbaf6VokkypvBcdC3nS1DY9v4jIM4hfxOUAnTpogT1xfi3M");'>
+        </div>
+        <div
+            class="relative z-10 max-w-[1200px] mx-auto px-4 md:px-10 pt-16 md:pt-24 flex flex-col items-center text-center">
+            <h1
+                class="text-white text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 drop-shadow-sm">
+                Move Stress-Free with NoBroker
+            </h1>
+            <p class="text-blue-100 text-lg md:text-xl font-medium max-w-2xl mb-10 drop-shadow-sm">
+                Save up to 40% on shifting costs. Instant quotes, lowest price guarantee, and free insurance.
+            </p>
+            <!-- Main Search Card -->
+            <div
+                class="w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 md:p-8 flex flex-col gap-6 border border-gray-100 dark:border-gray-700">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                    <!-- Origin -->
+                    <label class="flex flex-col text-left group">
+                        <span
+                            class="text-gray-600 dark:text-gray-400 text-xs font-bold uppercase tracking-wider mb-2 ml-1">Moving
+                            From</span>
+                        <div class="relative">
+                            <span
+                                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">location_on</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-gray-900 dark:text-white"
+                                placeholder="Enter Origin City" type="text" />
+                        </div>
+                    </label>
+                    <!-- Destination -->
+                    <label class="flex flex-col text-left group">
+                        <span
+                            class="text-gray-600 dark:text-gray-400 text-xs font-bold uppercase tracking-wider mb-2 ml-1">Moving
+                            To</span>
+                        <div class="relative">
+                            <span
+                                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">flag</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-gray-900 dark:text-white"
+                                placeholder="Enter Destination City" type="text" />
+                        </div>
+                    </label>
+                    <!-- Date -->
+                    <label class="flex flex-col text-left group">
+                        <span
+                            class="text-gray-600 dark:text-gray-400 text-xs font-bold uppercase tracking-wider mb-2 ml-1">Moving
+                            Date</span>
+                        <div class="relative">
+                            <span
+                                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">calendar_month</span>
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-gray-900 dark:text-white"
+                                type="date" />
+                        </div>
+                    </label>
+                    <!-- Size -->
+                    <label class="flex flex-col text-left group">
+                        <span
+                            class="text-gray-600 dark:text-gray-400 text-xs font-bold uppercase tracking-wider mb-2 ml-1">House
+                            Size</span>
+                        <div class="relative">
+                            <span
+                                class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined">home</span>
+                            <select
+                                class="w-full pl-10 pr-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all font-medium text-gray-900 dark:text-white appearance-none cursor-pointer">
+                                <option>Select size</option>
+                                <option>1 RK</option>
+                                <option>1 BHK</option>
+                                <option>2 BHK</option>
+                                <option>3 BHK</option>
+                                <option>Villa / Bungalow</option>
+                            </select>
+                            <span
+                                class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 material-symbols-outlined pointer-events-none">expand_more</span>
+                        </div>
+                    </label>
+                </div>
+                <div class="flex flex-col md:flex-row gap-4 mt-2">
+                    <button onclick="checkQuotes()"
+                        class="flex-1 bg-primary hover:bg-primary-dark text-white h-12 md:h-14 rounded-lg font-bold text-lg shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">search</span>
+                        Check Free Quotes
+                    </button>
+                    <!-- Scanner Feature -->
+                    <button onclick="openScanner()"
+                        class="flex-1 md:flex-[0.6] bg-indigo-50 dark:bg-indigo-900/30 border border-indigo-100 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 h-12 md:h-14 rounded-lg font-semibold text-base flex items-center justify-center gap-2 hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors group">
+                        <span
+                            class="material-symbols-outlined group-hover:scale-110 transition-transform">center_focus_strong</span>
+                        Scan Items with AI Webcam
+                        <span
+                            class="bg-indigo-600 text-white text-[10px] px-1.5 py-0.5 rounded uppercase font-bold ml-1">New</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content Grid -->
+    <main class="max-w-[1200px] mx-auto px-4 md:px-10 py-12">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar / Filters -->
+            <aside class="w-full lg:w-1/4 flex flex-col gap-6">
+                <!-- Map Widget -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <div class="h-40 w-full relative bg-gray-200">
+                        <img alt="Map route visualization" class="w-full h-full object-cover opacity-80"
+                            data-location="Map showing route from Bangalore to Mumbai"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoDRbylZtuHM5BaGiQOfLFMxOJYsJ1JTWEjVeX6EKssvXEQjxTXA-w0BWOaIHJXqBVnqw9oo3uGEIA3BAZr57zABodOGE56KSWB4-kwCmqczL45BhXqdUXkp_TfUDRfDXTpfbTJXvMeC7oHqU0WMcvhFN0uVt_5V-bgv-SxRFWzLM93_-qxhLqHMVmVH1EHrHVu5ia-zWcVHqDlLjxiZtiHHn3ROgBUovPDQCAupkWRx7buTLqT6V4sUYnlsbBF1Sa20Qzd1J9cT6q" />
+                        <div
+                            class="absolute bottom-2 left-2 bg-white/90 backdrop-blur px-2 py-1 rounded text-xs font-bold shadow-sm flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">route</span> 980 km Route
+                        </div>
+                    </div>
+                </div>
+                <!-- Filters -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-5">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-bold text-lg">Filters</h3>
+                        <button class="text-primary text-sm font-medium hover:underline">Reset</button>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input checked="" class="rounded border-gray-300 text-primary focus:ring-primary size-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium">Verified Partners</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer group">
+                            <input class="rounded border-gray-300 text-eco focus:ring-eco size-5" type="checkbox" />
+                            <span
+                                class="text-sm font-medium group-hover:text-eco transition-colors flex items-center gap-1">
+                                Eco-friendly Movers
+                                <span class="material-symbols-outlined text-[16px] text-eco filled-icon">eco</span>
+                            </span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input class="rounded border-gray-300 text-primary focus:ring-primary size-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium">Includes Insurance</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input class="rounded border-gray-300 text-primary focus:ring-primary size-5"
+                                type="checkbox" />
+                            <span class="text-sm font-medium">Storage Facility</span>
+                        </label>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-700">
+                        <h4 class="font-bold text-sm mb-3">Price Range</h4>
+                        <input class="w-full accent-primary h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+                            type="range" />
+                        <div class="flex justify-between text-xs text-gray-500 mt-2">
+                            <span>₹5k</span>
+                            <span>₹50k+</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cost Estimator Widget -->
+                <div class="bg-primary/5 dark:bg-primary/10 rounded-xl border border-primary/10 p-5">
+                    <div class="flex items-center gap-2 mb-3 text-primary">
+                        <span class="material-symbols-outlined">calculate</span>
+                        <h3 class="font-bold">Quick Estimator</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-medium mb-1">
+                                <span>Cartons</span>
+                                <span>12</span>
+                            </div>
+                            <input
+                                class="w-full accent-primary h-1.5 bg-gray-300 rounded-lg appearance-none cursor-pointer"
+                                max="50" type="range" value="12" />
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-medium mb-1">
+                                <span>Furniture Items</span>
+                                <span>5</span>
+                            </div>
+                            <input
+                                class="w-full accent-primary h-1.5 bg-gray-300 rounded-lg appearance-none cursor-pointer"
+                                max="20" type="range" value="5" />
+                        </div>
+                        <div class="pt-2 flex justify-between items-center">
+                            <span class="text-xs text-gray-500">Approx. Cost:</span>
+                            <span class="font-bold text-lg text-[#111318] dark:text-white">₹8,500</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Results Section -->
+            <div class="w-full lg:w-3/4 flex flex-col gap-6">
+                <div class="flex items-center justify-between">
+                    <h2 class="text-xl font-bold">Recommended Movers <span
+                            class="text-gray-400 font-normal text-base ml-1">(12 Found)</span></h2>
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm text-gray-500">Sort by:</span>
+                        <select
+                            class="border-none bg-transparent font-bold text-sm text-[#111318] dark:text-white focus:ring-0 cursor-pointer pr-8">
+                            <option>Recommended</option>
+                            <option>Price: Low to High</option>
+                            <option>Rating: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Vendor Card 1 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow p-5 flex flex-col sm:flex-row gap-5 relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 bg-eco text-white text-[10px] font-bold px-3 py-1 rounded-bl-lg z-10 uppercase tracking-wide flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[12px] filled-icon">eco</span> Sustainable Choice
+                    </div>
+                    <div class="w-full sm:w-48 h-40 sm:h-auto shrink-0 bg-gray-100 rounded-lg overflow-hidden relative">
+                        <img alt="Movers loading a white truck" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiiO4QkXxQBlYnyTmVp66QtvBqT4taJBNKikhyw2g_AOkkjLuEBP9AkpHOlup22LsnAqeXu7Fy1yRTIqOO8DI2g_LnzCr_Rv-q3F5uOiqtIVh31ZKiIYN0pG9CYB2YMRUPiT6P3di7w1HK_fPJoc1m6PICmn8sCuWbeJSK70gw2Klzrhqe5zoeWDbfWGaMZ0Bsuco5fh2tg8HSuyechi9ZNCL1xRIazuwzKpPTD0PCZvyP0k88VLU1dG0VgX23r5Y1wvUdIKKoePjg" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h3
+                                    class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                                    GreenMiles Logistics</h3>
+                                <div
+                                    class="flex items-center gap-1 bg-green-50 dark:bg-green-900/30 px-1.5 py-0.5 rounded text-green-700 dark:text-green-400 text-xs font-bold mt-6 sm:mt-0">
+                                    4.9 <span class="material-symbols-outlined text-[12px] filled-icon">star</span>
+                                    <span class="text-gray-400 font-normal ml-0.5">(342)</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-3 line-clamp-2">Specialized in eco-friendly packing
+                                materials and electric vehicle fleet for intracity moves. ISO Certified.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-600 dark:text-gray-300 font-medium">
+                                    <span class="material-symbols-outlined text-[14px]">shield</span> Insurance
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-600 dark:text-gray-300 font-medium">
+                                    <span class="material-symbols-outlined text-[14px]">inventory_2</span> Premium
+                                    Packing
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1 px-2 py-1 rounded bg-green-50 dark:bg-green-900/20 text-xs text-green-700 dark:text-green-400 font-medium border border-green-100 dark:border-green-900">
+                                    <span class="material-symbols-outlined text-[14px]">forest</span> Carbon Neutral
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4 mt-2">
+                            <div>
+                                <p class="text-xs text-gray-500">Estimated Quote</p>
+                                <p class="text-xl font-black text-gray-900 dark:text-white">₹12,500 <span
+                                        class="text-sm font-normal text-gray-400">- ₹14,000</span></p>
+                            </div>
+                            <div class="flex gap-3">
+                                <button onclick="showDetails('GreenMiles Logistics')"
+                                    class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Details</button>
+                                <button onclick="bookNow('GreenMiles Logistics')"
+                                    class="px-6 py-2 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vendor Card 2 -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow p-5 flex flex-col sm:flex-row gap-5 relative group">
+                    <div class="w-full sm:w-48 h-40 sm:h-auto shrink-0 bg-gray-100 rounded-lg overflow-hidden relative">
+                        <img alt="Workers moving furniture with straps" class="w-full h-full object-cover"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU2gkRKGWTgtvl5mf0eJNrUfEIAz27pV18QMj1qOK4eYWJPguWPNaZCUqQ_FCf8PVcgMcisUa0ZqVm6w8841oyutQmaJy0EOet2a9McJNVzkkUfVlNJ9ZSXpy4SDrWD1PUZlAhW1mfNX9rYdPXk1DXQXSob39RCKxkBc7z1R1FkAZH8xNBOzL0HE6Rjflqsoiu_M6cXImooE_LE7M0IzBFTMQAd9Lc-KAfhCZE-C97MUW9GB8jtdVcaXZhgkt7scNHzOQUZn3YeNSA" />
+                    </div>
+                    <div class="flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-1">
+                                <h3
+                                    class="font-bold text-lg text-gray-900 dark:text-white group-hover:text-primary transition-colors">
+                                    SwiftShift Movers</h3>
+                                <div
+                                    class="flex items-center gap-1 bg-yellow-50 dark:bg-yellow-900/30 px-1.5 py-0.5 rounded text-yellow-700 dark:text-yellow-400 text-xs font-bold">
+                                    4.5 <span class="material-symbols-outlined text-[12px] filled-icon">star</span>
+                                    <span class="text-gray-400 font-normal ml-0.5">(128)</span>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-500 mb-3 line-clamp-2">Reliable intercity moving services with
+                                real-time tracking. Experienced staff for delicate items.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="inline-flex items-center gap-1 px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-xs text-gray-600 dark:text-gray-300 font-medium">
+                                    <span class="material-symbols-outlined text-[14px]">local_shipping</span> Live
+                                    Tracking
+                                </span>
+                                <span
+                                    class="inline-flex items-center gap-1 px-2 py-1 rounded bg-blue-50 dark:bg-blue-900/20 text-xs text-blue-700 dark:text-blue-400 font-medium border border-blue-100 dark:border-blue-900">
+                                    <span class="material-symbols-outlined text-[14px]">verified</span> Verified
+                                </span>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center justify-between border-t border-gray-100 dark:border-gray-700 pt-4 mt-2">
+                            <div>
+                                <p class="text-xs text-gray-500">Estimated Quote</p>
+                                <p class="text-xl font-black text-gray-900 dark:text-white">₹9,800 <span
+                                        class="text-sm font-normal text-gray-400">- ₹11,200</span></p>
+                            </div>
+                            <div class="flex gap-3">
+                                <button onclick="showDetails('SwiftShift Movers')"
+                                    class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Details</button>
+                                <button onclick="bookNow('SwiftShift Movers')"
+                                    class="px-6 py-2 rounded-lg bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors">Book
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Comparison Table -->
+                <div
+                    class="mt-8 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                    <div class="p-5 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/50">
+                        <h3 class="font-bold text-lg">Compare Quotes</h3>
+                        <p class="text-sm text-gray-500">Comparing top 3 recommended partners</p>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left">
+                            <thead>
+                                <tr class="text-gray-500 border-b border-gray-200 dark:border-gray-700">
+                                    <th class="px-6 py-4 font-medium">Features</th>
+                                    <th class="px-6 py-4 font-bold text-primary">GreenMiles</th>
+                                    <th class="px-6 py-4 font-bold text-[#111318] dark:text-white">SwiftShift</th>
+                                    <th class="px-6 py-4 font-bold text-[#111318] dark:text-white">CityFast</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-300">Quote Price</td>
+                                    <td class="px-6 py-4 text-primary font-bold">₹12,500</td>
+                                    <td class="px-6 py-4 font-semibold">₹9,800</td>
+                                    <td class="px-6 py-4 font-semibold">₹10,500</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-300">Insurance Cover
+                                    </td>
+                                    <td class="px-6 py-4"><span class="text-green-600 font-medium">Full Coverage</span>
+                                    </td>
+                                    <td class="px-6 py-4">Basic Transit</td>
+                                    <td class="px-6 py-4">Full Coverage</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-300">Packing Quality
+                                    </td>
+                                    <td class="px-6 py-4">3-Layer Eco</td>
+                                    <td class="px-6 py-4">Standard</td>
+                                    <td class="px-6 py-4">Premium</td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 font-medium text-gray-900 dark:text-gray-300">Sustainability
+                                    </td>
+                                    <td class="px-6 py-4"><span
+                                            class="inline-flex items-center gap-1 text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">High</span>
+                                    </td>
+                                    <td class="px-6 py-4"><span class="text-gray-400">-</span></td>
+                                    <td class="px-6 py-4"><span
+                                            class="inline-flex items-center gap-1 text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Low</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Testimonials -->
+                <div class="mt-8">
+                    <h3 class="font-bold text-xl mb-6">What Customers Say</h3>
+                    <div class="flex gap-4 overflow-x-auto no-scrollbar pb-4">
+                        <!-- Testimonial 1 -->
+                        <div
+                            class="min-w-[280px] md:min-w-[320px] bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                            <div class="flex text-yellow-400 mb-3 text-sm">
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">"The webcam
+                                inventory feature was a game changer. The quote was accurate and no hidden costs at the
+                                end. The eco-friendly packaging was a nice touch!"</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-xs">
+                                    RJ</div>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">Rahul J.</p>
+                                    <p class="text-xs text-gray-500">Moved Bangalore to Pune</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div
+                            class="min-w-[280px] md:min-w-[320px] bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                            <div class="flex text-yellow-400 mb-3 text-sm">
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">"Very professional
+                                service. The team arrived on time and packed everything carefully. Nothing was broken.
+                                Would recommend SwiftShift."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-8 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 font-bold text-xs">
+                                    SK</div>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">Sneha K.</p>
+                                    <p class="text-xs text-gray-500">Local Shifting in Delhi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div
+                            class="min-w-[280px] md:min-w-[320px] bg-white dark:bg-gray-800 p-6 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm">
+                            <div class="flex text-yellow-400 mb-3 text-sm">
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                                <span class="material-symbols-outlined filled-icon">star</span>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">"Excellent
+                                experience. NoBroker support was very helpful throughout the process. The route tracking
+                                gave me peace of mind."</p>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-8 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold text-xs">
+                                    AM</div>
+                                <div>
+                                    <p class="text-sm font-bold text-gray-900 dark:text-white">Amit M.</p>
+                                    <p class="text-xs text-gray-500">Moved Mumbai to Hyderabad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        World's largest NoBrokerage property site. Connect directly with owners and save brokerage fees.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="testimonials.html">Testimonials</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="rental_agreement.html">Rental
+                                Agreement</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="packers_movers.html">Packers &
+                                Movers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="pay_rent.html">Pay Rent</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +91 99999 99999</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@nobroker.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video/Scanner Modal -->
+    <div id="scannerModal" class="fixed inset-0 z-[60] hidden overflow-y-auto" aria-labelledby="modal-title"
+        role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500/75 dark:bg-gray-900/80 backdrop-blur-sm transition-opacity"
+                onclick="closeModal('scannerModal')"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div
+                class="inline-block align-bottom bg-white dark:bg-gray-800 rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-xl sm:w-full">
+                <div class="bg-primary px-6 py-4 flex items-center justify-between">
+                    <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                        <span class="material-symbols-outlined">center_focus_strong</span>
+                        AI Inventory Scanner
+                    </h3>
+                    <button onclick="closeModal('scannerModal')"
+                        class="text-white/80 hover:text-white transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <div class="aspect-video bg-black rounded-lg relative overflow-hidden mb-4 group">
+                        <!-- Simulated Camera View -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <span
+                                class="material-symbols-outlined text-white/20 text-6xl animate-pulse">videocam_off</span>
+                        </div>
+                        <div
+                            class="absolute inset-4 border-2 border-primary/50 rounded-lg pointer-events-none border-dashed">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 bg-red-600 text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase animate-pulse">
+                            Live Webcam</div>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-sm text-gray-600 dark:text-gray-400">Point your camera at the items you want to
+                            move. Our AI will automatically identify and inventory them for an accurate quote.</p>
+                        <div
+                            class="bg-gray-50 dark:bg-gray-900/50 p-4 rounded-xl border border-gray-100 dark:border-gray-700">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Detected Items
+                            </h4>
+                            <div id="detectedItems" class="flex flex-wrap gap-2 text-xs font-medium">
+                                <span
+                                    class="bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-200 dark:border-gray-700">Waiting
+                                    for detection...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-900/50 px-6 py-4 flex justify-end gap-3">
+                    <button onclick="closeModal('scannerModal')"
+                        class="px-4 py-2 text-sm font-bold text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">Cancel</button>
+                    <button onclick="startScanning()" id="scanActionBtn"
+                        class="px-6 py-2 bg-primary text-white text-sm font-bold rounded-lg shadow-lg shadow-primary/20 hover:bg-primary-dark transition-colors">Start
+                        Scanning</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mover Details Modal -->
+    <div id="detailsModal" class="fixed inset-0 z-[60] hidden overflow-y-auto" role="dialog" aria-modal="true">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500/75 dark:bg-gray-900/80 backdrop-blur-sm transition-opacity"
+                onclick="closeModal('detailsModal')"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+            <div
+                class="inline-block align-bottom bg-white dark:bg-gray-800 rounded-2xl text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+                <div class="relative h-48 bg-gray-200">
+                    <img id="moverHeroImg"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiiO4QkXxQBlYnyTmVp66QtvBqT4taJBNKikhyw2g_AOkkjLuEBP9AkpHOlup22LsnAqeXu7Fy1yRTIqOO8DI2g_LnzCr_Rv-q3F5uOiqtIVh31ZKiIYN0pG9CYB2YMRUPiT6P3di7w1HK_fPJoc1m6PICmn8sCuWbeJSK70gw2Klzrhqe5zoeWDbfWGaMZ0Bsuco5fh2tg8HSuyechi9ZNCL1xRIazuwzKpPTD0PCZvyP0k88VLU1dG0VgX23r5Y1wvUdIKKoePjg"
+                        class="w-full h-full object-cover" alt="Mover detail">
+                    <button onclick="closeModal('detailsModal')"
+                        class="absolute top-4 right-4 size-10 rounded-full bg-black/50 text-white flex items-center justify-center backdrop-blur-md hover:bg-black/70 transition-colors">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                </div>
+                <div class="p-6">
+                    <div class="flex flex-col sm:flex-row justify-between items-start gap-4 mb-6">
+                        <div>
+                            <h3 id="moverName" class="text-2xl font-black text-gray-900 dark:text-white mb-2">Mover Name
+                            </h3>
+                            <div class="flex items-center gap-3">
+                                <span
+                                    class="bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-400 px-2 py-0.5 rounded text-xs font-bold flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm filled-icon">star</span> 4.9
+                                </span>
+                                <span class="text-sm text-gray-500">Verified Partner since 2019</span>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Starting From</p>
+                            <p class="text-2xl font-black text-primary">₹8,500</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Core Services</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-center gap-3 text-sm font-medium">
+                                    <span class="material-symbols-outlined text-primary">check_circle</span>
+                                    3-Layer Protective Packing
+                                </li>
+                                <li class="flex items-center gap-3 text-sm font-medium">
+                                    <span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Furniture Dismantling/Assembly
+                                </li>
+                                <li class="flex items-center gap-3 text-sm font-medium">
+                                    <span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Dedicated Shifting Manager
+                                </li>
+                                <li class="flex items-center gap-3 text-sm font-medium">
+                                    <span class="material-symbols-outlined text-primary">check_circle</span>
+                                    Insurance Coverage Included
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm uppercase tracking-wider text-gray-400 mb-4">Add-ons Available
+                            </h4>
+                            <div class="space-y-3">
+                                <div
+                                    class="flex justify-between items-center bg-gray-50 dark:bg-gray-900/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                                    <span class="text-sm">Storage Facility</span>
+                                    <span class="text-xs font-bold text-gray-900 dark:text-white">+ ₹2,000</span>
+                                </div>
+                                <div
+                                    class="flex justify-between items-center bg-gray-50 dark:bg-gray-900/50 p-3 rounded-lg border border-gray-100 dark:border-gray-700">
+                                    <span class="text-sm">Fragile Item Crate</span>
+                                    <span class="text-xs font-bold text-gray-900 dark:text-white">+ ₹800</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-gray-900/50 px-6 py-4 flex justify-between items-center">
+                    <button class="text-sm font-bold text-primary hover:underline">View All Reviews</button>
+                    <button onclick="bookNow('Current Mover')"
+                        class="px-8 py-3 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Book
+                        This Mover</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+
+    <script>
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `max-w-md w-full bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 flex items-center gap-3 pointer-events-auto transition-all duration-300 translate-x-full border-l-4 ${type === 'success' ? 'border-primary' : 'border-red-500'}`;
+
+            const icon = type === 'success' ? 'check_circle' : 'error';
+            const iconColor = type === 'success' ? 'text-primary' : 'text-red-500';
+
+            toast.innerHTML = `
+                <span class="material-symbols-outlined ${iconColor}">${icon}</span>
+                <p class="text-sm font-semibold text-gray-900 dark:text-white">${message}</p>
+            `;
+
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.remove('translate-x-full'), 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function checkQuotes() {
+            showToast('Fetching latest quotes for your route...');
+            setTimeout(() => {
+                showToast('Found 12 top-rated movers matching your criteria!');
+                window.scrollTo({
+                    top: document.querySelector('main').offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            }, 800);
+        }
+
+        function openScanner() {
+            openModal('scannerModal');
+            document.getElementById('detectedItems').innerHTML = '<span class="bg-white dark:bg-gray-800 px-2 py-1 rounded border border-gray-200 dark:border-gray-700">Waiting for detection...</span>';
+            document.getElementById('scanActionBtn').innerText = 'Start Scanning';
+        }
+
+        function startScanning() {
+            const btn = document.getElementById('scanActionBtn');
+            const detected = document.getElementById('detectedItems');
+
+            btn.innerHTML = '<span class="flex items-center gap-2"><svg class="animate-spin h-4 w-4" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Scanning...</span>';
+
+            const items = ['3-Seater Sofa', 'Queen Size Bed', 'Refrigerator', '4 Chairs', 'Dining Table', '6 Medium Boxes'];
+            let i = 0;
+            detected.innerHTML = '';
+
+            const interval = setInterval(() => {
+                if (i < items.length) {
+                    const span = document.createElement('span');
+                    span.className = 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2 py-1 rounded border border-blue-100 dark:border-blue-800 animate-bounce';
+                    span.innerText = items[i];
+                    detected.appendChild(span);
+                    i++;
+                } else {
+                    clearInterval(interval);
+                    btn.innerText = 'Scanning Complete';
+                    showToast('Inventory updated successfully!');
+                    setTimeout(() => closeModal('scannerModal'), 1000);
+                }
+            }, 400);
+        }
+
+        function showDetails(name) {
+            document.getElementById('moverName').innerText = name;
+            openModal('detailsModal');
+        }
+
+        function bookNow(name) {
+            showToast(`Initiating booking for ${name}...`);
+            setTimeout(() => {
+                showToast(`Booking Successful! A relationship manager will contact you shortly.`, 'success');
+                closeModal('detailsModal');
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
+

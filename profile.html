@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NoBroker User Dashboard</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2332",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        /* Custom scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200 min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <header
+        class="sticky top-0 z-50 w-full bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+                </a>
+                <!-- Nav Links (Desktop) -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="buy.html">Buy</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Rent</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="commercial.html">Commercial</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="pay_rent.html">Pay
+                        Rent</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="post_property.html">Post
+                        Property</a>
+                </div>
+                <!-- Actions -->
+                <a href="index.html" class="flex items-center gap-4">
+                    <button
+                        class="relative flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-400 transition-colors">
+                        <span class="material-symbols-outlined text-[24px]">notifications</span>
+                        <span
+                            class="absolute top-2 right-2 size-2.5 bg-red-500 rounded-full border-2 border-white dark:border-surface-dark"></span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 text-slate-600 dark:text-slate-400 transition-colors">
+                        <span class="material-symbols-outlined text-[24px]">help</span>
+                    </button>
+                    <div class="size-10 rounded-full bg-cover bg-center border border-gray-200 dark:border-gray-700 cursor-pointer"
+                        data-alt="User avatar of Rahul"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOC2MjLPTZtNrreTwfGkESbS8AmYhg_eKiAYBs6kcAz3XsmSAMbIdyHrpQ8VddP5zjyhaH3pQfXHp-Y4gCqDMzVhwKWDFUn18MI0rW-Ls4c1aWR8Yy0C_Mw2uC7brx-SXCYcUqGU40OGejV9omCooBEkwisVyybdBjBGMvjiLNNeYLrDdZ5O1P6bd4edcX6zGxB1MFBqP09KnKGDh7eTvqLFUKC6BziBh-3UU27Qtu01-xTNjtMF_tKH5X7QIgMHDmM7A4CPwsjym9');">
+                    </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Welcome Section -->
+        <div class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white mb-2">Welcome back, Rahul
+                </h1>
+                <p class="text-slate-500 dark:text-slate-400">You have <span class="font-medium text-primary">3 new
+                        leads</span> and <span class="font-medium text-primary">2 unread messages</span> today.</p>
+            </div>
+            <button
+                class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-medium transition-colors shadow-lg shadow-primary/20"
+                onclick="window.location.href='post_property.html'">
+                <span class="material-symbols-outlined text-[20px]">add_home_work</span>
+                Post New Property
+            </button>
+        </div>
+        <!-- Profile Header Card -->
+        <div
+            class="bg-surface-light dark:bg-surface-dark rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-800 mb-8">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                <div class="relative">
+                    <div class="size-24 rounded-full bg-cover bg-center border-4 border-white dark:border-gray-700 shadow-md"
+                        data-alt="Profile picture of Rahul Sharma"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5ke7cjWdBJZrshyr-1HWAofqiDjoyym1g8ZxNdJqTQQiPefp3rM7n35WlxK7St5TAXFPyH3iNuWZrwH2fUO7U2rMcRUwHCssu1vMDgdsLyDMRruiU7glDqoXxeHT2N_7WSWJFlKS1KfU_AMnvx0ep9GYgPdjHflTQTaAELbp2BU_4JjIUFrPf_tLcbkn3Mtrg7gATKaH21u2r4kOR2GsNL0b3AqDVsEDawsCou9vwqGfu0Vquqpqao1UvUxMNdiGv4DzGTnsO1UYw');">
+                    </div>
+                    <button
+                        class="absolute bottom-0 right-0 p-1.5 bg-white dark:bg-gray-700 rounded-full border border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:text-primary shadow-sm">
+                        <span class="material-symbols-outlined text-[16px] block">photo_camera</span>
+                    </button>
+                </div>
+                <div class="flex-1 text-center sm:text-left">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 mb-1">
+                        <h2 class="text-xl font-bold text-slate-900 dark:text-white">Rahul Sharma</h2>
+                        <span
+                            class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-xs font-semibold">
+                            <span class="material-symbols-outlined text-[14px]">verified</span> Verified Owner
+                        </span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-3">Member since 2021 • Bangalore, India</p>
+                    <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
+                        <div
+                            class="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-800/50 px-3 py-1.5 rounded-lg border border-gray-100 dark:border-gray-700">
+                            <span class="material-symbols-outlined text-yellow-500 text-[18px]">star</span>
+                            <span class="text-sm font-medium">Trust Score: 9/10</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-1.5 bg-gray-50 dark:bg-gray-800/50 px-3 py-1.5 rounded-lg border border-gray-100 dark:border-gray-700">
+                            <span class="material-symbols-outlined text-blue-500 text-[18px]">phone_iphone</span>
+                            <span class="text-sm font-medium">Phone Verified</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-auto mt-4 sm:mt-0">
+                    <button id="editProfileBtn" onclick="window.location.href='edit_profile.html'"
+                        class="w-full sm:w-auto px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm font-medium text-slate-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                        Edit Profile
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Dashboard Layout Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column: Tabs & Main Content -->
+            <div class="lg:col-span-2 flex flex-col gap-6">
+                <!-- Tabs -->
+                <div class="border-b border-gray-200 dark:border-gray-800 overflow-x-auto">
+                    <nav aria-label="Tabs" class="-mb-px flex space-x-8">
+                        <a class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-semibold text-sm flex items-center gap-2"
+                            href="my_listings.html">
+                            <span class="material-symbols-outlined text-[20px]">list_alt</span>
+                            My Listings
+                            <span class="bg-primary/10 text-primary py-0.5 px-2 rounded-full text-xs ml-1">4</span>
+                        </a>
+                        <a class="border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2"
+                            href="saved_searches.html">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            Saved Searches
+                        </a>
+                        <a class="border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2"
+                            href="messages.html">
+                            <span class="material-symbols-outlined text-[20px]">chat</span>
+                            Messages
+                        </a>
+                        <a class="border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm flex items-center gap-2"
+                            href="transactions.html">
+                            <span class="material-symbols-outlined text-[20px]">receipt_long</span>
+                            Transactions
+                        </a>
+                    </nav>
+                </div>
+                <!-- Active Tab Content: Listings Grid -->
+                <div class="space-y-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                        <div class="flex flex-col md:flex-row">
+                            <!-- Image -->
+                            <div class="md:w-64 h-48 md:h-auto relative bg-gray-200">
+                                <div class="absolute inset-0 bg-cover bg-center"
+                                    data-alt="Modern apartment interior with blue sofa"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuADIcU9fYB2AKnq-9Vx92bW0v6IvUMLgwMscThuQIB_dLNf-We7H88jxbWzD5kLC4soPb1qNdYMndoE_6YTddNWPtQ126e2Y2fhJtGNlbLVJDDkxJMTHO4rgeH9XnW4JlOfykkAiKZbJDV6MAgS4E4e2KBho0EfK3mJ2EuC6-r1NUUl_Yi6ktg6HRHrLdMvASri1JGuIM-z-aNyMwr1FEiy118ndmuQTaFlad1GNdxULZfxzZCvVGJ42EcLbyKVvDqCSpN0F1gHN3eV');">
+                                </div>
+                                <div
+                                    class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                    ACTIVE</div>
+                                <div
+                                    class="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-[14px]">photo_library</span> 12
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3
+                                            class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                            3 BHK Luxury Apartment</h3>
+                                        <span class="text-lg font-bold text-slate-900 dark:text-white">₹65,000<span
+                                                class="text-sm text-slate-500 font-normal">/mo</span></span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                        Koramangala 4th Block, Bangalore
+                                    </p>
+                                    <!-- Analytics Row -->
+                                    <div
+                                        class="grid grid-cols-3 gap-4 py-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-4">
+                                        <div
+                                            class="text-center border-r border-gray-200 dark:border-gray-700 last:border-0">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Views</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">245</p>
+                                        </div>
+                                        <div
+                                            class="text-center border-r border-gray-200 dark:border-gray-700 last:border-0">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Leads</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">12</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Msgs</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">5</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button onclick="window.location.href='edit_listing.html'"
+                                        class="flex-1 py-2 px-3 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-semibold transition-colors flex justify-center items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">edit</span>
+                                        Edit
+                                    </button>
+                                    <button onclick="window.location.href='boost_listing.html'"
+                                        class="flex-1 py-2 px-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold transition-colors flex justify-center items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+                                        Boost
+                                    </button>
+                                    <button
+                                        class="size-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-slate-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                        <div class="flex flex-col md:flex-row">
+                            <!-- Image -->
+                            <div class="md:w-64 h-48 md:h-auto relative bg-gray-200">
+                                <div class="absolute inset-0 bg-cover bg-center grayscale"
+                                    data-alt="Minimalist living room with balcony"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDxKVLbco-lo5LDX42z0xTE7jxjxlPZllon-r15qRQPW1XRArAlQFrUJ13s06w7dSIPQnJ0xUnqYsapDSgrdoAq_WFC9Y_WZpkTO7CX7DMFt3UCazTOyLYyEhMga910eIJacI6154wgqesHQ-9ckLMe6aDR4bwf7_iMvxeByVjNRBqgSRgKGPwMf0iUaO0GG8wZozk4WT4GT1RyuZzBZOVNyvEpRMXtNl4eAG-gTYDHujS8e7w2mTNHZN-ISbjtvDDJ18MYkOK597pn');">
+                                </div>
+                                <div
+                                    class="absolute top-3 left-3 bg-gray-500 text-white text-xs font-bold px-2 py-1 rounded">
+                                    INACTIVE</div>
+                            </div>
+                            <!-- Content -->
+                            <div class="p-5 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3
+                                            class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                                            2 BHK in Indiranagar</h3>
+                                        <span class="text-lg font-bold text-slate-900 dark:text-white">₹42,000<span
+                                                class="text-sm text-slate-500 font-normal">/mo</span></span>
+                                    </div>
+                                    <p class="text-slate-500 dark:text-slate-400 text-sm mb-4 flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                        Indiranagar 1st Stage, Bangalore
+                                    </p>
+                                    <!-- Analytics Row -->
+                                    <div
+                                        class="grid grid-cols-3 gap-4 py-3 bg-gray-50 dark:bg-gray-800/50 rounded-lg mb-4 opacity-75">
+                                        <div
+                                            class="text-center border-r border-gray-200 dark:border-gray-700 last:border-0">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Views</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">89</p>
+                                        </div>
+                                        <div
+                                            class="text-center border-r border-gray-200 dark:border-gray-700 last:border-0">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Leads</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">3</p>
+                                        </div>
+                                        <div class="text-center">
+                                            <p
+                                                class="text-xs text-slate-500 dark:text-slate-400 uppercase font-semibold">
+                                                Msgs</p>
+                                            <p class="text-lg font-bold text-slate-900 dark:text-white">1</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-auto">
+                                    <button
+                                        class="flex-1 py-2 px-3 bg-white dark:bg-surface-dark border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 text-slate-700 dark:text-slate-300 rounded-lg text-sm font-semibold transition-colors flex justify-center items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px]">visibility</span>
+                                        Activate
+                                    </button>
+                                    <button
+                                        class="size-9 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 text-slate-500 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">
+                                        <span class="material-symbols-outlined text-[20px]">delete</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Column: Sidebar Widgets -->
+            <div class="flex flex-col gap-6">
+                <!-- Portfolio Chart Widget -->
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-slate-900 dark:text-white">Property Portfolio</h3>
+                        <button class="text-primary text-sm font-medium hover:underline">View Details</button>
+                    </div>
+                    <!-- Pie Chart Simulation using Conic Gradient -->
+                    <div class="flex flex-col items-center">
+                        <div class="relative size-48 rounded-full mb-6"
+                            style="background: conic-gradient(#1152d4 0% 65%, #60a5fa 65% 85%, #94a3b8 85% 100%);">
+                            <!-- Inner circle for Donut Chart effect -->
+                            <div
+                                class="absolute inset-0 m-auto size-32 bg-surface-light dark:bg-surface-dark rounded-full flex flex-col items-center justify-center">
+                                <span class="text-xs text-slate-500 uppercase font-semibold">Total Value</span>
+                                <span class="text-xl font-bold text-slate-900 dark:text-white">₹4.2 Cr</span>
+                            </div>
+                        </div>
+                        <!-- Legend -->
+                        <div class="w-full space-y-3">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-3 rounded-full bg-primary"></div>
+                                    <span class="text-sm text-slate-600 dark:text-slate-300">Residential</span>
+                                </div>
+                                <span class="text-sm font-bold text-slate-900 dark:text-white">65%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-3 rounded-full bg-blue-400"></div>
+                                    <span class="text-sm text-slate-600 dark:text-slate-300">Commercial</span>
+                                </div>
+                                <span class="text-sm font-bold text-slate-900 dark:text-white">20%</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-3 rounded-full bg-slate-400"></div>
+                                    <span class="text-sm text-slate-600 dark:text-slate-300">Land/Plot</span>
+                                </div>
+                                <span class="text-sm font-bold text-slate-900 dark:text-white">15%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Recent Messages Preview -->
+                <div
+                    class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+                    <h3 class="font-bold text-slate-900 dark:text-white mb-4">Recent Messages</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3 pb-3 border-b border-gray-100 dark:border-gray-800">
+                            <div class="size-10 rounded-full bg-cover bg-center" data-alt="Avatar of Priya"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCHESNUZhjBTPVI-O00vSS9D7SVPMcJBeJ2THGt-qyHbPvJg_ex_PEGRM9R1xQHCpX5GxoS5eMbUoN7m7LtII2OETp9l1cX-n2VhIcdjTQle4u6-qHTNMZa_5MjW4Rt0uhTTBWt9DmkczCkdEuI6wdfLhgEC9HZpomMY_ii6raxxqnLxuF0LQev2lwKJGSvpkdPn2CDzUMYq122JOrhQxe6QIaLMF3xiXjmX4bAfVxYgd3dKVfTfDq57dSwpxhyqVZSUOd2yQAMpXJ3');">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <p class="text-sm font-bold text-slate-900 dark:text-white truncate">Priya Singh</p>
+                                    <span class="text-xs text-slate-400">10m</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">Is the 3BHK flat still
+                                    available for visiting...</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="size-10 rounded-full bg-cover bg-center" data-alt="Avatar of Amit"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBNCH9KIU2c6leHodyhhu6WY77yzyb4JC4D0EDMwY_4cyE6QokE51W3_hM3fm7PFk6t_cJ0AsIFO_I9l7oDigmdeCL7xXssRRoOKQlIc-7XMH8mJu_qaBOhCIcNFBPmCgIy6MDW_PhKZSkWCbApKSMw5KcS3HHToXc0YgDLpeerO9rplLZjd0UDfjArSnUHyRNX3G-5pnFy5jh8LrXLzgzcpPJ844gPPj-RIuZZFKMxG8B6KLUMUzYxEwVWpXq6DNPw0X0833zHBkSa');">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex justify-between items-center mb-1">
+                                    <p class="text-sm font-bold text-slate-900 dark:text-white truncate">Amit Kumar</p>
+                                    <span class="text-xs text-slate-400">2h</span>
+                                </div>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 truncate">I've sent the advance
+                                    payment proof.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="window.location.href='messages.html'"
+                        class="w-full mt-4 text-center text-sm font-medium text-primary hover:text-primary-dark transition-colors">View
+                        All Messages</button>
+                </div>
+                <!-- Privacy Notice -->
+                <div
+                    class="bg-blue-50 dark:bg-blue-900/10 p-4 rounded-xl border border-blue-100 dark:border-blue-800/30 flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary text-[24px]">shield</span>
+                    <div>
+                        <p class="text-sm font-bold text-slate-900 dark:text-white mb-1">Your data is secure</p>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                            NoBroker ensures your phone number is masked from general public view to prevent spam.
+                            <a class="text-primary hover:underline ml-1" href="#">Learn more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 w-full mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        World's largest NoBrokerage property site. Connect directly with owners and save brokerage fees.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="testimonials.html">Testimonials</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="rental_agreement.html">Rental
+                                Agreement</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="packers_movers.html">Packers &
+                                Movers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="pay_rent.html">Pay Rent</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +91 99999 99999</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@nobroker.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Success Toast -->
+    <div id="toast"
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#111318] text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 opacity-0 translate-y-10 transition-all duration-300 pointer-events-none">
+        <span class="material-symbols-outlined text-primary">check_circle</span>
+        <span id="toastMessage" class="text-sm font-semibold">Profile updated!</span>
+    </div>
+
+    <script>
+        document.getElementById('editProfileBtn').addEventListener('click', () => {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('opacity-0', 'translate-y-10');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'translate-y-10');
+                toast.classList.remove('opacity-100', 'translate-y-0');
+            }, 3000);
+        });
+    </script>
+</body>
+
+</html>

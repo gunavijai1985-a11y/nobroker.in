@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Home Services - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                    <span class="text-xl font-black text-gray-900 dark:text-white">NoBroker</span>
+                </a>
+                <a href="index.html"
+                    class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <h1 class="text-4xl font-black mb-12 text-center">Expert Home Services</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="painting_cleaning.html"
+                class="group bg-white dark:bg-[#1e293b] p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                <div
+                    class="size-14 bg-orange-100 dark:bg-orange-900/30 text-orange-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">format_paint</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Painting</h3>
+                <p class="text-sm text-gray-500">Refresh your walls with professional painting.</p>
+            </a>
+
+            <a href="painting_cleaning.html"
+                class="group bg-white dark:bg-[#1e293b] p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                <div
+                    class="size-14 bg-blue-100 dark:bg-blue-900/30 text-blue-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">cleaning_services</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Cleaning</h3>
+                <p class="text-sm text-gray-500">Deep cleaning for every corner of your home.</p>
+            </a>
+
+            <a href="packers_movers.html"
+                class="group bg-white dark:bg-[#1e293b] p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                <div
+                    class="size-14 bg-green-100 dark:bg-green-900/30 text-green-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">local_shipping</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Packers & Movers</h3>
+                <p class="text-sm text-gray-500">Safe and affordable relocation services.</p>
+            </a>
+            <a href="interiors.html"
+                class="group bg-white dark:bg-[#1e293b] p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                <div
+                    class="size-14 bg-purple-100 dark:bg-purple-900/30 text-purple-600 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <span class="material-symbols-outlined text-3xl">design_services</span>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Interiors</h3>
+                <p class="text-sm text-gray-500">Design your dream home with expert interior designers.</p>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>

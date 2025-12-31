@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Boost Listing - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>tailwind.config={theme:{extend:{colors:{primary:"#1152d4","primary-dark":"#0d42af","background-light":"#f6f6f8","text-main":"#111318","text-sub":"#616f89"}}}}</script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="bg-background-light text-text-main">
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html"><img src="logo.png" alt="NoBroker" class="h-8"></a>
+            <nav class="hidden md:flex gap-8"><a href="buy.html" class="text-sm font-medium hover:text-primary">Buy</a><a href="index.html" class="text-sm font-medium hover:text-primary">Rent</a><a href="commercial.html" class="text-sm font-medium hover:text-primary">Commercial</a><a href="pay_rent.html" class="text-sm font-medium hover:text-primary">Pay Rent</a></nav>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="buy.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Buy</a>
+                <a href="index.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Rent</a>
+                <a href="commercial.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Commercial</a>
+                <a href="pay_rent.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Pay Rent</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <a href="my_listings.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline mb-4">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>Back to My Listings
+            </a>
+            <h1 class="text-4xl font-bold mb-2">Boost Your Listing</h1>
+            <p class="text-text-sub text-lg">Get more visibility and attract qualified tenants</p>
+        </div>
+
+        <!-- Current Performance -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200 p-8 mb-12">
+            <h2 class="text-xl font-bold mb-6">Your Listing Performance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div>
+                    <p class="text-text-sub text-sm mb-1">Views</p>
+                    <p class="text-3xl font-bold">245</p>
+                    <p class="text-xs text-text-sub mt-2">↑ 12% this week</p>
+                </div>
+                <div>
+                    <p class="text-text-sub text-sm mb-1">Calls</p>
+                    <p class="text-3xl font-bold">12</p>
+                    <p class="text-xs text-text-sub mt-2">↑ 8% this week</p>
+                </div>
+                <div>
+                    <p class="text-text-sub text-sm mb-1">Messages</p>
+                    <p class="text-3xl font-bold">5</p>
+                    <p class="text-xs text-text-sub mt-2">Last 7 days</p>
+                </div>
+                <div>
+                    <p class="text-text-sub text-sm mb-1">Search Rank</p>
+                    <p class="text-3xl font-bold">#12</p>
+                    <p class="text-xs text-text-sub mt-2">In Indiranagar</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boost Plans -->
+        <h2 class="text-2xl font-bold mb-8">Promotion Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Plan 1 -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-shadow flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold">Bronze Plan</h3>
+                    <span class="material-symbols-outlined text-2xl text-orange-500">bolt</span>
+                </div>
+                <p class="text-text-sub text-sm mb-6">Basic visibility boost</p>
+                <ul class="space-y-3 mb-8 flex-1 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Boost for 7 days</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Featured in searches</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Priority support</span>
+                    </li>
+                </ul>
+                <p class="text-2xl font-bold mb-4">₹999</p>
+                <button class="w-full py-3 bg-orange-100 text-orange-600 rounded-lg font-semibold hover:bg-orange-200 transition-colors">Choose Plan</button>
+            </div>
+
+            <!-- Plan 2 (Popular) -->
+            <div class="bg-white rounded-2xl border-2 border-primary p-8 hover:shadow-lg transition-shadow flex flex-col ring-2 ring-primary/10 relative">
+                <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold">MOST POPULAR</span>
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold">Silver Plan</h3>
+                    <span class="material-symbols-outlined text-2xl text-blue-500">flash_on</span>
+                </div>
+                <p class="text-text-sub text-sm mb-6">Maximum reach & engagement</p>
+                <ul class="space-y-3 mb-8 flex-1 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Boost for 30 days</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Top of search results</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Highlighted badge</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Dedicated account manager</span>
+                    </li>
+                </ul>
+                <p class="text-2xl font-bold mb-4">₹2,999</p>
+                <button class="w-full py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-semibold transition-colors">Choose Plan</button>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-8 hover:shadow-lg transition-shadow flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold">Gold Plan</h3>
+                    <span class="material-symbols-outlined text-2xl text-yellow-500">stars</span>
+                </div>
+                <p class="text-text-sub text-sm mb-6">Premium placement & visibility</p>
+                <ul class="space-y-3 mb-8 flex-1 text-sm">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Boost for 90 days</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>#1 search placement</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>Premium badge + banner</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-sm text-green-500 mt-0.5">check_circle</span>
+                        <span>24/7 premium support</span>
+                    </li>
+                </ul>
+                <p class="text-2xl font-bold mb-4">₹6,999</p>
+                <button class="w-full py-3 bg-yellow-100 text-yellow-700 rounded-lg font-semibold hover:bg-yellow-200 transition-colors">Choose Plan</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-sub">© 2025 NoBroker Technologies</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

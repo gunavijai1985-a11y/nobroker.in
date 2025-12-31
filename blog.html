@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NoBroker Blog - Real Estate Insights</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom Masonry support */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+
+        .break-inside-avoid {
+            break-inside: avoid;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white overflow-x-hidden">
+    <!-- TopNavBar -->
+    <div
+        class="relative flex w-full flex-col bg-white dark:bg-[#1a202c] border-b border-solid border-b-[#f0f2f4] dark:border-b-gray-800">
+        <header class="flex items-center justify-between whitespace-nowrap px-4 py-3 md:px-10 lg:px-20 xl:px-40">
+            <a href="index.html">
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="size-8 text-primary flex items-center justify-center">
+                        <span class="material-symbols-outlined text-3xl">apartment</span>
+                    </div>
+                    <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex flex-1 justify-end gap-8">
+                <div class="flex items-center gap-9">
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="buy.html">Buy</a>
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="index.html">Rent</a>
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="commercial.html">Commercial</a>
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="pay_rent.html">Pay Rent</a>
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="packers_movers.html">Packers &amp; Movers</a>
+                    <a class="text-primary text-sm font-bold leading-normal" href="blog.html">Blog</a>
+                    <a class="text-[#111318] dark:text-gray-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors"
+                        href="login.html">Login</a>
+                </div>
+                <button
+                    class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors shadow-md"
+                    onclick="window.location.href='post_property.html'">
+                    <span class="truncate">Post Your Property</span>
+                </button>
+            </div>
+            <!-- Mobile Menu Icon -->
+            <div class="lg:hidden text-[#111318] dark:text-white">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+        </header>
+    </div>
+    <!-- Main Content Layout -->
+    <div class="flex flex-col min-h-screen">
+        <!-- Hero Section -->
+        <div class="w-full bg-white dark:bg-[#1a202c]">
+            <div class="px-4 py-8 md:px-10 lg:px-20 xl:px-40">
+                <div class="@container">
+                    <div
+                        class="flex flex-col gap-6 rounded-xl bg-gray-50 dark:bg-gray-800/50 p-4 md:p-8 lg:flex-row shadow-sm">
+                        <div class="w-full lg:w-3/5 bg-center bg-no-repeat aspect-video bg-cover rounded-lg shadow-md"
+                            data-alt="Modern city skyline with skyscrapers at sunset representing real estate growth"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqCu1bS77aDdV5bFwta2vZ-mx6ZVYIIN82NerLPdF7JR7wKjae184oIpOQK4NqrsJzljjpJcva3uqF_9ha1VSaTr1tj0KfOs2mHKb1k0FaVt00LSgo_yK3ToYU3S436zamJ42lGctOdiGoJkqqInc2vzLuQLa4Hq-Ut_R9i4S0OKXbFwXyr2mLaN38aKHUpvVmp718r4hf_1qdE3HaM9dPBThClgsEtzlj0eOng8dnzZa642upd39z9t0D9ovmgdDRvDCJrjZVaYob");'>
+                        </div>
+                        <div class="flex flex-col justify-center gap-6 lg:w-2/5">
+                            <div class="flex flex-col gap-3 text-left">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Featured
+                                    Article</span>
+                                <h1
+                                    class="text-[#111318] dark:text-white text-3xl font-black leading-tight tracking-[-0.033em] md:text-4xl lg:text-5xl">
+                                    Top 10 Cities to Invest in Real Estate in 2024
+                                </h1>
+                                <p
+                                    class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-relaxed md:text-base">
+                                    Discover the emerging markets offering the highest rental yields and capital
+                                    appreciation this year. A comprehensive guide for new and seasoned investors.
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <button id="featuredReadBtn"
+                                    class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-blue-700 transition-colors shadow-sm">
+                                    <span class="truncate">Read Now</span>
+                                </button>
+                                <span class="text-xs text-[#616f89] dark:text-gray-500 font-medium">8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Two Column Layout: Articles + Sidebar -->
+        <div class="px-4 py-10 md:px-10 lg:px-20 xl:px-40">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- Left Column: Article Grid (Masonry) -->
+                <div class="lg:col-span-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-[#111318] dark:text-white">Latest Articles</h2>
+                        <div class="flex gap-2 text-sm text-[#616f89]">
+                            <span class="font-bold text-primary cursor-pointer">All</span>
+                            <span class="cursor-pointer hover:text-primary">Popular</span>
+                            <span class="cursor-pointer hover:text-primary">Trending</span>
+                        </div>
+                    </div>
+                    <div id="articleGrid" class="masonry-grid">
+                        <!-- Article Card 1 -->
+                        <div
+                            class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group">
+                            <div class="h-48 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative"
+                                data-alt="Person signing legal documents for property verification"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBUSM7lR5r1UwZ-bQ3bAF8XaCxweGVMjKBSxgrXFtXo-jnG_muESTaCva1QcOxfnOnwkUvZTjl4ged4Y7KCAAfNkOdNgibYAbMSLmudm2KishqEjf-xx_AXq7l0bB8p5BKo2rGeolWWQ2HKLQq07jYSWllZAF7ALrnQe7wCpvnKN02WfrwdU3GwMoz0iL_Xr5oxEx0Y-CAj3QXomr9aAVi9AtbAG_DHLdUW_VY1fHuLAfU798y0EzYU0PIeLWa7RK0CpWlqyltEuAmQ');">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors">
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span
+                                    class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-primary uppercase bg-blue-50 dark:bg-blue-900/30 rounded">Legal
+                                    Advice</span>
+                                <h3
+                                    class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                                    How to verify property documents without a broker
+                                </h3>
+                                <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                                    Step-by-step guide to checking title deeds, encumbrance certificates, and approved
+                                    plans to ensure your investment is safe.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                                    <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read
+                                        More</button>
+                                    <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">6 min
+                                        read</span>
+                                    <button
+                                        class="material-symbols-outlined text-[#616f89] hover:text-primary text-[20px]">share</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Article Card 2 -->
+                        <div
+                            class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group">
+                            <div class="h-56 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative"
+                                data-alt="Modern living room with stylish furniture and bright lighting"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhuuZ6dgWTLaNVTs_zpSpswToVHC6xelIv2t_WAhuOBxrP9M4uBQh5BPJycFC8RzezaNKk2QcW13caMHnweECIeKNDCLBtrn4wekbSIMjM0TQz_lTGEPyVgTBxxrL-XyXBwioUSdtryWQdvnVrvziEjv9zVOgxraHztKjo6Q7_i_Y_y2qG_xzV1ptGCTzYndWcKU-J18d42iluXHEw1MBiQB11_oSvZNATfncrqd2BIERFtewEJCJXGxpv8_pevAutuAdKKB0kXxyy');">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors">
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span
+                                    class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-green-600 uppercase bg-green-50 dark:bg-green-900/30 rounded">Home
+                                    Decor</span>
+                                <h3
+                                    class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                                    5 DIY Home Decor Hacks for Renters
+                                </h3>
+                                <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                                    Spruce up your rental apartment without losing your deposit. Removable wallpaper,
+                                    lighting tricks, and more.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                                    <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read
+                                        More</button>
+                                    <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">4 min
+                                        read</span>
+                                    <button
+                                        class="material-symbols-outlined text-[#616f89] hover:text-primary text-[20px]">share</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Poll Widget (Inserted into Grid) -->
+                        <div
+                            class="break-inside-avoid mb-6 rounded-lg bg-gradient-to-br from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 border border-blue-100 dark:border-gray-700 p-6 shadow-sm">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="material-symbols-outlined text-primary">poll</span>
+                                <h4 class="font-bold text-[#111318] dark:text-white">Quick Poll</h4>
+                            </div>
+                            <p class="text-sm font-medium mb-4 text-[#111318] dark:text-gray-200">What's your biggest
+                                hurdle in house hunting?</p>
+                            <div class="space-y-3">
+                                <label
+                                    class="relative flex items-center p-3 rounded-lg border border-blue-200 dark:border-gray-600 bg-white dark:bg-[#1a202c] cursor-pointer hover:border-primary transition-colors group">
+                                    <input class="sr-only peer" name="poll" type="radio" />
+                                    <div
+                                        class="absolute inset-0 bg-blue-50 dark:bg-blue-900/20 w-[45%] rounded-l-lg opacity-50">
+                                    </div>
+                                    <div class="relative z-10 flex w-full justify-between items-center text-sm">
+                                        <span class="font-medium text-[#111318] dark:text-gray-200">High
+                                            Brokerage</span>
+                                        <span class="font-bold text-primary">45%</span>
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 border-2 border-primary rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+                                    </div>
+                                </label>
+                                <label
+                                    class="relative flex items-center p-3 rounded-lg border border-blue-200 dark:border-gray-600 bg-white dark:bg-[#1a202c] cursor-pointer hover:border-primary transition-colors group">
+                                    <input class="sr-only peer" name="poll" type="radio" />
+                                    <div
+                                        class="absolute inset-0 bg-blue-50 dark:bg-blue-900/20 w-[30%] rounded-l-lg opacity-50">
+                                    </div>
+                                    <div class="relative z-10 flex w-full justify-between items-center text-sm">
+                                        <span class="font-medium text-[#111318] dark:text-gray-200">Fake Listings</span>
+                                        <span class="font-bold text-primary">30%</span>
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 border-2 border-primary rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+                                    </div>
+                                </label>
+                                <label
+                                    class="relative flex items-center p-3 rounded-lg border border-blue-200 dark:border-gray-600 bg-white dark:bg-[#1a202c] cursor-pointer hover:border-primary transition-colors group">
+                                    <input class="sr-only peer" name="poll" type="radio" />
+                                    <div
+                                        class="absolute inset-0 bg-blue-50 dark:bg-blue-900/20 w-[25%] rounded-l-lg opacity-50">
+                                    </div>
+                                    <div class="relative z-10 flex w-full justify-between items-center text-sm">
+                                        <span class="font-medium text-[#111318] dark:text-gray-200">Deposit
+                                            Amount</span>
+                                        <span class="font-bold text-primary">25%</span>
+                                    </div>
+                                    <div
+                                        class="absolute inset-0 border-2 border-primary rounded-lg opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+                                    </div>
+                                </label>
+                            </div>
+                            <button
+                                class="mt-4 w-full py-2 text-xs font-bold text-primary hover:bg-blue-50 dark:hover:bg-blue-900/20 rounded transition-colors">View
+                                Detailed Results</button>
+                        </div>
+                        <!-- Article Card 3 -->
+                        <div
+                            class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group">
+                            <div class="h-48 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative"
+                                data-alt="Graph showing upward trend of rental yields in urban areas"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDmkGEX7j_LmxFdMhHT0e4YAQNluBtWJmdlYzHQbFALflNbVYt5772Z51GyetQOmQfFrmklpEBGwP2po_UZ9jKguakXEfsawnjnQEe5u98UdzWni7AnHw4ZP6m8KSHr-wB2S6xIL7vuiu_9HuCgXyYSqwjllNNoHk40yB7xqgo_DWzyXSsgOPM5xYgzDuMPb2gaSc3lmHWli0eGRM1u6WxP4BxrqY6qkeqYbMv9iJL5qI1wJcOdWx11pvG6ZkFQVCFfzXJ8FxSlGK6f');">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors">
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span
+                                    class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-purple-600 uppercase bg-purple-50 dark:bg-purple-900/30 rounded">Market
+                                    Trends</span>
+                                <h3
+                                    class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                                    Rental Yields in Mumbai vs. Bangalore
+                                </h3>
+                                <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                                    A comparative analysis of rental income in India's two biggest tech and financial
+                                    hubs. Where should you invest next?
+                                </p>
+                                <div
+                                    class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                                    <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read
+                                        More</button>
+                                    <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">7 min
+                                        read</span>
+                                    <button
+                                        class="material-symbols-outlined text-[#616f89] hover:text-primary text-[20px]">share</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Article Card 4 -->
+                        <div
+                            class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group">
+                            <div class="h-52 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative"
+                                data-alt="Couple shaking hands with property owner receiving keys"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBk864dzhRWU-7BzPnnfVXyRFTy4O4EVR-gwfCeAutoMF9BaZ_eQdc_yM7VRA9ezrBj2m95ux3oC6D59kcj91fDFJ0jPpAwdA-yjbOsgDKyHCtCsPYxuWDagmAmgyOoiVGx_X8julJViDtMND-gHoeTaNFjGcPZfn4CNzssEd2Jkd_754QIKzYSdvZrUVz_wfPai8mFce3r5F6a1xRvZIjfFR9VqRhp4Im4nhbMG-t2kwAKafDvUMinQfw4XHZrZ5QpQZ4v_Irk_35_');">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors">
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span
+                                    class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-orange-600 uppercase bg-orange-50 dark:bg-orange-900/30 rounded">Renting
+                                    Tips</span>
+                                <h3
+                                    class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                                    10 Questions to Ask Before Signing a Lease
+                                </h3>
+                                <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                                    Don't get caught off guard. Ensure you understand maintenance clauses, guest
+                                    policies, and renewal terms.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                                    <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read
+                                        More</button>
+                                    <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">5 min
+                                        read</span>
+                                    <button
+                                        class="material-symbols-outlined text-[#616f89] hover:text-primary text-[20px]">share</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Article Card 5 -->
+                        <div
+                            class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group">
+                            <div class="h-48 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative"
+                                data-alt="Modern kitchen interior with marble countertops"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUiClVMEwqnhEzLFZv91yT6APbZsOBOolKSAyvwORhGXhUiYaloBqTPYgjp4qTLxd8IzCaT3lCOEm4fMUf9v7QrVsG7kHwvsDajNHwa-IpheNEQSI3dKyAx6hWN1It9CFrTb8AmeSpRWCCXMIWV2bABRtx4EKFELaPEc6aG-lZVXnSj8yMeIaDnkH1UeOfWkvxJlwrMM3DySbvvLwJmuXjuvRHAmvC1tGzRRxmsAWCKJD1yYHcdWTLROu98D7lNkvBRM2SbUwmzo5R');">
+                                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors">
+                                </div>
+                            </div>
+                            <div class="p-5">
+                                <span
+                                    class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-teal-600 uppercase bg-teal-50 dark:bg-teal-900/30 rounded">Buying
+                                    Guides</span>
+                                <h3
+                                    class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                                    Ready to Move vs. Under Construction
+                                </h3>
+                                <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                                    Analyzing the pros and cons of buying a ready home versus booking an
+                                    under-construction property.
+                                </p>
+                                <div
+                                    class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                                    <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read
+                                        More</button>
+                                    <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">6 min
+                                        read</span>
+                                    <button
+                                        class="material-symbols-outlined text-[#616f89] hover:text-primary text-[20px]">share</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="mt-8 flex justify-center">
+                        <button id="loadMoreArticlesBtn"
+                            class="flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white dark:bg-gray-800 border border-[#dbdfe6] dark:border-gray-700 text-[#111318] dark:text-white text-sm font-bold hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-primary transition-all shadow-sm">
+                            <span class="material-symbols-outlined text-lg">autorenew</span>
+                            Load More Articles
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Column: Sidebar -->
+                <div class="lg:col-span-4 space-y-8">
+                    <!-- Search Widget -->
+                    <div
+                        class="rounded-lg bg-white dark:bg-[#1a202c] p-6 shadow-sm border border-[#dbdfe6] dark:border-gray-700">
+                        <label class="flex flex-col w-full">
+                            <span class="text-sm font-bold text-[#111318] dark:text-white mb-2">Search</span>
+                            <div
+                                class="flex w-full items-stretch rounded-lg h-10 border border-[#dbdfe6] dark:border-gray-600 bg-[#f0f2f4] dark:bg-gray-800 overflow-hidden focus-within:ring-2 focus-within:ring-primary focus-within:border-primary transition-all">
+                                <div class="text-[#616f89] flex items-center justify-center pl-3">
+                                    <span class="material-symbols-outlined text-[20px]">search</span>
+                                </div>
+                                <input
+                                    class="flex w-full bg-transparent border-none focus:ring-0 text-[#111318] dark:text-white text-sm px-3 placeholder:text-[#616f89]"
+                                    placeholder="Search articles..." />
+                            </div>
+                        </label>
+                    </div>
+                    <!-- Categories Widget -->
+                    <div
+                        class="rounded-lg bg-white dark:bg-[#1a202c] p-6 shadow-sm border border-[#dbdfe6] dark:border-gray-700">
+                        <h3 class="text-lg font-bold text-[#111318] dark:text-white mb-4">Categories</h3>
+                        <div class="flex flex-col gap-2">
+                            <a class="flex items-center justify-between p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 group transition-colors"
+                                href="#">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-teal-500"></div>
+                                    <span
+                                        class="text-sm font-medium text-[#111318] dark:text-gray-200 group-hover:text-primary">Buying
+                                        Guides</span>
+                                </div>
+                                <span
+                                    class="text-xs text-[#616f89] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">12</span>
+                            </a>
+                            <a class="flex items-center justify-between p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 group transition-colors"
+                                href="#">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-orange-500"></div>
+                                    <span
+                                        class="text-sm font-medium text-[#111318] dark:text-gray-200 group-hover:text-primary">Renting
+                                        Tips</span>
+                                </div>
+                                <span
+                                    class="text-xs text-[#616f89] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">8</span>
+                            </a>
+                            <a class="flex items-center justify-between p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 group transition-colors"
+                                href="#">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-purple-500"></div>
+                                    <span
+                                        class="text-sm font-medium text-[#111318] dark:text-gray-200 group-hover:text-primary">Market
+                                        Trends</span>
+                                </div>
+                                <span
+                                    class="text-xs text-[#616f89] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">5</span>
+                            </a>
+                            <a class="flex items-center justify-between p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 group transition-colors"
+                                href="#">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                    <span
+                                        class="text-sm font-medium text-[#111318] dark:text-gray-200 group-hover:text-primary">Home
+                                        Decor</span>
+                                </div>
+                                <span
+                                    class="text-xs text-[#616f89] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">15</span>
+                            </a>
+                            <a class="flex items-center justify-between p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 group transition-colors"
+                                href="#">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                    <span
+                                        class="text-sm font-medium text-[#111318] dark:text-gray-200 group-hover:text-primary">Legal
+                                        Advice</span>
+                                </div>
+                                <span
+                                    class="text-xs text-[#616f89] bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded-full">4</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Newsletter Widget -->
+                    <div class="rounded-lg bg-primary text-white p-6 shadow-md relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 -mr-6 -mt-6 w-24 h-24 rounded-full bg-white opacity-10 blur-xl">
+                        </div>
+                        <div class="relative z-10">
+                            <div class="mb-4">
+                                <span class="material-symbols-outlined text-4xl mb-2">mail</span>
+                                <h3 class="text-xl font-bold leading-tight">Join our Newsletter</h3>
+                                <p class="text-blue-100 text-sm mt-1">Get the latest property insights delivered to your
+                                    inbox weekly.</p>
+                            </div>
+                            <div id="subscriptionForm" class="space-y-3">
+                                <input id="emailInput"
+                                    class="w-full h-10 px-3 rounded text-[#111318] text-sm border-none focus:ring-2 focus:ring-white/50"
+                                    placeholder="Enter your email address" type="email" />
+                                <button id="subscribeBtn"
+                                    class="w-full h-10 rounded bg-[#101622] text-white text-sm font-bold hover:bg-opacity-90 transition-opacity">
+                                    Subscribe
+                                </button>
+                            </div>
+                            <div id="subscriptionSuccess" class="hidden text-center py-4">
+                                <span class="material-symbols-outlined text-4xl text-green-300 mb-2">check_circle</span>
+                                <h4 class="font-bold">Subscription Active!</h4>
+                                <p class="text-xs text-blue-100 mt-1">Check your inbox for a welcome gift.</p>
+                            </div>
+                            <p class="text-[10px] text-blue-200 mt-3 text-center">No spam, unsubscribe anytime.</p>
+                        </div>
+                    </div>
+                    <!-- Social Proof / Trending Mini List -->
+                    <div
+                        class="rounded-lg bg-white dark:bg-[#1a202c] p-6 shadow-sm border border-[#dbdfe6] dark:border-gray-700">
+                        <h3 class="text-sm font-bold text-[#616f89] uppercase tracking-wider mb-4">Trending Now</h3>
+                        <div class="space-y-4">
+                            <a class="block group" href="#">
+                                <h4
+                                    class="text-sm font-bold text-[#111318] dark:text-white group-hover:text-primary line-clamp-2 transition-colors">
+                                    Property Prices in Hyderabad Soar by 15%</h4>
+                                <span class="text-xs text-[#616f89] mt-1 block">2 hours ago</span>
+                            </a>
+                            <div class="h-px bg-[#f0f2f4] dark:bg-gray-700"></div>
+                            <a class="block group" href="#">
+                                <h4
+                                    class="text-sm font-bold text-[#111318] dark:text-white group-hover:text-primary line-clamp-2 transition-colors">
+                                    New Metro Line Announced for East Bangalore</h4>
+                                <span class="text-xs text-[#616f89] mt-1 block">Yesterday</span>
+                            </a>
+                            <div class="h-px bg-[#f0f2f4] dark:bg-gray-700"></div>
+                            <a class="block group" href="#">
+                                <h4
+                                    class="text-sm font-bold text-[#111318] dark:text-white group-hover:text-primary line-clamp-2 transition-colors">
+                                    Top 5 Gated Communities in Pune</h4>
+                                <span class="text-xs text-[#616f89] mt-1 block">2 days ago</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        World's largest NoBrokerage property site. Connect directly with owners and save brokerage fees.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="testimonials.html">Testimonials</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="rental_agreement.html">Rental
+                                Agreement</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="packers_movers.html">Packers &
+                                Movers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="pay_rent.html">Pay Rent</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +91 99999 99999</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@nobroker.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Article Reader Modal -->
+    <div id="articleModal"
+        class="fixed inset-0 bg-black/60 z-[100] hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div
+            class="bg-white dark:bg-[#1a202c] w-full max-w-3xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col animate-modal-in">
+            <div class="flex justify-between items-center p-6 border-b border-gray-100 dark:border-gray-800">
+                <div class="flex items-center gap-2">
+                    <span id="modalCategory"
+                        class="px-2 py-1 text-[10px] font-bold text-primary uppercase bg-blue-50 dark:bg-blue-900/30 rounded">Buying
+                        Guide</span>
+                    <span id="modalReadTime" class="text-xs text-text-secondary">6 min read</span>
+                </div>
+                <button id="closeModal"
+                    class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <div class="overflow-y-auto p-8 md:p-12">
+                <h2 id="modalTitle" class="text-3xl font-black mb-6 leading-tight">Article Title</h2>
+                <div id="modalContent" class="space-y-6 text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+            <div
+                class="p-6 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-100 dark:border-gray-800 flex justify-between items-center">
+                <button class="flex items-center gap-2 text-primary font-bold hover:underline">
+                    <span class="material-symbols-outlined">share</span> Share Article
+                </button>
+                <div class="flex gap-4">
+                    <button
+                        class="size-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-colors">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </button>
+                    <button
+                        class="size-10 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-white dark:hover:bg-gray-800 transition-colors">
+                        <span class="material-symbols-outlined">bookmark</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal Logic
+        const articleModal = document.getElementById('articleModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const modalCategory = document.getElementById('modalCategory');
+
+        const articles = {
+            featured: {
+                title: "Top 10 Cities to Invest in Real Estate in 2024",
+                category: "Featured",
+                content: `
+                    <p>Real estate remains one of the most stable long-term investments in India. As we move into 2024, several cities are emerging as hotspots for both residential and commercial properties.</p>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mt-8 mb-4">1. Bangalore (The Tech Hub)</h3>
+                    <p>Despite being a mature market, Bangalore continues to see massive demand in areas like Sarjapur and North Bangalore. The upcoming suburban rail and metro expansions are key drivers.</p>
+                    <h3 class="text-xl font-bold text-text-main dark:text-white mt-8 mb-4">2. Hyderabad (The Growth Prodigy)</h3>
+                    <p>With corporate-friendly policies, Hyderabad's IT corridor is expanding beyond Gachibowli into areas like Tellapur and Narsingi.</p>
+                    <p>Other notable cities include Pune, Mumbai (specifically Navi Mumbai), and Ahmedabad. Each offers a unique blend of rental yield and capital appreciation potential.</p>
+                `
+            },
+            latest: {
+                title: "How to verify property documents without a broker",
+                category: "Legal Advice",
+                content: `
+                    <p>Verifying property documents is the most crucial step in any real estate transaction. Doing it yourself can save you money and give you peace of mind.</p>
+                    <ul class="list-disc pl-6 space-y-4">
+                        <li><strong>Title Deed:</strong> Ensure the seller actually owns the property. Check the chain of ownership for the last 30 years.</li>
+                        <li><strong>Encumbrance Certificate (EC):</strong> This proves the property is free from any legal dues or mortgages.</li>
+                        <li><strong>Occupancy Certificate (OC):</strong> For apartments, an OC is mandatory to ensure the building was constructed as per the approved plan.</li>
+                    </ul>
+                    <p>Always consult with a legal expert for a final verification before handing over the token amount.</p>
+                `
+            }
+        };
+
+        function openArticle(type) {
+            const data = articles[type === 'featured' ? 'featured' : 'latest'];
+            modalTitle.innerText = data.title;
+            modalCategory.innerText = data.category;
+            modalContent.innerHTML = data.content;
+            articleModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        document.getElementById('featuredReadBtn')?.addEventListener('click', () => openArticle('featured'));
+        document.querySelectorAll('.read-article-btn').forEach(btn => {
+            btn.addEventListener('click', () => openArticle('latest'));
+        });
+
+        closeModal.addEventListener('click', () => {
+            articleModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Subscription Logic
+        const subscribeBtn = document.getElementById('subscribeBtn');
+        const emailInput = document.getElementById('emailInput');
+        const subForm = document.getElementById('subscriptionForm');
+        const subSuccess = document.getElementById('subscriptionSuccess');
+
+        if (subscribeBtn) {
+            subscribeBtn.addEventListener('click', () => {
+                if (emailInput.value && emailInput.value.includes('@')) {
+                    subForm.classList.add('hidden');
+                    subSuccess.classList.remove('hidden');
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            });
+        }
+
+        // Load More Articles Logic
+        const loadMoreArticlesBtn = document.getElementById('loadMoreArticlesBtn');
+        const articleGrid = document.getElementById('articleGrid');
+
+        const articleTemplate = (id) => `
+            <div class="break-inside-avoid mb-6 flex flex-col rounded-lg border border-[#dbdfe6] dark:border-gray-700 bg-white dark:bg-[#1a202c] shadow-sm hover:shadow-lg transition-all duration-300 group opacity-0 translate-y-4 animate-fade-in-up">
+                <div class="h-48 w-full bg-cover bg-center rounded-t-lg overflow-hidden relative" style="background-image: url('https://picsum.photos/seed/${id + 50}/400/300');">
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+                </div>
+                <div class="p-5">
+                    <span class="inline-block px-2 py-1 mb-3 text-[10px] font-bold tracking-wider text-primary uppercase bg-blue-50 dark:bg-blue-900/30 rounded">New Insight</span>
+                    <h3 class="mb-2 text-lg font-bold leading-tight text-[#111318] dark:text-white group-hover:text-primary transition-colors">
+                        The future of smart homes in urban cities
+                    </h3>
+                    <p class="mb-4 text-sm text-[#616f89] dark:text-gray-400 line-clamp-3">
+                        How IoT and sustainable design are changing the way we live and interact with our spaces.
+                    </p>
+                    <div class="flex items-center justify-between pt-4 border-t border-[#f0f2f4] dark:border-gray-700">
+                        <button class="text-sm font-bold text-primary hover:underline read-article-btn">Read More</button>
+                        <span class="text-xs font-medium text-[#616f89] dark:text-gray-500">5 min read</span>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        if (loadMoreArticlesBtn) {
+            loadMoreArticlesBtn.addEventListener('click', () => {
+                const originalText = loadMoreArticlesBtn.innerHTML;
+                loadMoreArticlesBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">autorenew</span> Loading...';
+                loadMoreArticlesBtn.disabled = true;
+
+                setTimeout(() => {
+                    for (let i = 0; i < 2; i++) {
+                        const temp = document.createElement('div');
+                        temp.innerHTML = articleTemplate(Math.floor(Math.random() * 100));
+                        const newCard = temp.firstElementChild;
+                        articleGrid.appendChild(newCard);
+
+                        // Re-attach event listeners to new "Read More" buttons
+                        newCard.querySelector('.read-article-btn').addEventListener('click', () => openArticle('latest'));
+                    }
+                    loadMoreArticlesBtn.innerHTML = originalText;
+                    loadMoreArticlesBtn.disabled = false;
+                }, 800);
+            });
+        }
+    </script>
+    <style>
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95) translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .animate-modal-in {
+            animation: modalIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+    </style>
+    <!-- Poll Results Modal -->
+    <div id="pollResultsModal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm p-4">
+        <div class="bg-white dark:bg-[#1a202c] rounded-2xl p-8 max-w-md w-full shadow-2xl scale-animation">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold">Poll Results</h3>
+                <button onclick="document.getElementById('pollResultsModal').classList.add('hidden')"
+                    class="text-gray-400 hover:text-gray-600"><span
+                        class="material-symbols-outlined">close</span></button>
+            </div>
+            <div class="space-y-6">
+                <div>
+                    <div class="flex justify-between text-sm font-bold mb-2">
+                        <span>Higher than average</span>
+                        <span class="text-primary">45.8%</span>
+                    </div>
+                    <div class="w-full h-3 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 45.8%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm font-bold mb-2">
+                        <span>Lower than average</span>
+                        <span class="text-primary">28.4%</span>
+                    </div>
+                    <div class="w-full h-3 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 28.4%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm font-bold mb-2">
+                        <span>Consistent</span>
+                        <span class="text-primary">25.8%</span>
+                    </div>
+                    <div class="w-full h-3 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+                        <div class="h-full bg-primary rounded-full" style="width: 25.8%"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-xs text-gray-400 mt-8 text-center">Total Votes: 1,482 • Last updated today</p>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="toast"
+        class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] bg-[#111318] text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 opacity-0 translate-y-10 transition-all duration-300 pointer-events-none">
+        <span class="material-symbols-outlined text-primary">analytics</span>
+        <span id="toastMessage" class="text-sm font-semibold">Vote submitted!</span>
+    </div>
+
+    <script>
+        document.getElementById('voteBtn').addEventListener('click', () => {
+            const selected = document.querySelector('input[name="poll"]:checked');
+            if (selected) {
+                const toast = document.getElementById('toast');
+                toast.classList.remove('opacity-0', 'translate-y-10');
+                toast.classList.add('opacity-100', 'translate-y-0');
+                setTimeout(() => {
+                    toast.classList.add('opacity-0', 'translate-y-10');
+                    toast.classList.remove('opacity-100', 'translate-y-0');
+                    document.getElementById('pollResultsModal').classList.remove('hidden');
+                }, 1500);
+            }
+        });
+
+        document.getElementById('viewResultsBtn').addEventListener('click', () => {
+            document.getElementById('pollResultsModal').classList.remove('hidden');
+        });
+
+        // Close modal on outside click
+        window.addEventListener('click', (e) => {
+            const modal = document.getElementById('pollResultsModal');
+            if (e.target === modal) modal.classList.add('hidden');
+        });
+    </script>
+</body>
+
+
+</html>
+

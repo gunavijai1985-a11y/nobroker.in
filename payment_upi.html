@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NoBroker - UPI Payment</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "accent-green": "#22c55e",
+                        "accent-green-dark": "#16a34a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white overflow-x-hidden min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html">
+                    <div class="flex items-center gap-2 cursor-pointer">
+                        <div class="size-8 text-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined text-3xl">apartment</span>
+                        </div>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                </a>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="flex items-center justify-center size-9 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        onclick="window.location.href='pay_rent.html'"><span
+                            class="material-symbols-outlined text-xl">arrow_back</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow flex items-center justify-center p-4">
+        <div
+            class="max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-gray-100 dark:border-gray-700 p-8">
+            <div class="flex items-center justify-center mb-8">
+                <div class="text-2xl font-black italic text-gray-800 dark:text-white">UPI <span
+                        class="text-xs font-normal not-italic block text-center">Unified Payments Interface</span></div>
+            </div>
+            <h2 class="text-2xl font-bold text-center mb-2">Pay with UPI</h2>
+            <p class="text-gray-500 text-center text-sm mb-8">Google Pay, PhonePe, Paytm & more</p>
+
+            <form class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Enter UPI ID</label>
+                    <div class="relative">
+                        <input type="text" placeholder="username@upi"
+                            class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 px-4 py-3">
+                        <button type="button"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 text-primary font-bold text-xs uppercase hover:underline">Verify</button>
+                    </div>
+                </div>
+
+                <div class="relative my-6 text-center">
+                    <div class="absolute inset-0 flex items-center">
+                        <div class="w-full border-t border-gray-200 dark:border-gray-700"></div>
+                    </div>
+                    <span class="relative bg-white dark:bg-gray-800 px-2 text-xs text-gray-500 font-bold uppercase">OR
+                        Scan QR</span>
+                </div>
+
+                <div class="flex justify-center mb-4">
+                    <div
+                        class="bg-gray-100 dark:bg-gray-900 p-4 rounded-xl border border-dashed border-gray-300 dark:border-gray-600">
+                        <span class="material-symbols-outlined text-8xl text-gray-400">qr_code_2</span>
+                    </div>
+                </div>
+
+                <button type="button"
+                    class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-xl mt-4 shadow-lg active:scale-95 transition-all"
+                    onclick="alert('Request sent to UPI App...')">
+                    Pay Now
+                </button>
+            </form>
+
+            <div class="mt-6 flex items-center justify-center gap-2 text-xs text-gray-400">
+                <span class="material-symbols-outlined text-sm">verified_user</span>
+                Verified by NPCI
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

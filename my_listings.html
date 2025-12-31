@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>My Listings - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "background-light": "#f6f6f8",
+                        "text-main": "#111318",
+                        "text-sub": "#616f89"
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="bg-background-light text-text-main">
+    <header class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center"><img src="logo.png" alt="NoBroker" class="h-8"></a>
+            <nav class="hidden md:flex gap-8"><a href="buy.html" class="text-sm font-medium hover:text-primary">Buy</a><a href="index.html" class="text-sm font-medium hover:text-primary">Rent</a><a href="commercial.html" class="text-sm font-medium hover:text-primary">Commercial</a><a href="pay_rent.html" class="text-sm font-medium hover:text-primary">Pay Rent</a></nav>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="buy.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Buy</a>
+                <a href="index.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Rent</a>
+                <a href="commercial.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Commercial</a>
+                <a href="pay_rent.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Pay Rent</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Page Title Section -->
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-2">My Listings</h1>
+            <p class="text-text-sub text-lg">Manage all your properties in one place</p>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Active</span>
+                    <span class="material-symbols-outlined text-primary text-2xl">home</span>
+                </div>
+                <p class="text-3xl font-bold">4</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Views</span>
+                    <span class="material-symbols-outlined text-orange-500 text-2xl">visibility</span>
+                </div>
+                <p class="text-3xl font-bold">1,245</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Leads</span>
+                    <span class="material-symbols-outlined text-green-500 text-2xl">trending_up</span>
+                </div>
+                <p class="text-3xl font-bold">28</p>
+            </div>
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Messages</span>
+                    <span class="material-symbols-outlined text-blue-500 text-2xl">mail</span>
+                </div>
+                <p class="text-3xl font-bold">12</p>
+            </div>
+        </div>
+
+        <!-- Listings Grid -->
+        <div class="space-y-4">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold">Your Properties</h2>
+                <a href="post_property.html" class="bg-primary hover:bg-primary-dark text-white px-6 py-2 rounded-lg font-semibold flex items-center gap-2 transition-colors shadow-sm">
+                    <span class="material-symbols-outlined">add</span>Add Property
+                </a>
+            </div>
+
+            <!-- Listing Card 1 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-48 h-48 md:h-auto bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBm8IW76b5BbhcRCc0htxj8SQpqpRsmz6xhTalHXahmgBO5jR9THDJbT-BXz7uPL0vlrUmOszK-x-HZF8ff43ijFMnRFLwCJOvhhEiscsLrbTDXQ1g97TCbTQ0TEFh1KXw8lM_TtCWq4oWB4kWQ4SM_84yiIqnYZv0WIFpw-dalf7kCFlRX6x3uJ3iigZNJ1ZzsZ3PjJemUwPo2ebFAfTUfNq6kiItukJnvGUfCWKBzkf8K2T6jAQK0KKdideLdzwstEBRU2ztTt-5" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">ACTIVE</span>
+                    </div>
+                    <div class="flex-1 p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">3 BHK Luxury Apartment</h3>
+                            <p class="text-text-sub text-sm mb-4 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                Koramangala 4th Block, Bangalore
+                            </p>
+                            <div class="flex gap-6 text-sm mb-4">
+                                <div><span class="text-text-sub">Price:</span> <span class="font-semibold">₹65,000/mo</span></div>
+                                <div><span class="text-text-sub">Views:</span> <span class="font-semibold">245</span></div>
+                                <div><span class="text-text-sub">Leads:</span> <span class="font-semibold">12</span></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="edit_listing.html" class="px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">edit</span>Edit
+                            </a>
+                            <a href="boost_listing.html" class="px-4 py-2 border border-primary/20 text-text-main rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">rocket_launch</span>Boost
+                            </a>
+                            <button class="px-4 py-2 border border-red-200 text-red-600 rounded-lg font-medium hover:bg-red-50 transition-colors">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listing Card 2 -->
+            <div class="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-48 h-48 md:h-auto bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center relative">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8eTXPpkepYcrlSK_DpZIoLchNiEExfqG-AFPPTjx_Pel7paLDW7V-7-O_C0yvNxnECOwBIAPLWtJyWt4hGBtArgaisVHBI1b8lOQJNE0eZhb8YUUhOBtO6n5RS1XVF7Ct277QDWkyOwShJt-WqOsSYyMuK6T4MfTXqS_0R-UGGxasDlCvHplYGlY56mOa4E5ucCjPzlmJJ35ghOdPRyBvNyOHmF8-jLAyfQUM6Ecb29QsBqt0jqnOFclBi0hNGRmoOluwu6xb_C0K" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-gray-600 text-white text-xs font-bold px-3 py-1 rounded-full">INACTIVE</span>
+                    </div>
+                    <div class="flex-1 p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">2 BHK Modern Flat</h3>
+                            <p class="text-text-sub text-sm mb-4 flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">location_on</span>
+                                Indiranagar, Bangalore
+                            </p>
+                            <div class="flex gap-6 text-sm mb-4">
+                                <div><span class="text-text-sub">Price:</span> <span class="font-semibold">₹42,000/mo</span></div>
+                                <div><span class="text-text-sub">Views:</span> <span class="font-semibold">87</span></div>
+                                <div><span class="text-text-sub">Leads:</span> <span class="font-semibold">5</span></div>
+                            </div>
+                        </div>
+                        <div class="flex gap-3">
+                            <a href="edit_listing.html" class="px-4 py-2 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary/20 transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">edit</span>Edit
+                            </a>
+                            <a href="boost_listing.html" class="px-4 py-2 border border-primary/20 text-text-main rounded-lg font-medium hover:bg-gray-50 transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-sm">rocket_launch</span>Boost
+                            </a>
+                            <button class="px-4 py-2 border border-red-200 text-red-600 rounded-lg font-medium hover:bg-red-50 transition-colors">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="profile.html" class="text-primary font-medium hover:underline flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>Back to Profile
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-sub">
+            © 2025 NoBroker Technologies. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

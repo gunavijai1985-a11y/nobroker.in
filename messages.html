@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Messages - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>tailwind.config={theme:{extend:{colors:{primary:"#1152d4","primary-dark":"#0d42af","background-light":"#f6f6f8","text-main":"#111318","text-sub":"#616f89"}}}}</script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="bg-background-light text-text-main">
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html"><img src="logo.png" alt="NoBroker" class="h-8"></a>
+            <nav class="hidden md:flex gap-8"><a href="buy.html" class="text-sm font-medium hover:text-primary">Buy</a><a href="index.html" class="text-sm font-medium hover:text-primary">Rent</a><a href="commercial.html" class="text-sm font-medium hover:text-primary">Commercial</a><a href="pay_rent.html" class="text-sm font-medium hover:text-primary">Pay Rent</a></nav>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="buy.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Buy</a>
+                <a href="index.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Rent</a>
+                <a href="commercial.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Commercial</a>
+                <a href="pay_rent.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Pay Rent</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-2">Messages</h1>
+            <p class="text-text-sub text-lg">Communicate with property owners and leads</p>
+        </div>
+
+        <!-- Message List -->
+        <div class="space-y-3">
+            <!-- Message 1 -->
+            <div class="bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-shadow overflow-hidden cursor-pointer">
+                <div class="p-4 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-white font-bold flex-shrink-0">RP</div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-start justify-between gap-2 mb-1">
+                            <h3 class="font-bold text-text-main">Ramesh Patel</h3>
+                            <span class="text-xs text-text-sub flex-shrink-0">Today</span>
+                        </div>
+                        <p class="text-text-sub text-sm mb-2">3 BHK Luxury Apartment, Koramangala</p>
+                        <p class="text-text-main text-sm truncate">Hi! I'm interested in viewing this property. Is it available this weekend?</p>
+                    </div>
+                    <span class="material-symbols-outlined text-primary text-2xl flex-shrink-0">mail</span>
+                </div>
+            </div>
+
+            <!-- Message 2 -->
+            <div class="bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-shadow overflow-hidden cursor-pointer">
+                <div class="p-4 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-emerald-600 flex items-center justify-center text-white font-bold flex-shrink-0">PS</div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-start justify-between gap-2 mb-1">
+                            <h3 class="font-bold text-text-main">Priya Sharma</h3>
+                            <span class="text-xs text-text-sub flex-shrink-0">Yesterday</span>
+                        </div>
+                        <p class="text-text-sub text-sm mb-2">2 BHK Modern Flat, Indiranagar</p>
+                        <p class="text-text-main text-sm truncate">Your viewing has been confirmed for Saturday at 3:00 PM</p>
+                    </div>
+                    <span class="material-symbols-outlined text-green-500 text-2xl flex-shrink-0">check_circle</span>
+                </div>
+            </div>
+
+            <!-- Message 3 -->
+            <div class="bg-white rounded-2xl border border-gray-100 hover:shadow-md transition-shadow overflow-hidden cursor-pointer">
+                <div class="p-4 flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center text-white font-bold flex-shrink-0">AK</div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex items-start justify-between gap-2 mb-1">
+                            <h3 class="font-bold text-text-main">Amit Kumar</h3>
+                            <span class="text-xs text-text-sub flex-shrink-0">2 days ago</span>
+                        </div>
+                        <p class="text-text-sub text-sm mb-2">1 BHK Apartment, HAL 2nd Stage</p>
+                        <p class="text-text-main text-sm truncate">What's the minimum lease period for this property?</p>
+                    </div>
+                    <span class="material-symbols-outlined text-orange-500 text-2xl flex-shrink-0">mail</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
+            <p class="text-sm text-text-sub text-center">💬 Open any message to reply instantly</p>
+        </div>
+
+        <div class="mt-8 text-center">
+            <a href="profile.html" class="text-primary font-medium hover:underline flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>Back to Profile
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-sub">© 2025 NoBroker Technologies</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

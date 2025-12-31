@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Edit Profile - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2332",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-200 min-h-screen flex flex-col">
+    <!-- Navbar (Simplified) -->
+    <header
+        class="sticky top-0 z-50 w-full bg-surface-light dark:bg-surface-dark border-b border-gray-200 dark:border-gray-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+                </a>
+                <a href="profile.html"
+                    class="text-sm font-medium hover:text-primary transition-colors flex items-center gap-1">
+                    <span class="material-symbols-outlined">arrow_back</span> Back to Profile
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-2xl mx-auto w-full px-4 py-8">
+        <h1 class="text-3xl font-bold mb-8 text-center">Edit Profile</h1>
+
+        <div
+            class="bg-surface-light dark:bg-surface-dark p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+            <form class="space-y-6">
+                <!-- Profile Picture -->
+                <div class="flex flex-col items-center mb-6">
+                    <div class="size-24 rounded-full bg-cover bg-center border-4 border-gray-100 dark:border-gray-700 shadow-md mb-3"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5ke7cjWdBJZrshyr-1HWAofqiDjoyym1g8ZxNdJqTQQiPefp3rM7n35WlxK7St5TAXFPyH3iNuWZrwH2fUO7U2rMcRUwHCssu1vMDgdsLyDMRruiU7glDqoXxeHT2N_7WSWJFlKS1KfU_AMnvx0ep9GYgPdjHflTQTaAELbp2BU_4JjIUFrPf_tLcbkn3Mtrg7gATKaH21u2r4kOR2GsNL0b3AqDVsEDawsCou9vwqGfu0Vquqpqao1UvUxMNdiGv4DzGTnsO1UYw');">
+                    </div>
+                    <button type="button" class="text-sm text-primary font-medium hover:underline">Change Photo</button>
+                </div>
+
+                <!-- Form Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">First Name</label>
+                        <input type="text" value="Rahul"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Last Name</label>
+                        <input type="text" value="Sharma"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Email Address</label>
+                        <input type="email" value="rahul.sharma@example.com"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-2 focus:ring-primary focus:border-primary">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Phone Number</label>
+                        <input type="tel" value="+91 98765 43210"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-2 focus:ring-primary focus:border-primary"
+                            disabled>
+                        <p class="text-xs text-gray-500 mt-1">Contact support to change verified phone number.</p>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="block text-sm font-semibold mb-2">Location</label>
+                        <input type="text" value="Bangalore, India"
+                            class="w-full rounded-lg border-gray-300 dark:border-gray-700 dark:bg-gray-800 px-4 py-2 focus:ring-primary focus:border-primary">
+                    </div>
+                </div>
+
+                <div class="flex justify-end gap-3 mt-8">
+                    <button type="button" onclick="window.location.href='profile.html'"
+                        class="px-6 py-2 border border-gray-300 dark:border-gray-600 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">Cancel</button>
+                    <button type="button" onclick="alert('Profile Updated!'); window.location.href='profile.html'"
+                        class="px-6 py-2 bg-primary hover:bg-primary-dark text-white rounded-lg text-sm font-medium transition-colors shadow-lg shadow-primary/30">Save
+                        Changes</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

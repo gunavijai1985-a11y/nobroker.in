@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Property Management - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                    <span class="text-xl font-black text-gray-900 dark:text-white">NoBroker</span>
+                </a>
+                <div class="flex gap-4">
+                    <a href="index.html"
+                        class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary">Home</a>
+                    <a href="post_property.html"
+                        class="text-sm font-semibold text-gray-600 dark:text-gray-300 hover:text-primary">Post
+                        Property</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-4 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-black mb-6">Comprehensive Property Management</h1>
+            <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">Let us manage your rental property
+                while you enjoy the returns. Hassle-free tenant management, maintenance, and rent collection.</p>
+            <button onclick="window.location.href='contact_us.html'"
+                class="mt-8 bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-xl shadow-lg transition-transform active:scale-95">Get
+                a Quote</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4">admin_panel_settings</span>
+                <h3 class="text-xl font-bold mb-3">Tenant Verification</h3>
+                <p class="text-gray-500">Rigorous background checks to ensure you get reliable tenants.</p>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4">engineering</span>
+                <h3 class="text-xl font-bold mb-3">Maintenance Support</h3>
+                <p class="text-gray-500">On-demand repairs and periodic inspections to keep your property in top shape.
+                </p>
+            </div>
+            <div
+                class="bg-white dark:bg-[#1e293b] p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4">payments</span>
+                <h3 class="text-xl font-bold mb-3">Rent Collection</h3>
+                <p class="text-gray-500">Timely rent collection and detailed monthly financial reports.</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

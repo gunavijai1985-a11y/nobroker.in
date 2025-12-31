@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Transactions - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>tailwind.config={theme:{extend:{colors:{primary:"#1152d4","primary-dark":"#0d42af","background-light":"#f6f6f8","text-main":"#111318","text-sub":"#616f89"}}}}</script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="bg-background-light text-text-main">
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html"><img src="logo.png" alt="NoBroker" class="h-8"></a>
+            <nav class="hidden md:flex gap-8"><a href="buy.html" class="text-sm font-medium hover:text-primary">Buy</a><a href="index.html" class="text-sm font-medium hover:text-primary">Rent</a><a href="commercial.html" class="text-sm font-medium hover:text-primary">Commercial</a><a href="pay_rent.html" class="text-sm font-medium hover:text-primary">Pay Rent</a></nav>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="buy.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Buy</a>
+                <a href="index.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Rent</a>
+                <a href="commercial.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Commercial</a>
+                <a href="pay_rent.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Pay Rent</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold mb-2">Payment History</h1>
+            <p class="text-text-sub text-lg">Track all your rent and service payments</p>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Total Paid</span>
+                    <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                </div>
+                <p class="text-3xl font-bold">₹7,80,000</p>
+                <p class="text-xs text-text-sub mt-2">Across 12 months</p>
+            </div>
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Upcoming</span>
+                    <span class="material-symbols-outlined text-blue-600 text-2xl">schedule</span>
+                </div>
+                <p class="text-3xl font-bold">₹65,000</p>
+                <p class="text-xs text-text-sub mt-2">Due in 5 days</p>
+            </div>
+            <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-200">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-text-sub text-sm font-semibold uppercase">Late Fees</span>
+                    <span class="material-symbols-outlined text-orange-600 text-2xl">info</span>
+                </div>
+                <p class="text-3xl font-bold">₹0</p>
+                <p class="text-xs text-text-sub mt-2">Great payment record!</p>
+            </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="mb-12">
+            <h2 class="text-2xl font-bold mb-6">Recent Transactions</h2>
+            <div class="space-y-3">
+                <div class="bg-white rounded-2xl border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600"><span class="material-symbols-outlined">arrow_downward</span></div>
+                        <div>
+                            <p class="font-bold">Rent Payment - December</p>
+                            <p class="text-xs text-text-sub">Dec 1, 2025 • Reference: TXN-12345</p>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">₹65,000</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600"><span class="material-symbols-outlined">arrow_downward</span></div>
+                        <div>
+                            <p class="font-bold">Rent Payment - November</p>
+                            <p class="text-xs text-text-sub">Nov 2, 2025 • Reference: TXN-12344</p>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">₹65,000</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-gray-100 p-4 flex items-center justify-between hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600"><span class="material-symbols-outlined">arrow_downward</span></div>
+                        <div>
+                            <p class="font-bold">Maintenance Charges - October</p>
+                            <p class="text-xs text-text-sub">Oct 5, 2025 • Reference: TXN-12343</p>
+                        </div>
+                    </div>
+                    <p class="font-bold text-lg">₹5,000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="profile.html" class="text-primary font-medium hover:underline flex items-center justify-center gap-1">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>Back to Profile
+            </a>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-sub">© 2025 NoBroker Technologies</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>NoBroker - Biometric Login</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "accent-green": "#22c55e",
+                        "accent-green-dark": "#16a34a",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white overflow-x-hidden">
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html">
+                    <div class="flex items-center gap-2 cursor-pointer">
+                        <div class="size-8 text-primary flex items-center justify-center">
+                            <span class="material-symbols-outlined text-3xl">apartment</span>
+                        </div>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                </a>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="flex items-center justify-center size-9 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        onclick="window.location.href='mobile_app.html'"><span
+                            class="material-symbols-outlined text-xl">arrow_back</span></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="min-h-screen flex flex-col items-center justify-center -mt-16 bg-gray-50 dark:bg-[#101622] p-4">
+        <div class="text-center max-w-2xl mx-auto">
+            <div
+                class="size-24 bg-red-50 text-red-500 rounded-3xl mx-auto flex items-center justify-center mb-8 shadow-sm">
+                <span class="material-symbols-outlined text-6xl">fingerprint</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-black mb-6 text-gray-900 dark:text-white">Secure Biometric Login</h1>
+            <p class="text-xl text-gray-500 dark:text-gray-400 mb-10 leading-relaxed">
+                Unlock the full potential of NoBroker with just a touch. Our advanced biometric security ensures your
+                account remains safe while giving you instant access to your listings and chats.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-left">
+                <div
+                    class="bg-white dark:bg-[#1a202c] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                    <span class="material-symbols-outlined text-3xl text-primary mb-4">bolt</span>
+                    <h3 class="font-bold mb-2">Lightning Fast</h3>
+                    <p class="text-sm text-gray-500">Log in under 0.5 seconds. No more forgotten passwords.</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-[#1a202c] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                    <span class="material-symbols-outlined text-3xl text-green-500 mb-4">verified_user</span>
+                    <h3 class="font-bold mb-2">Bank-Grade Security</h3>
+                    <p class="text-sm text-gray-500">Your biometric data is encrypted and stored locally on your device.
+                    </p>
+                </div>
+                <div
+                    class="bg-white dark:bg-[#1a202c] p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
+                    <span class="material-symbols-outlined text-3xl text-purple-500 mb-4">face</span>
+                    <h3 class="font-bold mb-2">Face ID Supported</h3>
+                    <p class="text-sm text-gray-500">Works seamlessly with native Android and iOS face recognition.</p>
+                </div>
+            </div>
+
+            <button onclick="window.location.href='app_download.html'"
+                class="bg-primary hover:bg-primary-dark text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary/30 transition-all hover:scale-105 active:scale-95">
+                Enable on App
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>

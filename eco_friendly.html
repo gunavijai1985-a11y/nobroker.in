@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Eco-Friendly Properties - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d3c9e",
+                        "accent": "#f97316", // Orange for special CTAs
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e293b",
+                        "text-main": "#111318",
+                        "text-secondary": "#616f89",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar for sidebar */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1;
+            border-radius: 20px;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white flex flex-col min-h-screen transition-colors duration-200">
+    <!-- Top Navigation -->
+    <header
+        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e5e7eb] dark:border-b-[#2d3748] px-6 py-3 bg-surface-light dark:bg-surface-dark sticky top-0 z-50">
+        <a href="index.html" class="flex items-center">
+            <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+        </a>
+        <!-- Search Bar -->
+        <label class="hidden md:flex flex-col min-w-[320px] !h-10 max-w-lg">
+            <div
+                class="flex w-full flex-1 items-stretch rounded-lg h-full border border-[#dbdfe6] dark:border-[#4b5563] overflow-hidden focus-within:ring-2 focus-within:ring-primary/50 transition-all">
+                <div
+                    class="text-text-secondary dark:text-gray-400 flex border-none bg-white dark:bg-[#1e293b] items-center justify-center pl-3">
+                    <span class="material-symbols-outlined">search</span>
+                </div>
+                <input
+                    class="flex w-full min-w-0 flex-1 resize-none overflow-hidden text-text-main dark:text-white focus:outline-0 border-none bg-white dark:bg-[#1e293b] h-full placeholder:text-text-secondary px-3 text-sm font-normal leading-normal"
+                    placeholder="Search locality, landmark, or project" value="Indiranagar, Bangalore" />
+                <button
+                    class="bg-primary hover:bg-primary-dark text-white px-4 font-medium text-sm transition-colors">Search</button>
+            </div>
+        </label>
+        </div>
+        <div class="flex flex-1 justify-end gap-6 items-center">
+            <div class="hidden lg:flex items-center gap-6">
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="buy.html">Buy</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="index.html">Rent</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="commercial.html">Commercial</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="pay_rent.html">Pay Rent</a>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="post_property.html">Post Property</a>
+                <div class="relative group">
+                    <button
+                        class="flex items-center gap-1 text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors">
+                        Services <span class="material-symbols-outlined text-sm">expand_more</span>
+                    </button>
+                    <div
+                        class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <a href="rental_agreement.html"
+                            class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-xl">Rental
+                            Agreement</a>
+                        <a href="packers_movers.html"
+                            class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-b-xl">Packers
+                            & Movers</a>
+                    </div>
+                </div>
+                <a class="text-text-main dark:text-gray-200 text-sm font-medium hover:text-primary transition-colors"
+                    href="login.html">Log In</a>
+            </div>
+            <button id="menuButton"
+                class="flex items-center gap-2 border border-[#dbdfe6] dark:border-[#4b5563] rounded-lg px-3 py-2 text-sm font-medium text-text-main dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                <span class="material-symbols-outlined text-lg">menu</span>
+                <span class="hidden sm:inline">Menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Layout -->
+    <div class="flex-1 max-w-[1440px] mx-auto w-full px-4 lg:px-6 py-6">
+        <!-- Breadcrumbs & Headline -->
+        <div class="mb-6">
+            <div class="flex flex-wrap gap-2 text-sm text-text-secondary dark:text-gray-400 mb-2">
+                <a class="hover:text-primary transition-colors" href="index.html">Home</a>
+                <span>/</span>
+                <a class="hover:text-primary transition-colors" href="#">Bangalore</a>
+                <span>/</span>
+                <span class="text-text-main dark:text-gray-200 font-medium">Rent in Indiranagar</span>
+            </div>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-text-main dark:text-white tracking-tight">
+                        Eco-Friendly Homes
+                    </h1>
+                    <p class="text-text-secondary dark:text-gray-400 mt-1 text-sm">
+                        Showing 124 results based on your preferences
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 relative">
+            <!-- Left Sidebar: Filters -->
+            <aside class="hidden lg:block lg:col-span-3 xl:col-span-3 space-y-4">
+                <div
+                    class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm overflow-hidden sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto custom-scrollbar">
+                    <div
+                        class="p-4 border-b border-[#e5e7eb] dark:border-[#2d3748] flex justify-between items-center bg-gray-50 dark:bg-gray-800/50">
+                        <h3 class="font-bold text-lg flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">tune</span> Refine Search
+                        </h3>
+                        <button id="resetFilters"
+                            class="text-xs font-medium text-primary hover:underline">Reset</button>
+                    </div>
+                    <!-- Map Toggle -->
+                    <div class="p-4 border-b border-[#e5e7eb] dark:border-[#2d3748]">
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-medium">Show on Map</span>
+                            <button id="mapToggle"
+                                class="bg-gray-200 dark:bg-gray-700 w-10 h-6 rounded-full relative transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                                <span id="mapToggleHandle"
+                                    class="translate-x-1 inline-block w-4 h-4 transform bg-white rounded-full transition-transform duration-200"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Filters Content -->
+                    <div class="p-4 space-y-6">
+                        <!-- Apartment Type -->
+                        <div class="space-y-3">
+                            <h4
+                                class="font-semibold text-sm text-text-secondary dark:text-gray-400 uppercase tracking-wider">
+                                Apartment Type</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <label class="cursor-pointer">
+                                    <input checked="" class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">
+                                        1 BHK</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input checked="" class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">
+                                        2 BHK</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">
+                                        3 BHK</div>
+                                </label>
+                                <label class="cursor-pointer">
+                                    <input class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-full border border-gray-300 dark:border-gray-600 text-sm font-medium peer-checked:bg-primary peer-checked:text-white peer-checked:border-primary transition-all">
+                                        4+ BHK</div>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Price Range -->
+                        <div class="space-y-3">
+                            <h4
+                                class="font-semibold text-sm text-text-secondary dark:text-gray-400 uppercase tracking-wider">
+                                Rent Range</h4>
+                            <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
+                                <div class="flex justify-between text-xs font-medium text-text-secondary mb-2">
+                                    <span>₹0</span>
+                                    <span>₹1L+</span>
+                                </div>
+                                <div class="relative h-6 flex items-center">
+                                    <input id="rentRange"
+                                        class="w-full h-1.5 bg-gray-300 dark:bg-gray-600 rounded-lg appearance-none cursor-pointer accent-primary"
+                                        max="100000" min="0" step="1000" type="range" value="60000" />
+                                </div>
+                                <div class="flex items-center justify-between mt-1 text-sm font-semibold">
+                                    <span>₹0</span>
+                                    <span>-</span>
+                                    <span id="rangeValue">₹60k</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Availability -->
+                        <div class="space-y-3">
+                            <h4
+                                class="font-semibold text-sm text-text-secondary dark:text-gray-400 uppercase tracking-wider">
+                                Availability</h4>
+                            <div class="space-y-2">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center">
+                                        <input checked=""
+                                            class="peer h-4 w-4 border-gray-300 text-primary focus:ring-primary"
+                                            name="avail" type="radio" />
+                                    </div>
+                                    <span class="text-sm group-hover:text-primary transition-colors">Immediate</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center">
+                                        <input class="peer h-4 w-4 border-gray-300 text-primary focus:ring-primary"
+                                            name="avail" type="radio" />
+                                    </div>
+                                    <span class="text-sm group-hover:text-primary transition-colors">Within 15
+                                        Days</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <div class="relative flex items-center">
+                                        <input class="peer h-4 w-4 border-gray-300 text-primary focus:ring-primary"
+                                            name="avail" type="radio" />
+                                    </div>
+                                    <span class="text-sm group-hover:text-primary transition-colors">Within 30
+                                        Days</span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- Tenant Type -->
+                        <div class="space-y-3">
+                            <h4
+                                class="font-semibold text-sm text-text-secondary dark:text-gray-400 uppercase tracking-wider">
+                                Preferred Tenant</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <label class="cursor-pointer select-none">
+                                    <input checked="" class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm peer-checked:bg-primary/10 peer-checked:text-primary peer-checked:border-primary transition-all">
+                                        Family</div>
+                                </label>
+                                <label class="cursor-pointer select-none">
+                                    <input class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm peer-checked:bg-primary/10 peer-checked:text-primary peer-checked:border-primary transition-all">
+                                        Bachelor</div>
+                                </label>
+                                <label class="cursor-pointer select-none">
+                                    <input class="peer sr-only" type="checkbox" />
+                                    <div
+                                        class="px-3 py-1.5 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-sm peer-checked:bg-primary/10 peer-checked:text-primary peer-checked:border-primary transition-all">
+                                        Company</div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pt-4">
+                            <button id="applyFilters"
+                                class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-3 px-4 rounded-lg transition-colors shadow-md shadow-primary/20">
+                                Apply Filters
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Center: Listings -->
+            <main class="col-span-1 lg:col-span-9 xl:col-span-6 flex flex-col gap-4">
+                <!-- Sort & View Controls -->
+                <div
+                    class="bg-surface-light dark:bg-surface-dark rounded-xl p-3 border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm flex flex-wrap gap-3 items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="relative">
+                            <select id="sortSelect"
+                                class="appearance-none bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-text-main dark:text-white text-sm rounded-lg focus:ring-primary focus:border-primary block w-full p-2.5 pr-8 cursor-pointer font-medium">
+                                <option>AI Recommended</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Newest First</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-text-secondary">
+                                <span class="material-symbols-outlined text-lg">expand_more</span>
+                            </div>
+                        </div>
+                        <div
+                            class="hidden sm:flex items-center gap-1 text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded border border-primary/20">
+                            <span class="material-symbols-outlined text-sm">auto_awesome</span>
+                            Sorted by AI Match
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 border-l border-gray-200 dark:border-gray-700 pl-3">
+                        <button class="p-2 text-primary bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors"
+                            title="List View">
+                            <span class="material-symbols-outlined">view_list</span>
+                        </button>
+                        <button
+                            class="p-2 text-text-secondary hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                            title="Grid View">
+                            <span class="material-symbols-outlined">grid_view</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Properties Container -->
+                <div id="propertyList" class="flex flex-col gap-6">
+                    <!-- Card 1 -->
+                    <article
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 overflow-hidden group">
+                        <div class="flex flex-col sm:flex-row h-full">
+                            <!-- Image Section -->
+                            <div class="relative w-full sm:w-72 h-64 sm:h-auto shrink-0 bg-gray-200">
+                                <img alt="Modern spacious living room with natural light"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZgRovsHxD9W0S2U9dYCKccQwUmkbb55Z2I3fK5cIUcngs1U10gJcgYHJ7JkNHKcnwMdLet0bVCaO0Uu5b1Zj4lbjQ0Rv2337kq0h-kACyyqS_aGbYVpCAZXP9PFJTFPAR01RGvD7qtvE7YFzktzTqL3V5gnR7nn0blj54_Lxy5FlBFwSoA6JLSVCqiGJlcRjacvWsL22vT33CapmqVcX3oDyxVbe_EczYXKVCFl_P998SlsBbSU1XUymt3aYBPyzavK7lVNSfLQU" />
+                                <div
+                                    class="absolute top-3 left-3 bg-white/95 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-primary border border-primary/10">
+                                    <span class="material-symbols-outlined text-sm filled">auto_awesome</span>
+                                    98% Match
+                                </div>
+                                <div class="absolute bottom-3 left-3 flex gap-2">
+                                    <button onclick="openGallery()"
+                                        class="bg-black/60 text-white text-[10px] px-2 py-1 rounded flex items-center gap-1 backdrop-blur-sm hover:bg-black/80 transition-colors cursor-pointer">
+                                        <span class="material-symbols-outlined text-xs">photo_camera</span> 8 Photos
+                                    </button>
+                                </div>
+                                <button
+                                    class="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-white text-gray-500 hover:text-red-500 transition-colors shadow-sm">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <!-- Content Section -->
+                            <div class="flex flex-col flex-1 p-5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h2 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors cursor-pointer"
+                                            onclick="window.location.href='property_details.html'">
+                                            2 BHK Apartment
+                                        </h2>
+                                        <p class="text-text-secondary text-sm mt-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">location_on</span>
+                                            Indiranagar, Bangalore • 1st Stage
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-2xl font-bold text-text-main dark:text-white">₹35,000</div>
+                                        <div class="text-xs text-text-secondary">per month</div>
+                                        <div class="text-xs text-green-600 font-medium mt-1">Negotiable</div>
+                                    </div>
+                                </div>
+                                <!-- Key Stats Grid -->
+                                <div
+                                    class="grid grid-cols-3 gap-2 py-4 border-y border-dashed border-gray-200 dark:border-gray-700 my-2">
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700">
+                                        <span class="text-xs text-text-secondary uppercase">Built Up Area</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">square_foot</span>
+                                            1200 Sq.ft
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Furnishing</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-base text-gray-400">chair</span>
+                                            Semi
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Available From</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">calendar_today</span>
+                                            Immediate
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Owner & Actions -->
+                                <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-10 rounded-full bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900 dark:to-blue-800 flex items-center justify-center text-primary font-bold text-sm">
+                                            RA
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold text-text-main dark:text-white">Rajesh
+                                                A.</span>
+                                            <span class="text-xs text-text-secondary">Owner</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 flex-1 justify-end">
+                                        <label
+                                            class="hidden sm:flex items-center gap-2 cursor-pointer text-sm text-text-secondary select-none">
+                                            <input class="rounded border-gray-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                            Compare
+                                        </label>
+                                        <button onclick="window.location.href='virtual_tour.html'"
+                                            class="px-4 py-2 rounded-lg border border-accent/30 text-accent hover:bg-accent/5 font-semibold text-sm flex items-center gap-2 transition-colors">
+                                            <span class="material-symbols-outlined text-lg">videocam</span>
+                                            <span class="hidden sm:inline">Virtual Tour</span>
+                                        </button>
+                                        <button onclick="window.location.href='property_details.html'"
+                                            class="px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/5 font-semibold text-sm transition-colors mr-2">
+                                            View Details
+                                        </button>
+                                        <button
+                                            class="px-5 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-sm shadow-md shadow-blue-500/20 transition-all transform active:scale-95"
+                                            onclick="window.location.href='property_details.html'">
+                                            Contact Owner
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 2 -->
+                    <article
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 overflow-hidden group">
+                        <div class="flex flex-col sm:flex-row h-full">
+                            <!-- Image Section -->
+                            <div class="relative w-full sm:w-72 h-64 sm:h-auto shrink-0 bg-gray-200">
+                                <img alt="Cozy bedroom with wooden flooring and window"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtqGcBCuHhnSntJFqr600l6jQUzkWUxaCzBKooBcYph8Azs40BaP8XPiec8kFyNLVKJwvkBmDoivyUSmtAd_vU1pb_DTksVf7dgRi_1VvHcY5VhQAh3H5_IRCmdwpjpBo-Ws4AuCSJ9M9cFFQwUZzaIkEBebz8a4B34L71pGQ8PHsOOPo24QbmFm9A49c_OOdSYEbzTsmg-Lo6gtmoEXcbtWL_1mF16dMmSvnvZ91S9wo2iRyoDs7nRJ5p0n_51H1DJEOtJp0oJe3p" />
+                                <div
+                                    class="absolute top-3 left-3 bg-white/95 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-green-600 border border-green-600/10">
+                                    <span class="material-symbols-outlined text-sm filled">check_circle</span>
+                                    Verified
+                                </div>
+                                <button
+                                    class="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-white text-gray-500 hover:text-red-500 transition-colors shadow-sm">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <!-- Content Section -->
+                            <div class="flex flex-col flex-1 p-5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h2 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors cursor-pointer"
+                                            onclick="window.location.href='property_details.html'">
+                                            3 BHK Luxury Flat
+                                        </h2>
+                                        <p class="text-text-secondary text-sm mt-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">location_on</span>
+                                            HAL 2nd Stage, Indiranagar
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-2xl font-bold text-text-main dark:text-white">₹55,000</div>
+                                        <div class="text-xs text-text-secondary">per month</div>
+                                        <div class="text-xs text-text-secondary mt-1">+ Maintenance</div>
+                                    </div>
+                                </div>
+                                <!-- Key Stats Grid -->
+                                <div
+                                    class="grid grid-cols-3 gap-2 py-4 border-y border-dashed border-gray-200 dark:border-gray-700 my-2">
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700">
+                                        <span class="text-xs text-text-secondary uppercase">Built Up Area</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">square_foot</span>
+                                            1850 Sq.ft
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Furnishing</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-base text-gray-400">chair</span>
+                                            Full
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Available From</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">calendar_today</span>
+                                            Oct 1st
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Owner & Actions -->
+                                <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-10 rounded-full bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-900 dark:to-purple-800 flex items-center justify-center text-purple-700 dark:text-purple-300 font-bold text-sm">
+                                            SK
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold text-text-main dark:text-white">Suresh
+                                                K.</span>
+                                            <span class="text-xs text-text-secondary">Owner</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 flex-1 justify-end">
+                                        <label
+                                            class="hidden sm:flex items-center gap-2 cursor-pointer text-sm text-text-secondary select-none">
+                                            <input class="rounded border-gray-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                            Compare
+                                        </label>
+                                        <button onclick="window.location.href='property_details.html'"
+                                            class="px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/5 font-semibold text-sm transition-colors mr-2">
+                                            View Details
+                                        </button>
+                                        <button
+                                            class="px-5 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-sm shadow-md shadow-blue-500/20 transition-all transform active:scale-95"
+                                            onclick="window.location.href='property_details.html'">
+                                            Contact Owner
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Card 3 -->
+                    <article
+                        class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 overflow-hidden group">
+                        <div class="flex flex-col sm:flex-row h-full">
+                            <!-- Image Section -->
+                            <div class="relative w-full sm:w-72 h-64 sm:h-auto shrink-0 bg-gray-200">
+                                <img alt="Stylish apartment interior with sofa and artwork"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAp4dZQhIUcQeaPWmiVN__6nUySKcxzMjX0DKvsskB8GEIUg7vGHMw_1aue1UqolgOj5aIObDrE0Dr5MZEFxBPscbrTKB0fcTc6CvsYc5xxMMN5MzwmsVyp_I2ayZF7m6JiYJ85-dF7DYc7ybnqRNUdsiEvHafMR0c_2ftHeX0zvJkPt5AcxANLY8xChUl7WHPaTpNPELyv3FXdvfuCMCDFaUNbgCAyrV_RgrjgGuBOiEAgXdN1VxfXDDEOi_ybJIzQG7pCZ2q4ezVF" />
+                                <div
+                                    class="absolute top-3 left-3 bg-white/95 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-primary border border-primary/10">
+                                    <span class="material-symbols-outlined text-sm filled">auto_awesome</span>
+                                    92% Match
+                                </div>
+                                <div class="absolute bottom-3 left-3 flex gap-2">
+                                    <div
+                                        class="bg-accent text-white text-[10px] px-2 py-1 rounded flex items-center gap-1 font-bold shadow-sm">
+                                        POPULAR
+                                    </div>
+                                </div>
+                                <button
+                                    class="absolute top-3 right-3 p-2 bg-white/90 dark:bg-black/50 rounded-full hover:bg-white text-gray-500 hover:text-red-500 transition-colors shadow-sm">
+                                    <span class="material-symbols-outlined text-xl">favorite</span>
+                                </button>
+                            </div>
+                            <!-- Content Section -->
+                            <div class="flex flex-col flex-1 p-5">
+                                <div class="flex justify-between items-start mb-2">
+                                    <div>
+                                        <h2
+                                            class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors cursor-pointer">
+                                            2 BHK Independent House
+                                        </h2>
+                                        <p class="text-text-secondary text-sm mt-1 flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-sm">location_on</span>
+                                            Defence Colony, Indiranagar
+                                        </p>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="text-2xl font-bold text-text-main dark:text-white">₹28,000</div>
+                                        <div class="text-xs text-text-secondary">per month</div>
+                                    </div>
+                                </div>
+                                <!-- Key Stats Grid -->
+                                <div
+                                    class="grid grid-cols-3 gap-2 py-4 border-y border-dashed border-gray-200 dark:border-gray-700 my-2">
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700">
+                                        <span class="text-xs text-text-secondary uppercase">Built Up Area</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">square_foot</span>
+                                            950 Sq.ft
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Furnishing</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span class="material-symbols-outlined text-base text-gray-400">chair</span>
+                                            Unfurn.
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-col gap-1 pl-2">
+                                        <span class="text-xs text-text-secondary uppercase">Available From</span>
+                                        <span class="font-semibold text-sm flex items-center gap-1">
+                                            <span
+                                                class="material-symbols-outlined text-base text-gray-400">calendar_today</span>
+                                            Immediate
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- Owner & Actions -->
+                                <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-10 rounded-full bg-gradient-to-br from-green-100 to-green-200 dark:from-green-900 dark:to-green-800 flex items-center justify-center text-green-700 dark:text-green-300 font-bold text-sm">
+                                            MJ
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span class="text-sm font-semibold text-text-main dark:text-white">Mary
+                                                J.</span>
+                                            <span class="text-xs text-text-secondary">Owner</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-3 flex-1 justify-end">
+                                        <label
+                                            class="hidden sm:flex items-center gap-2 cursor-pointer text-sm text-text-secondary select-none">
+                                            <input class="rounded border-gray-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                            Compare
+                                        </label>
+                                        <button onclick="window.location.href='property_details.html'"
+                                            class="px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/5 font-semibold text-sm transition-colors mr-2">
+                                            View Details
+                                        </button>
+                                        <button
+                                            class="px-5 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-sm shadow-md shadow-blue-500/20 transition-all transform active:scale-95"
+                                            onclick="window.location.href='property_details.html'">
+                                            Contact Owner
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+        </div>
+        <!-- Pagination/Infinite Scroll -->
+        <div class="flex flex-col items-center justify-center pt-8 pb-4 gap-4">
+            <p id="showingCount" class="text-sm text-text-secondary">Showing 1-3 of 124 properties</p>
+            <div class="w-full h-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden max-w-md">
+                <div id="progressBar" class="w-[3%] h-full bg-primary rounded-full transition-all duration-500"></div>
+            </div>
+            <button id="loadMoreBtn"
+                class="text-primary font-bold hover:bg-primary/5 px-6 py-2 rounded-full border border-primary transition-colors flex items-center gap-2">
+                Load More Properties <span class="material-symbols-outlined animate-bounce">arrow_downward</span>
+            </button>
+        </div>
+        </main>
+        <!-- Right Sidebar: Ads/Services -->
+        <aside class="hidden xl:block xl:col-span-3 space-y-6">
+            <!-- Ad Card -->
+            <div class="sticky top-24 space-y-6">
+                <div
+                    class="bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-xl p-6 text-white shadow-lg relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-white/10 transition-colors">
+                    </div>
+                    <h3 class="font-bold text-lg relative z-10">Premium Plan</h3>
+                    <p class="text-gray-300 text-sm mt-2 relative z-10">Get a Relationship Manager &amp; save up to
+                        ₹50,000 on brokerage.</p>
+                    <ul class="mt-4 space-y-2 text-sm text-gray-300 relative z-10">
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-green-400 text-sm">check</span> Personal
+                            Assistant</li>
+                        <li class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-green-400 text-sm">check</span> Guaranteed
+                            Closure</li>
+                    </ul>
+                    <button
+                        class="w-full mt-6 bg-accent hover:bg-orange-600 text-white font-bold py-2 rounded-lg transition-colors shadow-lg relative z-10"
+                        onclick="window.location.href='pay_rent.html'">
+                        Explore Plans
+                    </button>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] p-4 shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-blue-50 dark:bg-blue-900/30 rounded-lg text-primary">
+                            <span class="material-symbols-outlined">contract</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-text-main dark:text-white">Rental Agreement</h4>
+                            <p class="text-xs text-text-secondary">Home delivered</p>
+                        </div>
+                    </div>
+                    <button class="w-full text-primary text-sm font-medium hover:underline text-left"
+                        onclick="window.location.href='rental_agreement.html'">Create Now →</button>
+                </div>
+                <div
+                    class="bg-white dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] p-4 shadow-sm">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="p-2 bg-green-50 dark:bg-green-900/30 rounded-lg text-green-600">
+                            <span class="material-symbols-outlined">local_shipping</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-text-main dark:text-white">Packers &amp; Movers</h4>
+                            <p class="text-xs text-text-secondary">Lowest price guarantee</p>
+                        </div>
+                    </div>
+                    <button class="w-full text-primary text-sm font-medium hover:underline text-left"
+                        onclick="window.location.href='packers_movers.html'">Get Quote →</button>
+                </div>
+                <!-- Vertical Ad Placeholder -->
+                <div
+                    class="h-64 bg-gray-100 dark:bg-gray-800 rounded-xl border border-dashed border-gray-300 dark:border-gray-600 flex flex-col items-center justify-center text-text-secondary gap-2">
+                    <span class="text-xs font-semibold uppercase tracking-widest">Advertisement</span>
+                    <div class="w-12 h-1 bg-gray-300 dark:bg-gray-600 rounded-full"></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                <div class="col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        World's largest NoBrokerage property site. Connect directly with owners and save brokerage fees.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                class="text-xl">X</span></a> <!-- Placeholder for social icons -->
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                class="text-xl">fb</span></a>
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                class="text-xl">in</span></a>
+                        <a class="text-gray-400 hover:text-primary transition-colors" href="#"><span
+                                class="text-xl">ig</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="post_property.html">Post Property</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="terms.html">Terms &amp; Conditions</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="privacy_policy.html">Privacy
+                                Policy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="testimonials.html">Testimonials</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="contact_us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="rental_agreement.html">Rental
+                                Agreement</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="packers_movers.html">Packers &amp;
+                                Movers</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="property_management.html">Property
+                                Management</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="home_services.html">Home Services</a>
+                        </li>
+                        <li><a class="hover:text-primary transition-colors" href="pay_rent.html">Pay Rent</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xs">call</span> +91 99999 99999
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-xs">mail</span> hello@nobroker.in
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Side Menu Overlay -->
+    <div id="sideMenuOverlay"
+        class="fixed inset-0 bg-black/50 z-[60] opacity-0 invisible transition-all duration-300 backdrop-blur-sm"></div>
+
+    <!-- Side Menu Drawer -->
+    <div id="sideMenu"
+        class="fixed top-0 right-0 h-full w-[300px] bg-white dark:bg-surface-dark z-[70] translate-x-full transition-transform duration-300 shadow-2xl overflow-y-auto">
+        <div
+            class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center bg-gray-50/50 dark:bg-gray-800/50">
+            <div class="flex items-center gap-3 text-primary">
+                <span class="material-symbols-outlined text-2xl font-bold">apartment</span>
+                <span class="font-black tracking-tighter text-gray-900 dark:text-white text-lg">NoBroker</span>
+            </div>
+            <button id="closeMenu"
+                class="size-9 rounded-full flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <div class="p-4 py-6 space-y-2">
+            <a href="index.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">home</span>
+                <span class="font-semibold">Home</span>
+            </a>
+            <a href="profile.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">account_circle</span>
+                <span class="font-semibold">My Profile</span>
+            </a>
+            <a href="post_property.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">add_circle</span>
+                <span class="font-semibold">Post Property</span>
+            </a>
+            <a href="pay_rent.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">credit_card</span>
+                <span class="font-semibold">Pay Rent</span>
+            </a>
+            <div class="h-px bg-gray-100 dark:bg-gray-800 my-4 mx-2"></div>
+            <p class="px-5 text-[10px] font-black uppercase text-gray-400 tracking-widest mb-2">Support & Info</p>
+            <a href="about_us.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">info</span>
+                <span class="font-semibold">About Us</span>
+            </a>
+            <a href="contact_us.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">support_agent</span>
+                <span class="font-semibold">Contact Us</span>
+            </a>
+            <a href="testimonials.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">reviews</span>
+                <span class="font-semibold">Testimonials</span>
+            </a>
+            <a href="blog.html"
+                class="flex items-center gap-4 p-3 rounded-xl hover:bg-primary/5 text-gray-700 dark:text-gray-200 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-gray-400 group-hover:text-primary transition-colors">rss_feed</span>
+                <span class="font-semibold">Blog</span>
+            </a>
+        </div>
+
+        <div class="p-6 mt-4">
+            <button onclick="window.location.href='login.html'"
+                class="w-full bg-primary text-white font-bold py-3 rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">
+                Login / Register
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts for Interactivity -->
+    <script>
+        // Menu Toggle Logic
+        const menuButton = document.getElementById('menuButton');
+        const sideMenu = document.getElementById('sideMenu');
+        const sideMenuOverlay = document.getElementById('sideMenuOverlay');
+        const closeMenu = document.getElementById('closeMenu');
+
+        function toggleMenu() {
+            sideMenu.classList.toggle('translate-x-full');
+            sideMenuOverlay.classList.toggle('opacity-0');
+            sideMenuOverlay.classList.toggle('invisible');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuButton) menuButton.addEventListener('click', toggleMenu);
+        if (closeMenu) closeMenu.addEventListener('click', toggleMenu);
+        if (sideMenuOverlay) sideMenuOverlay.addEventListener('click', toggleMenu);
+
+        // Layout Toggle Logic
+        const propertyList = document.getElementById('propertyList');
+        const listBtn = document.querySelector('button[title="List View"]');
+        const gridBtn = document.querySelector('button[title="Grid View"]');
+
+        function switchLayout(mode) {
+            if (mode === 'grid') {
+                propertyList.classList.remove('flex', 'flex-col');
+                propertyList.classList.add('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6');
+                gridBtn.classList.replace('text-text-secondary', 'text-primary');
+                gridBtn.classList.add('bg-primary/10');
+                listBtn.classList.replace('text-primary', 'text-text-secondary');
+                listBtn.classList.remove('bg-primary/10');
+                const articles = propertyList.querySelectorAll('article');
+                articles.forEach(article => {
+                    const row = article.querySelector('.flex-col.sm\\:flex-row');
+                    if (row) row.classList.remove('sm:flex-row');
+                });
+            } else {
+                propertyList.classList.add('flex', 'flex-col');
+                propertyList.classList.remove('grid', 'grid-cols-1', 'md:grid-cols-2', 'gap-6');
+                listBtn.classList.replace('text-text-secondary', 'text-primary');
+                listBtn.classList.add('bg-primary/10');
+                gridBtn.classList.replace('text-primary', 'text-text-secondary');
+                gridBtn.classList.remove('bg-primary/10');
+                const articles = propertyList.querySelectorAll('article');
+                articles.forEach(article => {
+                    const row = article.querySelector('.flex-col');
+                    if (row) row.classList.add('sm:flex-row');
+                });
+            }
+        }
+
+        if (listBtn) listBtn.addEventListener('click', () => switchLayout('list'));
+        if (gridBtn) gridBtn.addEventListener('click', () => switchLayout('grid'));
+
+        // Map Toggle Logic
+        const mapToggle = document.getElementById('mapToggle');
+        const mapToggleHandle = document.getElementById('mapToggleHandle');
+        let isMapOn = false;
+
+        if (mapToggle) {
+            mapToggle.addEventListener('click', () => {
+                isMapOn = !isMapOn;
+                if (isMapOn) {
+                    mapToggle.classList.replace('bg-gray-200', 'bg-primary');
+                    mapToggle.classList.replace('dark:bg-gray-700', 'bg-primary');
+                    mapToggleHandle.classList.replace('translate-x-1', 'translate-x-5');
+                } else {
+                    mapToggle.classList.replace('bg-primary', 'bg-gray-200');
+                    mapToggle.classList.add('dark:bg-gray-700');
+                    mapToggleHandle.classList.replace('translate-x-5', 'translate-x-1');
+                }
+            });
+        }
+
+        // Rent Range Logic
+        const rentRange = document.getElementById('rentRange');
+        const rangeValue = document.getElementById('rangeValue');
+
+        if (rentRange) {
+            rentRange.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (val >= 100000) {
+                    rangeValue.textContent = '₹1L+';
+                } else if (val >= 1000) {
+                    rangeValue.textContent = `₹${(val / 1000).toFixed(0)}k`;
+                } else {
+                    rangeValue.textContent = `₹${val}`;
+                }
+            });
+        }
+
+        // Filter Logic
+        const applyFilters = document.getElementById('applyFilters');
+        const resetFilters = document.getElementById('resetFilters');
+        const filterInputs = document.querySelectorAll('aside input');
+
+        if (applyFilters) {
+            applyFilters.addEventListener('click', () => {
+                applyFilters.textContent = 'Applying...';
+                applyFilters.disabled = true;
+                setTimeout(() => {
+                    applyFilters.textContent = 'Apply Filters';
+                    applyFilters.disabled = false;
+                    alert('Filters applied successfully! (Mock search update)');
+                }, 800);
+            });
+        }
+
+        if (resetFilters) {
+            resetFilters.addEventListener('click', () => {
+                filterInputs.forEach(input => {
+                    if (input.type === 'checkbox' || input.type === 'radio') {
+                        if (input.name === 'avail') {
+                            if (input.parentElement.innerText.includes('Immediate')) {
+                                input.checked = true;
+                            } else {
+                                input.checked = false;
+                            }
+                        } else if (input.parentElement.innerText.includes('1 BHK') || input.parentElement.innerText.includes('2 BHK') || input.parentElement.innerText.includes('Family')) {
+                            input.checked = true;
+                        } else {
+                            input.checked = false;
+                        }
+                    }
+                });
+                if (rentRange) {
+                    rentRange.value = 60000;
+                    rangeValue.textContent = '₹60k';
+                }
+                if (isMapOn) mapToggle.click();
+                alert('Filters reset to default.');
+            });
+        }
+        // Load More Properties Logic
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        // propertyList is already declared above
+        const showingCount = document.getElementById('showingCount');
+        const progressBar = document.getElementById('progressBar');
+        let currentCount = 3;
+        const totalProperties = 124;
+
+        const propertyTemplate = (id) => `
+            <article class="bg-surface-light dark:bg-surface-dark rounded-xl border border-[#e5e7eb] dark:border-[#2d3748] shadow-sm hover:shadow-lg hover:border-primary/30 transition-all duration-300 overflow-hidden group opacity-0 translate-y-4 animate-fade-in-up">
+                <div class="flex flex-col sm:flex-row h-full">
+                    <div class="relative w-full sm:w-72 h-64 sm:h-auto shrink-0 bg-gray-200">
+                        <img src="https://picsum.photos/seed/${id + currentCount}/400/300" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Property Image">
+                        <div class="absolute top-3 left-3 bg-white/95 dark:bg-black/80 backdrop-blur-sm px-2 py-1 rounded-md text-xs font-bold flex items-center gap-1 shadow-sm text-primary border border-primary/10">
+                            <span class="material-symbols-outlined text-sm filled">auto_awesome</span>
+                            ${Math.floor(Math.random() * 20) + 80}% Match
+                        </div>
+                    </div>
+                    <div class="flex flex-col flex-1 p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <div>
+                                <h2 class="text-xl font-bold text-text-main dark:text-white group-hover:text-primary transition-colors cursor-pointer" onclick="window.location.href='property_details.html'">
+                                    ${id} BHK Premium Apartment
+                                </h2>
+                                <p class="text-text-secondary text-sm mt-1 flex items-center gap-1">
+                                    <span class="material-symbols-outlined text-sm">location_on</span>
+                                    HSR Layout, Sector ${id}
+                                </p>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-bold text-text-main dark:text-white">₹${(id * 15 + 20)}000</div>
+                                <div class="text-xs text-text-secondary">per month</div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-3 gap-2 py-4 border-y border-dashed border-gray-200 dark:border-gray-700 my-2">
+                             <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700">
+                                <span class="text-xs text-text-secondary uppercase">Area</span>
+                                <span class="font-semibold text-sm">${id * 400 + 800} Sq.ft</span>
+                            </div>
+                            <div class="flex flex-col gap-1 border-r border-gray-100 dark:border-gray-700 pl-2">
+                                <span class="text-xs text-text-secondary uppercase">Furnish</span>
+                                <span class="font-semibold text-sm">Semi</span>
+                            </div>
+                            <div class="flex flex-col gap-1 pl-2">
+                                <span class="text-xs text-text-secondary uppercase">Type</span>
+                                <span class="font-semibold text-sm">Apartment</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-3 flex flex-wrap items-center justify-end gap-4">
+                            <button onclick="window.location.href='virtual_tour.html'"
+                                class="px-4 py-2 rounded-lg border border-accent/30 text-accent hover:bg-accent/5 font-semibold text-sm flex items-center gap-2 transition-colors">
+                                <span class="material-symbols-outlined text-lg">videocam</span>
+                                <span class="hidden sm:inline">Virtual Tour</span>
+                            </button>
+                            <button onclick="window.location.href='property_details.html'" class="px-4 py-2 rounded-lg border border-primary/30 text-primary hover:bg-primary/5 font-semibold text-sm transition-colors mr-2">View Details</button>
+                            <button class="px-5 py-2 rounded-lg bg-primary hover:bg-primary-dark text-white font-bold text-sm shadow-md transition-all active:scale-95" onclick="window.location.href='property_details.html'">
+                                Contact Owner
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        `;
+
+        if (loadMoreBtn) {
+            loadMoreBtn.addEventListener('click', () => {
+                const originalContent = loadMoreBtn.innerHTML;
+                loadMoreBtn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Loading...';
+                loadMoreBtn.disabled = true;
+
+                setTimeout(() => {
+                    for (let i = 0; i < 3; i++) {
+                        if (currentCount < totalProperties) {
+                            currentCount++;
+                            const temp = document.createElement('div');
+                            temp.innerHTML = propertyTemplate(Math.floor(Math.random() * 3) + 1);
+                            propertyList.appendChild(temp.firstElementChild);
+                        }
+                    }
+
+                    showingCount.textContent = `Showing 1-${currentCount} of ${totalProperties} properties`;
+                    const progress = (currentCount / totalProperties) * 100;
+                    progressBar.style.width = `${progress}%`;
+
+                    loadMoreBtn.innerHTML = originalContent;
+                    loadMoreBtn.disabled = false;
+
+                    if (currentCount >= totalProperties) {
+                        loadMoreBtn.style.display = 'none';
+                    }
+                }, 1000);
+            });
+        }
+        // Sorting Logic
+        const sortSelect = document.getElementById('sortSelect');
+        const sortBadge = document.querySelector('.bg-primary\\/10'); // Container of badge
+
+        if (sortSelect) {
+            sortSelect.addEventListener('change', () => {
+                const sortValue = sortSelect.value;
+                const cards = Array.from(propertyList.querySelectorAll('article'));
+
+                // Update Badge Text
+                if (sortBadge) {
+                    const textNode = Array.from(sortBadge.childNodes).find(node => node.nodeType === 3 && node.textContent.trim().length > 0);
+                    if (textNode) {
+                        if (sortValue.includes('Price')) textNode.textContent = ' Sorted by Price';
+                        else if (sortValue.includes('Newest')) textNode.textContent = ' Sorted by Date';
+                        else textNode.textContent = ' Sorted by AI Match';
+                    }
+                }
+
+                if (sortValue === 'Price: Low to High') {
+                    cards.sort((a, b) => getPrice(a) - getPrice(b));
+                } else if (sortValue === 'Price: High to Low') {
+                    cards.sort((a, b) => getPrice(b) - getPrice(a));
+                } else {
+                    // For AI/Newest, we might randomly shuffle to simulate change if we don't have original index
+                    // Or just leave as is. User mostly cares about Price Sort working.
+                    // Let's shuffle for visual feedback if not price
+                    if (sortValue === 'AI Recommended') {
+                        cards.sort(() => Math.random() - 0.5);
+                    }
+                }
+
+                // Re-append
+                // Note: propertyList might have non-article children? (No, id="propertyList" contains articles directly in my view)
+                // But wait, the list toggler changes classes on propertyList.
+                // We just need to re-append articles.
+                cards.forEach(card => propertyList.appendChild(card));
+            });
+        }
+
+        function getPrice(card) {
+            // Price is in .text-2xl.font-bold
+            const priceEl = card.querySelector('.text-2xl.font-bold');
+            if (!priceEl) return 0;
+            let text = priceEl.innerText; // "₹35,000" or "₹1.5 Cr"
+
+            // Handle Cr/Lac/k
+            // Simple parsing for numeric + multiplier
+            let multiplier = 1;
+            if (text.includes('Cr')) multiplier = 10000000;
+            else if (text.includes('Lac') || text.includes('L')) multiplier = 100000;
+            else if (text.includes('k')) multiplier = 1000;
+
+            let num = parseFloat(text.replace(/[^\d.]/g, ''));
+            return num * multiplier;
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+        }
+    </style>
+
+    <!-- Photo Gallery Modal -->
+    <div id="galleryModal"
+        class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 backdrop-blur-md">
+        <!-- Close Button -->
+        <button onclick="closeGallery()"
+            class="absolute top-4 right-4 text-white hover:text-gray-300 z-[110] p-2 rounded-full hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Gallery Content -->
+        <div class="relative w-full h-full flex flex-col justify-center items-center p-4">
+            <!-- Main Image Container -->
+            <div
+                class="relative w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <img id="galleryImage" src="" alt="Property Gallery"
+                    class="w-full h-full object-contain transition-opacity duration-300 opacity-100">
+
+                <!-- Navigation Arrows -->
+                <button onclick="prevImage()"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110 group">
+                    <span
+                        class="material-symbols-outlined text-2xl group-hover:-translate-x-0.5 transition-transform">arrow_back_ios</span>
+                </button>
+                <button onclick="nextImage()"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110 group">
+                    <span
+                        class="material-symbols-outlined text-2xl group-hover:translate-x-0.5 transition-transform">arrow_forward_ios</span>
+                </button>
+
+                <!-- Image Counter -->
+                <div
+                    class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded-full text-white text-sm font-medium backdrop-blur-md border border-white/10">
+                    <span id="currentImageIdx">1</span> / <span id="totalImages">8</span>
+                </div>
+            </div>
+
+            <!-- Thumbnails Strip -->
+            <div class="mt-6 flex gap-2 overflow-x-auto max-w-4xl p-2 scrollbar-hide">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Script -->
+    <script>
+        const galleryImages = [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuBhZgRovsHxD9W0S2U9dYCKccQwUmkbb55Z2I3fK5cIUcngs1U10gJcgYHJ7JkNHKcnwMdLet0bVCaO0Uu5b1Zj4lbjQ0Rv2337kq0h-kACyyqS_aGbYVpCAZXP9PFJTFPAR01RGvD7qtvE7YFzktzTqL3V5gnR7nn0blj54_Lxy5FlBFwSoA6JLSVCqiGJlcRjacvWsL22vT33CapmqVcX3oDyxVbe_EczYXKVCFl_P998SlsBbSU1XUymt3aYBPyzavK7lVNSfLQU",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuCtqGcBCuHhnSntJFqr600l6jQUzkWUxaCzBKooBcYph8Azs40BaP8XPiec8kFyNLVKJwvkBmDoivyUSmtAd_vU1pb_DTksVf7dgRi_1VvHcY5VhQAh3H5_IRCmdwpjpBo-Ws4AuCSJ9M9cFFQwUZzaIkEBebz8a4B34L71pGQ8PHsOOPo24QbmFm9A49c_OOdSYEbzTsmg-Lo6gtmoEXcbtWL_1mF16dMmSvnvZ91S9wo2iRyoDs7nRJ5p0n_51H1DJEOtJp0oJe3p",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuAp4dZQhIUcQeaPWmiVN__6nUySKcxzMjX0DKvsskB8GEIUg7vGHMw_1aue1UqolgOj5aIObDrE0Dr5MZEFxBPscbrTKB0fcTc6CvsYc5xxMMN5MzwmsVyp_I2ayZF7m6JiYJ85-dF7DYc7ybnqRNUdsiEvHafMR0c_2ftHeX0zvJkPt5AcxANLY8xChUl7WHPaTpNPELyv3FXdvfuCMCDFaUNbgCAyrV_RgrjgGuBOiEAgXdN1VxfXDDEOi_ybJIzQG7pCZ2q4ezVF",
+            "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1484154218962-a1c00207bf9a?q=80&w=1000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1616486338812-3dadae4b4f9d?q=80&w=1000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1000&auto=format&fit=crop"
+        ];
+
+        let currentIdx = 0;
+        const modal = document.getElementById('galleryModal');
+        const mainImage = document.getElementById('galleryImage');
+        const counter = document.getElementById('currentImageIdx');
+        const total = document.getElementById('totalImages');
+
+        function openGallery() {
+            modal.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+            updateGallery();
+        }
+
+        function closeGallery() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function updateGallery() {
+            // Fade out
+            mainImage.style.opacity = '0.5';
+
+            setTimeout(() => {
+                mainImage.src = galleryImages[currentIdx];
+                counter.innerText = currentIdx + 1;
+                total.innerText = galleryImages.length;
+                mainImage.style.opacity = '1';
+                updateThumbnails();
+            }, 150);
+        }
+
+        function nextImage() {
+            currentIdx = (currentIdx + 1) % galleryImages.length;
+            updateGallery();
+        }
+
+        function prevImage() {
+            currentIdx = (currentIdx - 1 + galleryImages.length) % galleryImages.length;
+            updateGallery();
+        }
+
+        // Generate Thumbnails
+        const thumbContainer = document.querySelector('.mt-6.flex.gap-2');
+        if (thumbContainer) { // Ensure container exists
+            galleryImages.forEach((img, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `w-16 h-16 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${idx === currentIdx ? 'border-primary opacity-100 scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`;
+                btn.innerHTML = `<img src="${img}" class="w-full h-full object-cover">`;
+                btn.onclick = () => {
+                    currentIdx = idx;
+                    updateGallery();
+                };
+                thumbContainer.appendChild(btn);
+            });
+        }
+
+
+        function updateThumbnails() {
+            const thumbs = thumbContainer.querySelectorAll('button');
+            thumbs.forEach((btn, idx) => {
+                if (idx === currentIdx) {
+                    btn.className = 'w-16 h-16 rounded-lg overflow-hidden border-2 border-primary transition-all shrink-0 opacity-100 scale-110';
+                } else {
+                    btn.className = 'w-16 h-16 rounded-lg overflow-hidden border-2 border-transparent transition-all shrink-0 opacity-60 hover:opacity-100';
+                }
+            });
+        }
+
+        // Keyboard Support
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Property Details - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                        "success": "#10B981",
+                        "text-main": "#111318",
+                        "text-sub": "#616f89"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased selection:bg-primary/20">
+    <div class="relative flex flex-col min-h-screen">
+        <!-- Navbar -->
+        <header class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+            <div class="px-4 md:px-8 py-3 max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+                    </a>
+                    <div class="hidden md:flex relative group">
+                        <div
+                            class="flex items-center bg-background-light dark:bg-gray-800 rounded-lg px-3 py-2 w-80 border border-transparent focus-within:border-primary/50 focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+                            <span class="material-symbols-outlined text-text-sub">search</span>
+                            <input
+                                class="bg-transparent border-none outline-none text-sm ml-2 w-full text-text-main dark:text-white placeholder:text-text-sub"
+                                placeholder="Search locality, landmark, builder..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center gap-6">
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="buy.html">Buy</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Rent</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="commercial.html">Commercial</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="pay_rent.html">Pay
+                        Rent</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors" href="post_property.html">Post
+                        Property</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors"
+                        href="rental_agreement.html">Rental Agreement</a>
+                    <div class="flex gap-3">
+                        <button
+                            class="px-4 py-2 text-sm font-semibold text-primary bg-primary/10 hover:bg-primary/20 rounded-lg transition-colors"
+                            onclick="window.location.href='login.html'">Log In</button>
+                        <button
+                            class="px-4 py-2 text-sm font-semibold text-white bg-primary hover:bg-blue-700 rounded-lg transition-colors shadow-sm"
+                            onclick="window.location.href='login.html'">Sign Up</button>
+                    </div>
+                </div>
+                <button id="menuButton" class="lg:hidden text-text-main dark:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </header>
+        <!-- Breadcrumbs -->
+        <div class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 md:px-8 py-3">
+                <div class="flex items-center text-sm text-text-sub overflow-x-auto whitespace-nowrap scrollbar-hide">
+                    <a class="hover:text-primary hover:underline" href="index.html">Home</a>
+                    <span class="mx-2 material-symbols-outlined text-xs">chevron_right</span>
+                    <a class="hover:text-primary hover:underline" href="search_results.html">Bangalore</a>
+                    <span class="mx-2 material-symbols-outlined text-xs">chevron_right</span>
+                    <a class="hover:text-primary hover:underline" href="search_results.html">Indiranagar</a>
+                    <span class="mx-2 material-symbols-outlined text-xs">chevron_right</span>
+                    <span class="text-text-main dark:text-white font-medium">3 BHK Apartment in 12th Main Rd</span>
+                </div>
+            </div>
+        </div>
+        <main class="flex-grow max-w-7xl mx-auto w-full px-4 md:px-8 py-6">
+            <!-- Page Heading & Actions -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-6">
+                <div>
+                    <div class="flex items-center gap-3 mb-2">
+                        <h1 class="text-2xl md:text-3xl font-bold text-text-main dark:text-white leading-tight">3 BHK
+                            Luxury Apartment for Rent</h1>
+                        <span
+                            class="hidden md:inline-flex items-center px-2 py-0.5 rounded text-xs font-bold bg-success/10 text-success border border-success/20">
+                            VERIFIED PROPERTY
+                        </span>
+                    </div>
+                    <p class="text-text-sub dark:text-gray-400 flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm">location_on</span>
+                        12th Main Rd, HAL 2nd Stage, Indiranagar, Bengaluru
+                    </p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                        onclick="toggleSave(this)">
+                        <span class="material-symbols-outlined text-base">favorite</span>
+                        <span class="save-text">Save</span>
+                    </button>
+                    <button
+                        class="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-gray-700 rounded-lg text-sm font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                        onclick="shareListing()">
+                        <span class="material-symbols-outlined text-base">share</span>
+                        Share
+                    </button>
+                </div>
+            </div>
+            <!-- Image Grid / Hero -->
+            <div
+                class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-3 mb-8 h-[500px] rounded-xl overflow-hidden relative group">
+                <div class="col-span-1 md:col-span-2 row-span-2 relative cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center"
+                        data-alt="Modern spacious living room with large windows"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCBm8IW76b5BbhcRCc0htxj8SQpqpRsmz6xhTalHXahmgBO5jR9THDJbT-BXz7uPL0vlrUmOszK-x-HZF8ff43ijFMnRFLwCJOvhhEiscsLrbTDXQ1g97TCbTQ0TEFh1KXw8lM_TtCWq4oWB4kWQ4SM_84yiIqnYZv0WIFpw-dalf7kCFlRX6x3uJ3iigZNJ1ZzsZ3PjJemUwPo2ebFAfTUfNq6kiItukJnvGUfCWKBzkf8K2T6jAQK0KKdideLdzwstEBRU2ztTt-5');">
+                    </div>
+                    <button onclick="window.location.href='virtual_tour.html'"
+                        class="absolute bottom-4 left-4 bg-black/60 hover:bg-black/80 text-white px-3 py-1 rounded-full text-xs font-medium backdrop-blur-sm flex items-center gap-1 transition-all">
+                        <span class="material-symbols-outlined text-sm">360</span>
+                        360° Tour
+                    </button>
+                </div>
+                <div class="relative cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center" data-alt="Minimalist modern kitchen with island"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8eTXPpkepYcrlSK_DpZIoLchNiEExfqG-AFPPTjx_Pel7paLDW7V-7-O_C0yvNxnECOwBIAPLWtJyWt4hGBtArgaisVHBI1b8lOQJNE0eZhb8YUUhOBtO6n5RS1XVF7Ct277QDWkyOwShJt-WqOsSYyMuK6T4MfTXqS_0R-UGGxasDlCvHplYGlY56mOa4E5ucCjPzlmJJ35ghOdPRyBvNyOHmF8-jLAyfQUM6Ecb29QsBqt0jqnOFclBi0hNGRmoOluwu6xb_C0K');">
+                    </div>
+                </div>
+                <div class="relative cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center" data-alt="Cozy master bedroom with warm lighting"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgY4bR6bFkY3xob1wnq6ogxWTw4fziS9LksW7ZegO3KKJMOckC23vCdL9FYZwN04ZJ41mArZMfvd2-IY-DzEFZb4zvfp7yUX_qlfKnyt6JjWihqlp1h61YwS2_s2767X1jwwdWWORiuTj-hedGLmSOms09XUCkUZbt8nOaeL4QTmUTwYjFVbhLA4wNFskQ9D14CWVd6QSl0Bl9iRjLudfIrYgjqF7NOL_W3JWvI-z40ypkphfqojSMuOg-x4GBKQzzdP4NZRWdh4Qh');">
+                    </div>
+                </div>
+                <div class="relative cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center" data-alt="Clean modern bathroom with glass shower"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDb5QrhDpxWswy6pqO0YVqKMorP1mwzJaLD2frT0T9aqR7H0xTdPyiJNThDWbIbv5P2cn9ngEfmmW8RfrmP2yNCqILvmH-QOrlnzUbVIn-kAFeKslYsWZLE09VpCrVSsiHNWivUGNO2EY8f4Wcah6Ei6tCbg28psL9nBue0qXSZwxXO54MGZNg7ueHi17iPc8014CM1Ovc1b30HmxovBLasocXYKeA-wWCAneW-UAdIUK57_UG71LXweGsRjoGaxCL5CiYyqZxDJ1Dy');">
+                    </div>
+                </div>
+                <div class="relative cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center" data-alt="Balcony view with plants"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiyY65gurNprOrui0LsH5BJK34_M6cvatwfyN9aFSgGk5G4FGGV3XFH0aop3dRUVU6i5MtqXyNRYmZPbfW35PCw_mGG1t4lNGjOiFX4lCPgRtin-kdKxasLVfnOMepRAItiFbv-YlqC-xS04BS5ddQc360FUaE-vM6jtCfpur2p7rEjTOvuAas4z8aK3zZcXegQajO4_37MXfoPKsYJr7tbOBsXyc61AGmwaGqISB3ZchjV4KBydzpyJpj-9WckED1XnOT7YtYhks2');">
+                    </div>
+                    <button onclick="openGallery()"
+                        class="absolute inset-0 w-full h-full bg-black/40 flex items-center justify-center hover:bg-black/50 transition-colors cursor-pointer border-none">
+                        <span class="text-white font-semibold text-lg flex items-center gap-2">
+                            <span class="material-symbols-outlined">grid_view</span>
+                            Show All Photos
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex flex-col lg:flex-row gap-8 relative">
+                <!-- Main Content Column -->
+                <div class="flex-1 w-full lg:max-w-[calc(100%-380px)]">
+                    <!-- Sticky Tab Navigation -->
+                    <div
+                        class="sticky top-[73px] z-40 bg-background-light dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 mb-6 -mx-4 px-4 md:-mx-8 md:px-8 py-2">
+                        <nav class="flex gap-6 overflow-x-auto scrollbar-hide">
+                            <a class="whitespace-nowrap pb-2 border-b-2 border-primary text-primary font-semibold text-sm"
+                                href="#overview">Overview</a>
+                            <a class="whitespace-nowrap pb-2 border-b-2 border-transparent text-text-sub hover:text-text-main font-medium text-sm transition-colors"
+                                href="#amenities">Amenities</a>
+                            <a class="whitespace-nowrap pb-2 border-b-2 border-transparent text-text-sub hover:text-text-main font-medium text-sm transition-colors"
+                                href="#location">Location</a>
+                            <a class="whitespace-nowrap pb-2 border-b-2 border-transparent text-text-sub hover:text-text-main font-medium text-sm transition-colors"
+                                href="#owner">Owner Info</a>
+                        </nav>
+                    </div>
+                    <!-- Overview Section -->
+                    <section
+                        class="mb-10 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+                        id="overview">
+                        <h3 class="text-lg font-bold mb-4 text-text-main dark:text-white">Property Overview</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                            <div class="flex flex-col gap-1">
+                                <span
+                                    class="text-text-sub text-xs uppercase tracking-wider font-semibold">Bedrooms</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">bed</span>
+                                    <span class="font-bold text-lg">3 BHK</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span class="text-text-sub text-xs uppercase tracking-wider font-semibold">Area</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">square_foot</span>
+                                    <span class="font-bold text-lg">1,850 sqft</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span
+                                    class="text-text-sub text-xs uppercase tracking-wider font-semibold">Bathrooms</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">bathtub</span>
+                                    <span class="font-bold text-lg">3 Baths</span>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1">
+                                <span
+                                    class="text-text-sub text-xs uppercase tracking-wider font-semibold">Furnishing</span>
+                                <div class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary">chair</span>
+                                    <span class="font-bold text-lg">Semi-Furnished</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="prose dark:prose-invert max-w-none text-text-sub dark:text-gray-300 text-sm leading-relaxed mb-6">
+                            <p>Beautifully designed 3 BHK apartment located in the heart of Indiranagar. The property
+                                features east-facing entrance, modular kitchen with chimney, wardrobes in all bedrooms,
+                                and premium bath fittings. Enjoy excellent connectivity to metro stations, top schools,
+                                and shopping districts.</p>
+                        </div>
+                        <!-- AI Insights Card -->
+                        <div
+                            class="bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-indigo-900/20 dark:to-blue-900/10 rounded-xl p-5 border border-indigo-100 dark:border-indigo-800/50">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span
+                                    class="material-symbols-outlined text-indigo-600 dark:text-indigo-400">auto_awesome</span>
+                                <h4 class="font-bold text-indigo-900 dark:text-indigo-100 text-sm">AI Analysis: Pros
+                                    &amp; Cons</h4>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span
+                                        class="text-xs font-bold text-success uppercase tracking-wider mb-2 block">Pros</span>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-success text-base mt-0.5">check_circle</span>
+                                            <span class="text-text-main dark:text-gray-200">High rental yield potential
+                                                compared to locality average.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-success text-base mt-0.5">check_circle</span>
+                                            <span class="text-text-main dark:text-gray-200">Newly renovated with
+                                                energy-efficient lighting.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <span
+                                        class="text-xs font-bold text-orange-500 uppercase tracking-wider mb-2 block">Cons</span>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-start gap-2">
+                                            <span
+                                                class="material-symbols-outlined text-orange-500 text-base mt-0.5">warning</span>
+                                            <span class="text-text-main dark:text-gray-200">Traffic noise on weekends
+                                                due to main road proximity.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Amenities Section -->
+                    <section
+                        class="mb-10 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+                        id="amenities">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white">Amenities</h3>
+                            <span
+                                class="text-success text-sm font-medium flex items-center gap-1 bg-success/10 px-2 py-1 rounded">
+                                <span class="material-symbols-outlined text-sm">eco</span>
+                                Eco-Friendly
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-y-6 gap-x-4">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">fitness_center</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Gymnasium</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">pool</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Swimming Pool</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">local_parking</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Covered
+                                    Parking</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">security</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">24x7 Security</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-success/10 flex items-center justify-center text-success">
+                                    <span class="material-symbols-outlined">solar_power</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Solar Heating</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-success/10 flex items-center justify-center text-success">
+                                    <span class="material-symbols-outlined">water_drop</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Rainwater
+                                    Harvesting</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">elevator</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Power Backup</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined">pets</span>
+                                </div>
+                                <span class="text-sm font-medium text-text-sub dark:text-gray-300">Pet Friendly</span>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Location Map Section -->
+                    <section
+                        class="mb-10 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm"
+                        id="location">
+                        <h3 class="text-lg font-bold mb-4 text-text-main dark:text-white">Location &amp; Neighborhood
+                        </h3>
+                        <div class="rounded-lg overflow-hidden h-64 w-full relative mb-4 bg-gray-100 dark:bg-gray-800">
+                            <!-- Map Placeholder -->
+                            <div class="absolute inset-0 bg-cover bg-center opacity-80"
+                                data-alt="Map view of Indiranagar, Bangalore showing streets and location pins"
+                                data-location="Indiranagar, Bangalore"
+                                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCe_VlDcODKChoEKJ6ol9GIXUnpeMjRLhaptWwMVY9TD--Cl0yGSZ1KqTI54OfICRmcxvpsSaEgfJIK8vxFkmQpGvIgNISLaVF1r-fk46A5STjW04yC8tziN3pOdo5QJ5ydzjGp8aCCWduK8S_aY5pjH3h6gjseSLUDztOZq2i6rtWyQJ3ld5I0LxagCG5qEECKkN10WW60NPgnpD_gaBvtgBMbW-D4b3fuySbUdfhLx4LvodhB931-s037kS7_TGiPiMsPhOB2An0x');">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <button onclick="exploreMap()"
+                                    class="pointer-events-auto bg-white dark:bg-gray-800 text-text-main dark:text-white px-4 py-2 rounded-full shadow-lg font-medium flex items-center gap-2 hover:scale-105 transition-transform">
+                                    <span class="material-symbols-outlined text-primary">map</span>
+                                    Explore on Map
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4 text-sm mb-10">
+                            <div class="p-3 bg-background-light dark:bg-gray-800 rounded-lg">
+                                <div class="flex items-center gap-2 mb-2 font-semibold text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined text-primary text-base">school</span>
+                                    Education
+                                </div>
+                                <ul class="space-y-1 text-text-sub">
+                                    <li class="flex justify-between"><span>National Public School</span> <span
+                                            class="text-xs">0.5 km</span></li>
+                                    <li class="flex justify-between"><span>New Horizon</span> <span class="text-xs">1.2
+                                            km</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 bg-background-light dark:bg-gray-800 rounded-lg">
+                                <div class="flex items-center gap-2 mb-2 font-semibold text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined text-primary text-base">directions_bus</span>
+                                    Transit
+                                </div>
+                                <ul class="space-y-1 text-text-sub">
+                                    <li class="flex justify-between"><span>Indiranagar Metro</span> <span
+                                            class="text-xs">0.8 km</span></li>
+                                    <li class="flex justify-between"><span>Bus Stop</span> <span class="text-xs">0.2
+                                            km</span></li>
+                                </ul>
+                            </div>
+                            <div class="p-3 bg-background-light dark:bg-gray-800 rounded-lg">
+                                <div class="flex items-center gap-2 mb-2 font-semibold text-text-main dark:text-white">
+                                    <span class="material-symbols-outlined text-primary text-base">local_hospital</span>
+                                    Healthcare
+                                </div>
+                                <ul class="space-y-1 text-text-sub">
+                                    <li class="flex justify-between"><span>Manipal Hospital</span> <span
+                                            class="text-xs">2.1 km</span></li>
+                                    <li class="flex justify-between"><span>Chinmaya Mission</span> <span
+                                            class="text-xs">0.6 km</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Owner Section (New) -->
+                        <section id="owner"
+                            class="mb-10 bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm scroll-mt-32">
+                            <div class="flex items-center justify-between mb-6">
+                                <h3 class="text-lg font-bold text-text-main dark:text-white">Owner Information</h3>
+                                <div
+                                    class="flex items-center gap-1 text-success text-xs font-bold uppercase tracking-wider">
+                                    <span class="material-symbols-outlined text-sm">verified_user</span>
+                                    Verified Owner
+                                </div>
+                            </div>
+                            <div
+                                class="flex flex-col md:flex-row gap-8 items-center md:items-start p-6 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border border-gray-100 dark:border-gray-800">
+                                <div class="size-24 rounded-full bg-cover bg-center border-4 border-white dark:border-gray-700 shadow-xl"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoKaQKt-Kdjx40Q155vA0syFtfzfDCM7L_xJR6IV6GwkL8-MQrX4GkQT8DBF2zy0KnLXhCexqVMRpsjqznfyStpMWx9w6_CHDtv3iTv9mk0E6R8wDRowzx2mxfpqerhS9oq8tWvP7Y7uHaASqGJr8T33TJ5BoQnxZG8OrIwH8UZlkGJZ_pO2ZusGX1IT7lTJFqfmN785h8BpjbLB4-5_R-GwE9pGhw7377EMnCjzzbsQYvSyYPCw9Fc-gOOM5H0q4joWB5HuIKjOuJ');">
+                                </div>
+                                <div class="flex-1 text-center md:text-left">
+                                    <h4 class="text-xl font-bold mb-1">Rajesh Kumar</h4>
+                                    <p class="text-text-sub text-sm mb-4">Member since June 2021 • Indiranagar</p>
+                                    <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-6">
+                                        <div class="flex flex-col">
+                                            <span
+                                                class="text-xs text-text-sub uppercase font-bold tracking-tighter">Response
+                                                Rate</span>
+                                            <span class="font-bold">98% (within 1 hr)</span>
+                                        </div>
+                                        <div class="flex flex-col">
+                                            <span
+                                                class="text-xs text-text-sub uppercase font-bold tracking-tighter">Total
+                                                Listings</span>
+                                            <span class="font-bold">4 Active</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-wrap justify-center md:justify-start gap-3">
+                                        <button
+                                            class="px-6 py-2.5 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-blue-700 transition-all flex items-center gap-2"
+                                            onclick="alert('Contact details revealed!')">
+                                            <span class="material-symbols-outlined text-base">call</span>
+                                            Reveal Contact
+                                        </button>
+                                        <button
+                                            class="px-6 py-2.5 bg-white dark:bg-gray-700 text-text-main dark:text-white font-bold rounded-xl border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 transition-all flex items-center gap-2"
+                                            onclick="window.location.href='chat_support.html'">
+                                            <span class="material-symbols-outlined text-base">chat</span>
+                                            Chat with Owner
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <!-- Similar Properties Carousel (Simplified for single page view) -->
+                    <section class="mb-10">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-bold text-text-main dark:text-white">Similar Properties Nearby</h3>
+                            <div class="flex gap-2">
+                                <button
+                                    class="size-8 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800">
+                                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                                </button>
+                                <button
+                                    class="size-8 rounded-full border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-800">
+                                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Card 1 -->
+                            <div
+                                class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="h-40 bg-cover bg-center relative"
+                                    data-alt="Modern apartment building exterior"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkDNpyzpFaAOzX-7Tfd3xJWEf2BMNtOyrAkbK9quMRz2NMdWD7sNdRldp3nawDdFZ_0vfT8yV5I1GOiawhYvPqeDp1byrr467sMN45nnOS3RxwMvfIu9g_PLazYmtjJnb4Z6ila6MfLEv9Pcc7Apn4-d20OsvLRcxxo6yLX9ry_9ZAGjGV5r3mgHaKSJhQgADKmcIMAe_3GRf85WwK_t_WFh0UqCBWX8itipPcqN0N7OJAXWDqrm1WiMJ4enjg5Nhjh2LIVrwejvwR');">
+                                    <div
+                                        class="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 px-2 py-1 rounded text-xs font-bold shadow-sm">
+                                        ₹ 42k
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h4 class="font-bold text-sm truncate mb-1 text-text-main dark:text-white">2 BHK in
+                                        Defence Colony</h4>
+                                    <p class="text-xs text-text-sub mb-2">0.5 km away • Semi-Furnished</p>
+                                    <button
+                                        class="w-full py-1.5 text-xs font-semibold text-primary border border-primary/20 rounded hover:bg-primary/5">View
+                                        Details</button>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="h-40 bg-cover bg-center relative"
+                                    data-alt="Cozy apartment interior with sofa"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBJoJ35JiqL-eATO54Yw0bXqpT6fM_-q5dE5yAnaKUAy-Hvbi4JDVAjHXghtQ-1058Nai1q4uHpYT_5LIUEBmO7IorF1pQxUHFE6GQyKu9yjVBZlmkisps8glSVw6JdoQHs0F5LFt9VTLafc5Bf6jDbFvnrrCduzfdVFINvNWvF92iYGMPM7z_TCFj5-DtPhn_Fw2s_YpIodCR1dGM9NF7YYZY7h_L1EHOdMur7AL_QKVdOkN92Hx2gdjANUsHzKdI62gUOfWAYWlj5');">
+                                    <div
+                                        class="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 px-2 py-1 rounded text-xs font-bold shadow-sm">
+                                        ₹ 48k
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h4 class="font-bold text-sm truncate mb-1 text-text-main dark:text-white">3 BHK in
+                                        HAL 3rd Stage</h4>
+                                    <p class="text-xs text-text-sub mb-2">1.2 km away • Fully Furnished</p>
+                                    <button
+                                        class="w-full py-1.5 text-xs font-semibold text-primary border border-primary/20 rounded hover:bg-primary/5">View
+                                        Details</button>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="hidden lg:block bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+                                <div class="h-40 bg-cover bg-center relative"
+                                    data-alt="Bright bedroom with large window"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBokgBtW3TWlgjkrVdbAHZT_eDev8LO49nazMH1bd8336udlcUv_pBiZaQjm-SQgIiGfBXpJPm5azZMuvmGElgS9s6usDs5kf3HWWsJ0BY3WFCDsqB67GDs5buQ9cHvvtRucsXOASd7FFKk5D03ZhUdXJT4m8CV-E5AztcF_J0sz2vSBECNHNMM86dmKGH7ZGu8RUYemwlzgURwsvmNNNsfYrGK_IPt0-yi9V05jcpGbSFiROmjCn3ydqwZ7CbR1WPdEQafalZFkHYb');">
+                                    <div
+                                        class="absolute top-2 right-2 bg-white/90 dark:bg-gray-900/90 px-2 py-1 rounded text-xs font-bold shadow-sm">
+                                        ₹ 40k
+                                    </div>
+                                </div>
+                                <div class="p-3">
+                                    <h4 class="font-bold text-sm truncate mb-1 text-text-main dark:text-white">2 BHK
+                                        near Metro</h4>
+                                    <p class="text-xs text-text-sub mb-2">0.8 km away • Unfurnished</p>
+                                    <button
+                                        class="w-full py-1.5 text-xs font-semibold text-primary border border-primary/20 rounded hover:bg-primary/5">View
+                                        Details</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Sidebar (Right Column) -->
+                <div class="w-full lg:w-[350px] flex-shrink-0">
+                    <div class="sticky top-24 flex flex-col gap-4">
+                        <!-- Owner Card / Price -->
+                        <div
+                            class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-lg p-5">
+                            <div class="mb-4 pb-4 border-b border-gray-100 dark:border-gray-800">
+                                <div class="flex items-end gap-2 mb-1">
+                                    <span class="text-3xl font-bold text-text-main dark:text-white">₹45,000</span>
+                                    <span class="text-text-sub text-sm mb-1.5">/ month</span>
+                                </div>
+                                <div class="text-sm text-text-sub">Deposit: ₹2,00,000 (Negotiable)</div>
+                            </div>
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="size-12 rounded-full bg-gray-200 dark:bg-gray-700 bg-cover bg-center relative"
+                                    data-alt="Portrait of the property owner"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDoKaQKt-Kdjx40Q155vA0syFtfzfDCM7L_xJR6IV6GwkL8-MQrX4GkQT8DBF2zy0KnLXhCexqVMRpsjqznfyStpMWx9w6_CHDtv3iTv9mk0E6R8wDRowzx2mxfpqerhS9oq8tWvP7Y7uHaASqGJr8T33TJ5BoQnxZG8OrIwH8UZlkGJZ_pO2ZusGX1IT7lTJFqfmN785h8BpjbLB4-5_R-GwE9pGhw7377EMnCjzzbsQYvSyYPCw9Fc-gOOM5H0q4joWB5HuIKjOuJ');">
+                                    <div
+                                        class="absolute bottom-0 right-0 size-3 bg-success border-2 border-white dark:border-gray-900 rounded-full">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="flex items-center gap-1">
+                                        <h4 class="font-bold text-text-main dark:text-white">Rajesh Kumar</h4>
+                                        <span class="material-symbols-outlined text-success text-sm"
+                                            title="Verified Owner">verified</span>
+                                    </div>
+                                    <p class="text-xs text-text-sub">Owner • Responds in 1 hr</p>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg mb-3 shadow-md transition-all flex justify-center items-center gap-2"
+                                onclick="alert('Owner contact: +91 98XXX XXXXX')">
+                                <span class="material-symbols-outlined">call</span>
+                                Contact Owner
+                            </button>
+                            <button
+                                class="w-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 text-text-main dark:text-white font-semibold py-2.5 px-4 rounded-lg transition-all flex justify-center items-center gap-2 text-sm"
+                                onclick="window.location.href='chat_support.html'">
+                                <span class="material-symbols-outlined text-primary">chat</span>
+                                Chat &amp; Negotiate
+                            </button>
+                        </div>
+                        <!-- Booking Calendar -->
+                        <div
+                            class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
+                            <h4 class="font-bold text-text-main dark:text-white mb-3">Schedule a Viewing</h4>
+                            <div class="flex gap-2 mb-3 overflow-x-auto pb-2 scrollbar-hide">
+                                <div
+                                    class="min-w-[60px] p-2 rounded-lg border border-primary bg-primary/5 text-center cursor-pointer">
+                                    <div class="text-xs text-text-sub font-medium">Mon</div>
+                                    <div class="font-bold text-primary">12</div>
+                                </div>
+                                <div
+                                    class="min-w-[60px] p-2 rounded-lg border border-gray-200 dark:border-gray-700 text-center cursor-pointer hover:border-gray-300">
+                                    <div class="text-xs text-text-sub font-medium">Tue</div>
+                                    <div class="font-bold text-text-main dark:text-white">13</div>
+                                </div>
+                                <div
+                                    class="min-w-[60px] p-2 rounded-lg border border-gray-200 dark:border-gray-700 text-center cursor-pointer hover:border-gray-300">
+                                    <div class="text-xs text-text-sub font-medium">Wed</div>
+                                    <div class="font-bold text-text-main dark:text-white">14</div>
+                                </div>
+                                <div
+                                    class="min-w-[60px] p-2 rounded-lg border border-gray-200 dark:border-gray-700 text-center cursor-pointer hover:border-gray-300">
+                                    <div class="text-xs text-text-sub font-medium">Thu</div>
+                                    <div class="font-bold text-text-main dark:text-white">15</div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-2 mb-4">
+                                <button
+                                    class="py-1.5 px-2 text-sm border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-gray-800">10:00
+                                    AM</button>
+                                <button
+                                    class="py-1.5 px-2 text-sm border border-primary bg-primary/10 text-primary rounded font-medium">02:00
+                                    PM</button>
+                                <button
+                                    class="py-1.5 px-2 text-sm border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-gray-800">05:00
+                                    PM</button>
+                                <button
+                                    class="py-1.5 px-2 text-sm border border-gray-200 dark:border-gray-700 rounded hover:bg-gray-50 dark:hover:bg-gray-800">07:00
+                                    PM</button>
+                            </div>
+                            <button id="requestVisitBtn"
+                                class="w-full bg-background-light dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-text-main dark:text-white font-semibold py-2 px-4 rounded-lg text-sm transition-colors"
+                                onclick="requestVisit()">
+                                Request Visit
+                            </button>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div
+                            class="bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
+                            <h4
+                                class="font-bold text-text-main dark:text-white text-sm uppercase tracking-wide mb-3 opacity-80">
+                                Quick Services</h4>
+                            <div class="space-y-3">
+                                <a class="flex items-center gap-3 p-2 rounded-lg hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition-all group"
+                                    href="rental_agreement.html">
+                                    <div
+                                        class="size-8 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">description</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div
+                                            class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                            Draft Rental Agreement</div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-gray-400 text-sm">chevron_right</span>
+                                </a>
+                                <a class="flex items-center gap-3 p-2 rounded-lg hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition-all group"
+                                    href="#">
+                                    <div
+                                        class="size-8 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">account_balance</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div
+                                            class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                            Apply for Rent Loan</div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-gray-400 text-sm">chevron_right</span>
+                                </a>
+                                <a class="flex items-center gap-3 p-2 rounded-lg hover:bg-white dark:hover:bg-gray-700 hover:shadow-sm transition-all group"
+                                    href="packers_movers.html">
+                                    <div
+                                        class="size-8 rounded-full bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400 flex items-center justify-center">
+                                        <span class="material-symbols-outlined text-sm">local_shipping</span>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div
+                                            class="text-sm font-semibold text-text-main dark:text-white group-hover:text-primary transition-colors">
+                                            Packers &amp; Movers</div>
+                                    </div>
+                                    <span class="material-symbols-outlined text-gray-400 text-sm">chevron_right</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Floating Chat Button (Mobile only mainly, but good for accessibility) -->
+        <div class="fixed bottom-6 right-6 z-50">
+            <button onclick="window.location.href='chat_support.html'"
+                class="bg-primary hover:bg-blue-700 text-white rounded-full p-4 shadow-xl flex items-center gap-2 transition-transform hover:scale-105">
+                <span class="material-symbols-outlined text-2xl">chat_bubble</span>
+                <span class="font-bold hidden md:inline">Chat with Support</span>
+            </button>
+        </div>
+        <!-- Footer -->
+        <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
+                    <div class="col-span-2 lg:col-span-2">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                            <span
+                                class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                        </div>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                            World's largest NoBrokerage property site. Connect directly with owners and save brokerage
+                            fees.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="testimonials.html">Testimonials</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="contact_us.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-4">Services</h4>
+                        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                            <li><a class="hover:text-primary transition-colors" href="rental_agreement.html">Rental
+                                    Agreement</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="packers_movers.html">Packers &
+                                    Movers</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="pay_rent.html">Pay Rent</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                        <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-xs">call</span> +91 99999 99999</li>
+                            <li class="flex items-center gap-2"><span
+                                    class="material-symbols-outlined text-xs">mail</span> hello@nobroker.in</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                    <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+    <!-- Mobile Side Menu -->
+    <div id="sideMenuOverlay"
+        class="fixed inset-0 bg-black/50 z-[60] opacity-0 invisible transition-all duration-300 backdrop-blur-sm"></div>
+    <div id="sideMenu"
+        class="fixed top-0 right-0 h-full w-[300px] bg-white dark:bg-gray-900 z-[70] translate-x-full transition-transform duration-300 shadow-2xl p-6">
+        <div class="flex justify-between items-center mb-8">
+            <h2 class="font-bold text-xl">Menu</h2>
+            <button id="closeMenu" class="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+        <div class="space-y-4">
+            <a href="index.html" class="block font-medium hover:text-primary transition-colors">Home</a>
+            <a href="search_results.html" class="block font-medium hover:text-primary transition-colors">Browse
+                Properties</a>
+            <a href="profile.html" class="block font-medium hover:text-primary transition-colors">My Profile</a>
+            <a href="pay_rent.html" class="block font-medium hover:text-primary transition-colors">Pay Rent</a>
+            <a href="post_property.html" class="block font-medium hover:text-primary transition-colors">Post
+                Property</a>
+            <a href="chat_support.html" class="block font-medium hover:text-primary transition-colors">Support Chat</a>
+        </div>
+    </div>
+
+    <script>
+        // Tab Navigation Highlighting
+        const tabs = document.querySelectorAll('nav a');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(t => {
+                    t.classList.remove('border-primary', 'text-primary');
+                    t.classList.add('border-transparent', 'text-text-sub');
+                });
+                tab.classList.remove('border-transparent', 'text-text-sub');
+                tab.classList.add('border-primary', 'text-primary');
+            });
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menuButton');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('sideMenuOverlay');
+        const closeBtn = document.getElementById('closeMenu');
+
+        function toggleMenu() {
+            sideMenu.classList.toggle('translate-x-full');
+            overlay.classList.toggle('opacity-0');
+            overlay.classList.toggle('invisible');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+        if (closeBtn) closeBtn.addEventListener('click', toggleMenu);
+        if (overlay) overlay.addEventListener('click', toggleMenu);
+    </script>
+
+    <script>
+        // Small interaction helpers: save/share/map/scheduling
+        function toggleSave(btn) {
+            try {
+                const key = 'saved_listing_' + (location.pathname || location.href);
+                const saved = btn.dataset.saved === 'true';
+                if (saved) {
+                    btn.dataset.saved = 'false';
+                    localStorage.removeItem(key);
+                    const span = btn.querySelector('.save-text');
+                    if (span) span.innerText = 'Save';
+                } else {
+                    btn.dataset.saved = 'true';
+                    localStorage.setItem(key, '1');
+                    const span = btn.querySelector('.save-text');
+                    if (span) span.innerText = 'Saved';
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function shareListing() {
+            const shareData = {
+                title: document.title,
+                text: 'Check out this property',
+                url: location.href
+            };
+            if (navigator.share) {
+                navigator.share(shareData).catch(() => {});
+                return;
+            }
+            // Fallback: copy link to clipboard
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(location.href).then(() => {
+                    alert('Link copied to clipboard');
+                }).catch(() => {
+                    prompt('Copy this link', location.href);
+                });
+            } else {
+                prompt('Copy this link', location.href);
+            }
+        }
+
+        function exploreMap() {
+            const el = document.querySelector('#location [data-location]');
+            const q = el && el.dataset && el.dataset.location ? el.dataset.location : '';
+            const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q || document.title);
+            window.open(url, '_blank');
+        }
+
+        // Schedule selection logic
+        (function setupScheduleSelection(){
+            try {
+                // date items are divs inside the first schedule container
+                const dateItems = document.querySelectorAll('.min-w-[60px]');
+                dateItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        dateItems.forEach(d => d.classList.remove('border-primary','bg-primary/5','text-primary'));
+                        item.classList.add('border-primary','bg-primary/5','text-primary');
+                    });
+                });
+
+                // time buttons
+                const timeBtns = document.querySelectorAll('.grid.grid-cols-2 button');
+                timeBtns.forEach(b => {
+                    b.addEventListener('click', (e) => {
+                        timeBtns.forEach(t => t.classList.remove('border-primary','bg-primary/10','text-primary','font-medium'));
+                        b.classList.add('border-primary','bg-primary/10','text-primary','font-medium');
+                    });
+                });
+            } catch (e) { console.error(e); }
+        })();
+
+        function requestVisit(){
+            // find selected date and time
+            const selectedDate = Array.from(document.querySelectorAll('.min-w-[60px]')).find(d=>d.classList.contains('border-primary'));
+            const selectedTime = Array.from(document.querySelectorAll('.grid.grid-cols-2 button')).find(b=>b.classList.contains('border-primary'));
+            const dateText = selectedDate ? selectedDate.innerText.trim().replace(/\n/g,' ') : null;
+            const timeText = selectedTime ? selectedTime.innerText.trim() : null;
+            if (!dateText || !timeText) {
+                alert('Please select a preferred date and time for the visit.');
+                return;
+            }
+            // Simulate request submission
+            alert('Visit requested for ' + dateText + ' at ' + timeText + '. Owner will contact you soon.');
+        }
+
+        // Smooth scroll for internal anchors
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Photo Gallery Modal -->
+    <div id="galleryModal"
+        class="fixed inset-0 z-[100] bg-black/95 hidden opacity-0 transition-opacity duration-300 backdrop-blur-md">
+        <!-- Close Button -->
+        <button onclick="closeGallery()"
+            class="absolute top-4 right-4 text-white hover:text-gray-300 z-[110] p-2 rounded-full hover:bg-white/10 transition-colors">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Gallery Content -->
+        <div class="relative w-full h-full flex flex-col justify-center items-center p-4">
+            <!-- Main Image Container -->
+            <div
+                class="relative w-full max-w-5xl aspect-video bg-black rounded-lg overflow-hidden shadow-2xl ring-1 ring-white/10">
+                <img id="galleryImage" src="" alt="Property Gallery"
+                    class="w-full h-full object-contain transition-opacity duration-300 opacity-100">
+
+                <!-- Navigation Arrows -->
+                <button onclick="prevImage()"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110 group">
+                    <span
+                        class="material-symbols-outlined text-2xl group-hover:-translate-x-0.5 transition-transform">arrow_back_ios</span>
+                </button>
+                <button onclick="nextImage()"
+                    class="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full backdrop-blur-sm transition-all hover:scale-110 group">
+                    <span
+                        class="material-symbols-outlined text-2xl group-hover:translate-x-0.5 transition-transform">arrow_forward_ios</span>
+                </button>
+
+                <!-- Image Counter -->
+                <div
+                    class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 px-3 py-1 rounded-full text-white text-sm font-medium backdrop-blur-md border border-white/10">
+                    <span id="currentImageIdx">1</span> / <span id="totalImages">5</span>
+                </div>
+            </div>
+
+            <!-- Thumbnails Strip -->
+            <div class="mt-6 flex gap-2 overflow-x-auto max-w-4xl p-2 scrollbar-hide">
+                <!-- Javascript will populate this -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const galleryImages = [
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuCBm8IW76b5BbhcRCc0htxj8SQpqpRsmz6xhTalHXahmgBO5jR9THDJbT-BXz7uPL0vlrUmOszK-x-HZF8ff43ijFMnRFLwCJOvhhEiscsLrbTDXQ1g97TCbTQ0TEFh1KXw8lM_TtCWq4oWB4kWQ4SM_84yiIqnYZv0WIFpw-dalf7kCFlRX6x3uJ3iigZNJ1ZzsZ3PjJemUwPo2ebFAfTUfNq6kiItukJnvGUfCWKBzkf8K2T6jAQK0KKdideLdzwstEBRU2ztTt-5',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuC8eTXPpkepYcrlSK_DpZIoLchNiEExfqG-AFPPTjx_Pel7paLDW7V-7-O_C0yvNxnECOwBIAPLWtJyWt4hGBtArgaisVHBI1b8lOQJNE0eZhb8YUUhOBtO6n5RS1XVF7Ct277QDWkyOwShJt-WqOsSYyMuK6T4MfTXqS_0R-UGGxasDlCvHplYGlY56mOa4E5ucCjPzlmJJ35ghOdPRyBvNyOHmF8-jLAyfQUM6Ecb29QsBqt0jqnOFclBi0hNGRmoOluwu6xb_C0K',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuBgY4bR6bFkY3xob1wnq6ogxWTw4fziS9LksW7ZegO3KKJMOckC23vCdL9FYZwN04ZJ41mArZMfvd2-IY-DzEFZb4zvfp7yUX_qlfKnyt6JjWihqlp1h61YwS2_s2767X1jwwdWWORiuTj-hedGLmSOms09XUCkUZbt8nOaeL4QTmUTwYjFVbhLA4wNFskQ9D14CWVd6QSl0Bl9iRjLudfIrYgjqF7NOL_W3JWvI-z40ypkphfqojSMuOg-x4GBKQzzdP4NZRWdh4Qh',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDb5QrhDpxWswy6pqO0YVqKMorP1mwzJaLD2frT0T9aqR7H0xTdPyiJNThDWbIbv5P2cn9ngEfmmW8RfrmP2yNCqILvmH-QOrlnzUbVIn-kAFeKslYsWZLE09VpCrVSsiHNWivUGNO2EY8f4Wcah6Ei6tCbg28psL9nBue0qXSZwxXO54MGZNg7ueHi17iPc8014CM1Ovc1b30HmxovBLasocXYKeA-wWCAneW-UAdIUK57_UG71LXweGsRjoGaxCL5CiYyqZxDJ1Dy',
+            'https://lh3.googleusercontent.com/aida-public/AB6AXuDiyY65gurNprOrui0LsH5BJK34_M6cvatwfyN9aFSgGk5G4FGGV3XFH0aop3dRUVU6i5MtqXyNRYmZPbfW35PCw_mGG1t4lNGjOiFX4lCPgRtin-kdKxasLVfnOMepRAItiFbv-YlqC-xS04BS5ddQc360FUaE-vM6jtCfpur2p7rEjTOvuAas4z8aK3zZcXegQajO4_37MXfoPKsYJr7tbOBsXyc61AGmwaGqISB3ZchjV4KBydzpyJpj-9WckED1XnOT7YtYhks2'
+        ];
+
+        let currentIdx = 0;
+        const modal = document.getElementById('galleryModal');
+        const mainImage = document.getElementById('galleryImage');
+        const counter = document.getElementById('currentImageIdx');
+        const total = document.getElementById('totalImages');
+
+        function openGallery() {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+            updateGallery();
+        }
+
+        function closeGallery() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        function updateGallery() {
+            mainImage.style.opacity = '0.5';
+            setTimeout(() => {
+                mainImage.src = galleryImages[currentIdx];
+                counter.innerText = currentIdx + 1;
+                total.innerText = galleryImages.length;
+                mainImage.style.opacity = '1';
+                updateThumbnails();
+            }, 150);
+        }
+
+        function nextImage() {
+            currentIdx = (currentIdx + 1) % galleryImages.length;
+            updateGallery();
+        }
+
+        function prevImage() {
+            currentIdx = (currentIdx - 1 + galleryImages.length) % galleryImages.length;
+            updateGallery();
+        }
+
+        const thumbContainer = document.querySelector('.mt-6.flex.gap-2');
+        if (thumbContainer) {
+            galleryImages.forEach((img, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `w-16 h-16 rounded-lg overflow-hidden border-2 transition-all shrink-0 ${idx === currentIdx ? 'border-primary opacity-100 scale-110' : 'border-transparent opacity-60 hover:opacity-100'}`;
+                btn.innerHTML = `<img src="${img}" class="w-full h-full object-cover">`;
+                btn.onclick = () => {
+                    currentIdx = idx;
+                    updateGallery();
+                };
+                thumbContainer.appendChild(btn);
+            });
+        }
+
+        function updateThumbnails() {
+            const thumbs = thumbContainer.querySelectorAll('button');
+            thumbs.forEach((btn, idx) => {
+                if (idx === currentIdx) {
+                    btn.className = 'w-16 h-16 rounded-lg overflow-hidden border-2 border-primary transition-all shrink-0 opacity-100 scale-110';
+                } else {
+                    btn.className = 'w-16 h-16 rounded-lg overflow-hidden border-2 border-transparent transition-all shrink-0 opacity-60 hover:opacity-100';
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'Escape') closeGallery();
+            if (e.key === 'ArrowRight') nextImage();
+            if (e.key === 'ArrowLeft') prevImage();
+        });
+    </script>
+</body>
+
+
+</html>

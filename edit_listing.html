@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Edit Listing - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>tailwind.config={theme:{extend:{colors:{primary:"#1152d4","primary-dark":"#0d42af","background-light":"#f6f6f8","text-main":"#111318","text-sub":"#616f89"}}}}</script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body class="bg-background-light text-text-main">
+    <header class="sticky top-0 z-50 bg-white border-b shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html"><img src="logo.png" alt="NoBroker" class="h-8"></a>
+            <nav class="hidden md:flex gap-8"><a href="buy.html" class="text-sm font-medium hover:text-primary">Buy</a><a href="index.html" class="text-sm font-medium hover:text-primary">Rent</a><a href="commercial.html" class="text-sm font-medium hover:text-primary">Commercial</a><a href="pay_rent.html" class="text-sm font-medium hover:text-primary">Pay Rent</a></nav>
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600">
+                <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden border-t bg-white">
+            <nav class="flex flex-col gap-2 p-4">
+                <a href="buy.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Buy</a>
+                <a href="index.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Rent</a>
+                <a href="commercial.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Commercial</a>
+                <a href="pay_rent.html" class="px-4 py-2 text-sm font-medium hover:text-primary hover:bg-gray-50 rounded">Pay Rent</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="mb-12">
+            <a href="my_listings.html" class="inline-flex items-center gap-2 text-primary font-medium hover:underline mb-4">
+                <span class="material-symbols-outlined text-sm">arrow_back</span>Back to My Listings
+            </a>
+            <h1 class="text-4xl font-bold">Edit Listing</h1>
+        </div>
+
+        <form class="space-y-8">
+            <!-- Basic Info Section -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-8">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">1</span>
+                    Basic Information
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Property Title</label>
+                        <input type="text" value="3 BHK Luxury Apartment" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary/20">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Monthly Rent</label>
+                        <div class="flex items-center gap-2">
+                            <span class="text-text-sub">₹</span>
+                            <input type="number" value="65000" class="flex-1 border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary/20">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Location</label>
+                        <input type="text" value="Koramangala 4th Block, Bangalore" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary/20">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">Property Type</label>
+                        <select class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary/20">
+                            <option selected>3 BHK Apartment</option>
+                            <option>2 BHK Apartment</option>
+                            <option>1 BHK Apartment</option>
+                            <option>Villa</option>
+                            <option>Studio</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <label class="block text-sm font-semibold mb-2">Description</label>
+                    <textarea class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-primary/20 h-24" placeholder="Add details about your property">Beautifully designed 3 BHK apartment with modern amenities</textarea>
+                </div>
+            </div>
+
+            <!-- Amenities Section -->
+            <div class="bg-white rounded-2xl border border-gray-100 p-8">
+                <h2 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">2</span>
+                    Amenities
+                </h2>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                        <input type="checkbox" checked class="w-5 h-5">
+                        <span>Gym</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                        <input type="checkbox" checked class="w-5 h-5">
+                        <span>Swimming Pool</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                        <input type="checkbox" checked class="w-5 h-5">
+                        <span>Parking</span>
+                    </label>
+                    <label class="flex items-center gap-2 p-3 border border-gray-200 rounded-lg cursor-pointer hover:bg-blue-50 transition-colors">
+                        <input type="checkbox" class="w-5 h-5">
+                        <span>Garden</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex gap-4">
+                <button type="submit" class="px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg font-semibold transition-colors shadow-sm flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm">save</span>Save Changes
+                </button>
+                <a href="my_listings.html" class="px-8 py-3 border border-gray-200 rounded-lg font-semibold hover:bg-gray-50 transition-colors">Cancel</a>
+            </div>
+        </form>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-16 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-text-sub">© 2025 NoBroker Technologies</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

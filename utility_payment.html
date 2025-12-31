@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Utility Bill Payments - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d3c9e",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white antialiased overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-[#1a202c] border-b border-[#f0f2f4] dark:border-gray-800">
+        <div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-[1440px]">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <nav class="flex gap-6">
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="packers_movers.html">Packers & Movers</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="rental_agreement.html">Rental Agreement</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="pay_rent.html">Pay Rent</a>
+                </nav>
+            </div>
+            <div class="flex gap-3">
+                <button
+                    class="hidden sm:flex items-center justify-center rounded-lg h-9 px-4 bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-bold"
+                    onclick="window.location.href='login.html'">Log In</button>
+                <button
+                    class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary-dark transition-colors text-sm font-bold shadow-md shadow-primary/20"
+                    onclick="window.location.href='login.html'">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-[1000px] mx-auto px-4 py-12">
+        <div class="mb-10 text-center md:text-left">
+            <h1 class="text-3xl font-black mb-2">Utility Bill Payments</h1>
+            <p class="text-gray-500">Fast, secure, and hassle-free payments for all your home utilities.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Payment Form -->
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700">
+                <div class="grid grid-cols-4 gap-4 mb-8">
+                    <button class="flex flex-col items-center gap-2 p-3 rounded-2xl bg-primary/10 text-primary group">
+                        <span class="material-symbols-outlined filled-icon">bolt</span>
+                        <span class="text-[10px] font-bold uppercase">Elec</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center gap-2 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-500 transition-colors">
+                        <span class="material-symbols-outlined">water_drop</span>
+                        <span class="text-[10px] font-bold uppercase">Water</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center gap-2 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-500 transition-colors">
+                        <span class="material-symbols-outlined">propane_tank</span>
+                        <span class="text-[10px] font-bold uppercase">Gas</span>
+                    </button>
+                    <button
+                        class="flex flex-col items-center gap-2 p-3 rounded-2xl hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-500 transition-colors">
+                        <span class="material-symbols-outlined">wifi</span>
+                        <span class="text-[10px] font-bold uppercase">Broadband</span>
+                    </button>
+                </div>
+
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Select
+                            Board</label>
+                        <select
+                            class="w-full p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary outline-none text-sm font-medium">
+                            <option>BESCOM - Bangalore</option>
+                            <option>TNEB - Tamil Nadu</option>
+                            <option>MSEDCL - Maharashtra</option>
+                            <option>BSES Yamuna - Delhi</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">Consumer
+                            Number</label>
+                        <input type="text" placeholder="Enter Consumer ID"
+                            class="w-full p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-primary outline-none text-sm font-medium" />
+                    </div>
+                    <button
+                        class="w-full py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">
+                        Fetch Bill & Pay
+                    </button>
+                </div>
+            </div>
+
+            <!-- Offers & Info -->
+            <div class="space-y-6">
+                <div class="bg-indigo-600 rounded-3xl p-8 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="text-xl font-bold mb-2">Earn up to ₹500 Cashback!</h3>
+                        <p class="text-indigo-100 text-sm mb-6">Pay your first utility bill on NoBroker and get
+                            guaranteed rewards.</p>
+                        <span class="px-3 py-1 bg-white/20 rounded-lg text-xs font-bold uppercase">Code:
+                            FIRSTBILL</span>
+                    </div>
+                    <span
+                        class="absolute -right-4 -bottom-4 material-symbols-outlined text-[120px] opacity-10 rotate-12">redeem</span>
+                </div>
+
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-gray-100 dark:border-gray-700">
+                    <h4 class="font-bold mb-4">Recent Payments</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sm">bolt</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold">Electricity Bill</p>
+                                    <p class="text-[10px] text-gray-400">12 Oct 2023</p>
+                                </div>
+                            </div>
+                            <p class="text-sm font-bold">₹2,450</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div
+                                    class="size-10 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-sm">wifi</span>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold">Broadband Bill</p>
+                                    <p class="text-[10px] text-gray-400">05 Oct 2023</p>
+                                </div>
+                            </div>
+                            <p class="text-sm font-bold">₹1,199</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-500 text-sm mb-4">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            <div class="flex justify-center gap-6">
+                <a href="about_us.html" class="text-sm text-gray-400 hover:text-primary">About Us</a>
+                <a href="contact_us.html" class="text-sm text-gray-400 hover:text-primary">Contact Us</a>
+                <a href="index.html" class="text-sm text-gray-400 hover:text-primary">Home</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

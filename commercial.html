@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Commercial Property - Rent & Buy - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d3c9e",
+                        "dark-navy": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-[#f6f6f8] dark:bg-[#101622] text-[#111318] dark:text-white min-h-screen flex flex-col transition-colors duration-200">
+    <!-- Header -->
+    <header
+        class="flex items-center justify-between border-b border-[#e5e7eb] dark:border-[#2d3748] px-6 lg:px-10 py-3 bg-white dark:bg-[#1e293b] sticky top-0 z-50 shadow-sm">
+        <a href="index.html" class="flex items-center gap-4 text-primary">
+            <div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                <span class="material-symbols-outlined text-3xl font-bold">corporate_fare</span>
+            </div>
+            <h1 class="text-[#111318] dark:text-white text-xl font-black tracking-tighter">NoBroker</h1>
+        </a>
+        <nav class="hidden lg:flex items-center gap-8">
+            <a href="buy.html" class="text-sm font-medium hover:text-primary transition-colors">Buy</a>
+            <a href="index.html" class="text-sm font-medium hover:text-primary transition-colors">Rent</a>
+            <a href="commercial.html" class="text-sm font-bold text-primary">Commercial</a>
+            <a href="blog.html" class="text-sm font-medium hover:text-primary transition-colors">Blog</a>
+            <a href="about_us.html" class="text-sm font-medium hover:text-primary transition-colors">About Us</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <button
+                class="px-4 py-2 text-sm font-bold bg-primary text-white rounded-lg hover:bg-primary-dark transition-all shadow-lg shadow-primary/20"
+                onclick="window.location.href='login.html'">Log In</button>
+            <button class="lg:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"><span
+                    class="material-symbols-outlined">menu</span></button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+        <!-- Commercial Hero -->
+        <section class="relative h-[500px] flex items-center justify-center bg-dark-navy overflow-hidden">
+            <div
+                class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000')] bg-cover bg-center opacity-40 grayscale">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-navy via-transparent to-dark-navy/60"></div>
+
+            <div class="relative z-20 max-w-5xl w-full px-6 flex flex-col items-center">
+                <span
+                    class="bg-primary/20 text-primary border border-primary/30 px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-widest mb-6 backdrop-blur-sm">Commercial
+                    Solutions</span>
+                <h2
+                    class="text-4xl md:text-5xl lg:text-7xl font-black text-white mb-8 text-center leading-none tracking-tight">
+                    Scale Your Business Faster</h2>
+                <p class="text-lg md:text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto leading-relaxed">Verified
+                    office spaces, retail shops, and warehouses with zero brokerage. Rent or Buy directly from owners.
+                </p>
+
+                <div
+                    class="w-full max-w-3xl bg-white/10 backdrop-blur-md border border-white/20 p-2 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-2">
+                    <div
+                        class="flex-[2] flex items-center gap-3 px-6 py-4 bg-white/5 rounded-xl border border-white/10 group focus-within:bg-white/20 transition-all">
+                        <span
+                            class="material-symbols-outlined text-primary group-focus-within:scale-125 transition-transform">search</span>
+                        <input type="text" placeholder="Locality or Office Building"
+                            class="w-full bg-transparent border-none focus:ring-0 text-white placeholder:text-gray-400 font-medium">
+                    </div>
+                    <div class="flex-1 px-4 py-4 bg-white/5 rounded-xl border border-white/10 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-gray-400 text-sm">business</span>
+                        <select
+                            class="bg-transparent border-none focus:ring-0 text-white font-bold text-sm w-full cursor-pointer">
+                            <option class="text-black">Rent</option>
+                            <option class="text-black">Buy</option>
+                        </select>
+                    </div>
+                    <button
+                        class="flex-1 px-8 py-4 bg-primary hover:bg-primary-dark text-white font-black rounded-xl transition-all shadow-xl shadow-primary/30"
+                        onclick="window.location.href='search_results.html'">Explore</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Sectors -->
+        <section class="max-w-7xl mx-auto px-6 py-24">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+                <div>
+                    <h3 class="text-3xl font-black mb-3">Enterprise-Grade Spaces</h3>
+                    <p class="text-gray-500">Choosing the right location for your team's success.</p>
+                </div>
+                <div class="flex gap-4">
+                    <button
+                        class="size-12 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><span
+                            class="material-symbols-outlined">west</span></button>
+                    <button
+                        class="size-12 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all"><span
+                            class="material-symbols-outlined">east</span></button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Office Spaces -->
+                <div onclick="window.location.href='search_results.html'"
+                    class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1000"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Modern office">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-navy to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h4 class="text-2xl font-black text-white mb-2">Office Spaces</h4>
+                        <p
+                            class="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Fully furnished, IT parks and coworking hubs.</p>
+                        <span class="inline-flex items-center gap-2 text-primary font-black text-sm">View Listings <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <!-- Retail Stores -->
+                <div onclick="window.location.href='search_results.html'"
+                    class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Retail shop">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-navy to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h4 class="text-2xl font-black text-white mb-2">Retail Stores</h4>
+                        <p
+                            class="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            High-street showrooms and mall outlets.</p>
+                        <span class="inline-flex items-center gap-2 text-primary font-black text-sm">View Listings <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <!-- Warehouses -->
+                <div onclick="window.location.href='search_results.html'"
+                    class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=1000"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Warehouse">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-navy to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h4 class="text-2xl font-black text-white mb-2">Warehouses</h4>
+                        <p
+                            class="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Logistics hubs and storage facilities.</p>
+                        <span class="inline-flex items-center gap-2 text-primary font-black text-sm">View Listings <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+                <!-- Plots -->
+                <div onclick="window.location.href='search_results.html'"
+                    class="group relative h-[400px] rounded-3xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1500382017468-9049fee79562?auto=format&fit=crop&q=80&w=1000"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        alt="Industrial land">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark-navy to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 p-8">
+                        <h4 class="text-2xl font-black text-white mb-2">Industrial Land</h4>
+                        <p
+                            class="text-gray-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Prime plots for manufacturing and development.</p>
+                        <span class="inline-flex items-center gap-2 text-primary font-black text-sm">View Listings <span
+                                class="material-symbols-outlined text-sm">arrow_forward</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] border-t border-gray-200 dark:border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-6 text-primary">
+                <div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+                    <span class="material-symbols-outlined text-3xl font-bold">corporate_fare</span>
+                </div>
+                <h1 class="text-[#111318] dark:text-white text-xl font-black tracking-tighter ml-4">NoBroker</h1>
+            </div>
+            <p class="text-sm text-gray-500 max-w-md mx-auto mb-8">Efficient commercial real estate solutions for the
+                modern enterprise. Built for scale.</p>
+            <div class="flex justify-center gap-8 text-sm font-medium mb-12">
+                <a href="about_us.html" class="hover:text-primary transition-colors">About</a>
+                <a href="contact_us.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="testimonials.html" class="hover:text-primary transition-colors">Legal</a>
+                <a href="blog.html" class="hover:text-primary transition-colors">News</a>
+            </div>
+            <p class="text-xs text-gray-400">© 2025 NoBroker Commercial • Powered by Antigravity</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

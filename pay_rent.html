@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pay Rent - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d42af",
+                        "accent-green": "#22c55e",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white transition-colors duration-300 min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav
+        class="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101622]/90 backdrop-blur-md border-b border-[#f0f2f4] dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center">
+                    <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+                </a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
+                        href="buy.html">Buy</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
+                        href="index.html">Rent</a>
+                    <a class="text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors"
+                        href="commercial.html">Commercial</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors">
+                            Services <span class="material-symbols-outlined text-sm">expand_more</span>
+                        </button>
+                        <div
+                            class="absolute left-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="rental_agreement.html"
+                                class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-t-xl transition-colors">Rental
+                                Agreement</a>
+                            <a href="packers_movers.html"
+                                class="block px-4 py-3 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 rounded-b-xl transition-colors">Packers
+                                & Movers</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Actions -->
+                <div class="flex items-center gap-3">
+                    <button
+                        class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg border border-primary text-primary hover:bg-primary hover:text-white text-sm font-bold transition-colors"
+                        onclick="window.location.href='pay_rent.html'">Pay Rent</button>
+                    <button
+                        class="hidden sm:flex items-center justify-center h-9 px-4 rounded-lg bg-accent-green hover:bg-accent-green-dark text-white text-sm font-bold shadow-sm transition-colors"
+                        onclick="window.location.href='post_property.html'">Post Free Ad</button>
+                    <button
+                        class="flex items-center justify-center size-9 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        onclick="window.location.href='login.html'">
+                        <span class="material-symbols-outlined text-xl">account_circle</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto w-full px-4 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-black text-gray-900 dark:text-white mb-4">Pay Your Rent</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-400">Pay your house rent, office rent, or security deposit
+                via Credit Card or Reward Points.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Payment Form -->
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 overflow-hidden">
+                    <div class="p-8">
+                        <form class="space-y-6">
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Tenant
+                                        Name</label>
+                                    <input type="text" placeholder="Full Name"
+                                        class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 px-4 py-3 focus:ring-primary focus:border-primary">
+                                </div>
+                                <div class="col-span-2 sm:col-span-1">
+                                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Mobile
+                                        Number</label>
+                                    <input type="tel" placeholder="10 Digit Mobile No."
+                                        class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 px-4 py-3 focus:ring-primary focus:border-primary">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Rent
+                                    Amount</label>
+                                <div class="relative">
+                                    <span
+                                        class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500 font-bold">₹</span>
+                                    <input type="number" placeholder="Enter Amount"
+                                        class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 pl-8 pr-4 py-4 text-xl font-bold focus:ring-primary focus:border-primary">
+                                </div>
+                            </div>
+
+                            <div class="border-t border-gray-100 dark:border-gray-700 pt-6">
+                                <h3 class="font-bold mb-4">Landlord Details</h3>
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="col-span-2 sm:col-span-1">
+                                        <label
+                                            class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Landlord
+                                            Name</label>
+                                        <input type="text" placeholder="Full Name"
+                                            class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 px-4 py-3 focus:ring-primary focus:border-primary">
+                                    </div>
+                                    <div class="col-span-2 sm:col-span-1">
+                                        <label
+                                            class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Bank
+                                            Account Number</label>
+                                        <input type="text" placeholder="Account Number"
+                                            class="w-full rounded-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900 px-4 py-3 focus:ring-primary focus:border-primary">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button"
+                                class="w-full py-4 bg-primary hover:bg-primary-dark text-white font-black text-lg rounded-xl shadow-lg shadow-primary/30 transition-all transform active:scale-[0.98]">
+                                Proceed to Payment
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Perks Sidebar -->
+            <div class="space-y-6">
+                <div class="bg-gradient-to-br from-primary to-blue-600 rounded-2xl p-6 text-white shadow-xl">
+                    <h3 class="text-xl font-black mb-4">Why Pay with NoBroker?</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined">credit_card</span>
+                            <div>
+                                <p class="font-bold">Earn Rewards</p>
+                                <p class="text-sm opacity-90">Get up to 3% cashback on credit card payments.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined">verified_user</span>
+                            <div>
+                                <p class="font-bold">Safe & Secure</p>
+                                <p class="text-sm opacity-90">PCI-DSS compliant payments with bank-level security.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="material-symbols-outlined">receipt</span>
+                            <div>
+                                <p class="font-bold">Instant Receipts</p>
+                                <p class="text-sm opacity-90">Get automated rent house receipts for HRA claims.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div
+                    class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-100 dark:border-gray-700 shadow-sm">
+                    <p class="text-sm text-gray-500 mb-4">Trusted by over 10 Lakh users every month for hassle-free rent
+                        payments.</p>
+                    <div class="flex gap-2">
+                        <div onclick="window.location.href='payment_visa.html'"
+                            class="h-8 w-12 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600">
+                            VISA</div>
+                        <div onclick="window.location.href='payment_mastercard.html'"
+                            class="h-8 w-12 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600">
+                            MC</div>
+                        <div onclick="window.location.href='payment_upi.html'"
+                            class="h-8 w-12 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600">
+                            UPI</div>
+                        <div onclick="window.location.href='payment_rupay.html'"
+                            class="h-8 w-12 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center text-[10px] font-bold cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors border border-gray-200 dark:border-gray-600">
+                            RUPAY</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">apartment</span>
+                        <span class="text-xl font-black tracking-tighter text-gray-900 dark:text-white">NoBroker</span>
+                    </div>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+                        World's largest NoBrokerage property site. Connect directly with owners and save brokerage fees.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li><a class="hover:text-primary transition-colors" href="about_us.html">About Us</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="testimonials.html">Testimonials</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-4">Reach Us</h4>
+                    <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">call</span>
+                            +91 99999 99999</li>
+                        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">mail</span>
+                            hello@nobroker.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
+                <p class="text-sm text-gray-400">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

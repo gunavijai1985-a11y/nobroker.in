@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Painting & Cleaning Services - NoBroker</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "primary-dark": "#0d3c9e",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: { "display": ["Inter", "sans-serif"] },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white antialiased overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-[#1a202c] border-b border-[#f0f2f4] dark:border-gray-800">
+        <div class="px-4 md:px-10 py-3 flex items-center justify-between mx-auto max-w-[1440px]">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="NoBroker Logo" class="h-8 md:h-10 w-auto">
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <nav class="flex gap-6">
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="packers_movers.html">Packers & Movers</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="rental_agreement.html">Rental Agreement</a>
+                    <a class="text-sm font-medium hover:text-primary transition-colors dark:text-gray-300"
+                        href="pay_rent.html">Pay Rent</a>
+                </nav>
+            </div>
+            <div class="flex gap-3">
+                <button
+                    class="hidden sm:flex items-center justify-center rounded-lg h-9 px-4 bg-primary/10 text-primary hover:bg-primary/20 transition-colors text-sm font-bold"
+                    onclick="window.location.href='login.html'">Log In</button>
+                <button
+                    class="flex items-center justify-center rounded-lg h-9 px-4 bg-primary text-white hover:bg-primary-dark transition-colors text-sm font-bold shadow-md shadow-primary/20"
+                    onclick="window.location.href='login.html'">Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-white dark:bg-[#1a202c] overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover"
+                src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=2000"
+                alt="Professional painter at work" />
+            <div class="absolute inset-0 bg-blue-900/60 dark:bg-black/70"></div>
+        </div>
+        <div class="relative z-10 max-w-[1200px] mx-auto px-4 py-20 md:py-32 text-center">
+            <h1 class="text-white text-4xl md:text-6xl font-black mb-6">Home Painting & Cleaning</h1>
+            <p class="text-blue-100 text-lg md:text-xl mb-10 max-w-2xl mx-auto">Professional services at your doorstep.
+                Safe, reliable, and guaranteed best prices starting from ₹999.</p>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button onclick="bookService('Painting')"
+                    class="px-8 py-4 bg-white text-primary font-bold rounded-xl shadow-xl hover:bg-gray-50 transition-all">Book
+                    Painting</button>
+                <button onclick="bookService('Full Cleaning')"
+                    class="px-8 py-4 bg-primary text-white font-bold rounded-xl shadow-xl hover:bg-primary-dark transition-all">Book
+                    Full Cleaning</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Selection -->
+    <main class="max-w-[1200px] mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+                <span class="material-symbols-outlined text-4xl text-primary mb-4">format_paint</span>
+                <h3 class="text-xl font-bold mb-2">Interior Painting</h3>
+                <p class="text-gray-500 text-sm">One-day painting, textured walls, and premium finishes.</p>
+            </div>
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+                <span class="material-symbols-outlined text-4xl text-green-500 mb-4">cleaning_services</span>
+                <h3 class="text-xl font-bold mb-2">Deep Cleaning</h3>
+                <p class="text-gray-500 text-sm">Kitchen, bathroom, and full home sanitized cleaning.</p>
+            </div>
+            <div
+                class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 text-center">
+                <span class="material-symbols-outlined text-4xl text-orange-500 mb-4">brush</span>
+                <h3 class="text-xl font-bold mb-2">Waterproofing</h3>
+                <p class="text-gray-500 text-sm">Long-term solutions for damp walls and ceiling leaks.</p>
+            </div>
+        </div>
+
+        <section class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-sm">
+            <h2 class="text-2xl font-bold mb-8 text-center">How It Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        1</div>
+                    <p class="font-bold mb-2">Book Service</p>
+                    <p class="text-sm text-gray-500">Pick your city and preferred date.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        2</div>
+                    <p class="font-bold mb-2">Expert Inspection</p>
+                    <p class="text-sm text-gray-500">Our team visits for a detailed quote.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        3</div>
+                    <p class="font-bold mb-2">Execution</p>
+                    <p class="text-sm text-gray-500">Hassle-free service by experts.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-12 h-12 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">
+                        4</div>
+                    <p class="font-bold mb-2">Completion</p>
+                    <p class="text-sm text-gray-500">Post-service walk-through & payment.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-[#101622] pt-16 pb-8 border-t border-gray-200 dark:border-gray-800 text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-500 text-sm mb-4">© 2023 NoBroker Technologies Solutions Pvt. Ltd.</p>
+            <div class="flex justify-center gap-6">
+                <a href="about_us.html" class="text-sm text-gray-400 hover:text-primary">About Us</a>
+                <a href="contact_us.html" class="text-sm text-gray-400 hover:text-primary">Contact Us</a>
+                <a href="index.html" class="text-sm text-gray-400 hover:text-primary">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="fixed bottom-6 right-6 z-[100] flex flex-col gap-3 pointer-events-none"></div>
+
+    <script>
+        function showToast(message, type = 'success') {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = `max-w-md w-full bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-4 flex items-center gap-3 pointer-events-auto transition-all duration-300 translate-x-full border-l-4 ${type === 'success' ? 'border-primary' : 'border-red-500'}`;
+
+            const icon = type === 'success' ? 'check_circle' : 'error';
+            const iconColor = type === 'success' ? 'text-primary' : 'text-red-500';
+
+            toast.innerHTML = `
+                <span class="material-symbols-outlined ${iconColor}">${icon}</span>
+                <p class="text-sm font-semibold text-gray-900 dark:text-white">${message}</p>
+            `;
+
+            container.appendChild(toast);
+            setTimeout(() => toast.classList.remove('translate-x-full'), 10);
+
+            setTimeout(() => {
+                toast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+
+        function bookService(service) {
+            showToast(`Initiating booking for ${service}...`);
+            setTimeout(() => {
+                showToast(`${service} Service Booked! Our inspector will visit on your preferred date.`, 'success');
+            }, 1000);
+        }
+    </script>
+</body>
+
+</html>
